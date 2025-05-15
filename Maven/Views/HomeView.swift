@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Maven
 //
 //  Created by Isabella Sulisufi on 08/05/2025.
@@ -15,11 +15,11 @@ struct HomeView: View {
 
             VStack {
                 Text("MAVEN Score")
-                    .font(Font.interTitle)
+                    .font(Font.mavenTitle)
                     .padding(.bottom, 6.0)
 
                 Text("What is a MAVEN Score?")
-                    .font(Font.inter16)
+                    .font(Font.font16)
                     .underline(true, pattern: .solid)
 
                 Text("450")
@@ -45,24 +45,23 @@ struct HomeView: View {
                     Spacer()
                 }
 
-
                 // Boost your score
                 VStack(alignment: .leading) {
                     Text("🚀 Boost Your Score!")
-                        .font(Font.inter16)
+                        .font(Font.font16)
                     // Cards - Financial Knowledge Centre and Financial Habits
                     HStack(spacing: 4) {
                         VStack(alignment: .leading) {
                             Text("📚 Financial Knowledge Center")
-                                .font(Font.inter16)
+                                .font(Font.font16)
                                 .padding(.bottom, 2.0)
 
                             Text("Learn, grow, and master your money")
-                                .font(Font.interLight16)
+                                .font(Font.font16Light)
 
                             Spacer()
                             Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
-                                .font(Font.interLight16)
+                                .font(Font.font16Light)
 
                         }
                         .padding(10.0)
@@ -72,15 +71,15 @@ struct HomeView: View {
 
                         VStack(alignment: .leading) {
                             Text("📊 Your Financial Habits ")
-                                .font(Font.inter16)
+                                .font(Font.font16)
                                 .padding(.bottom, 2.0)
 
                             Text("See how your behaviour shapes your score!")
-                                .font(Font.interLight16)
+                                .font(Font.font16Light)
 
                             Spacer()
                             Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
-                                .font(Font.interLight16)
+                                .font(Font.font16Light)
 
                         }
                         .padding(10.0)
@@ -92,14 +91,11 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 4.0)
                 Spacer()
-
-
             }
             .padding()
         }
     }
 }
-
 
 #Preview {
     HomeView()

@@ -19,7 +19,7 @@ struct MavenInfoView: View {
                     // Title Section
                     VStack(spacing: 8) {
                         Text("MAVEN")
-                            .font(Font.interTitle)
+                            .font(Font.mavenTitle)
                             .multilineTextAlignment(.center)
 
                         Text("(Maturity, Awareness, Value,\nEducation, Navigation)")
@@ -54,14 +54,14 @@ struct MavenInfoView: View {
                         // Financial Knowledge
                         VStack(alignment: .leading, spacing: 4) {
                             Text("Financial Knowledge")
-                                .font(Font.interSubtitle)
+                                .font(Font.font18Subtitle)
 
                             Text("This calculates your financial knowledge based on your interactions and results with products on ClearScore. This can include:")
-                                .font(Font.inter16)
+                                .font(Font.font16)
                                 .padding(.bottom, 6.0)
 
                             Text("1. Completing Quizzes\n2. Watching Improve Videos\n3. Completing User Scenarios")
-                                .font(Font.inter16)
+                                .font(Font.font16)
 
                         }
                         .padding(.bottom, 12.0)
@@ -69,14 +69,14 @@ struct MavenInfoView: View {
                         // Behaviour
                         VStack(alignment: .leading, spacing: 4) {
                             Text("Behaviour")
-                                .font(Font.interSubtitle)
+                                .font(Font.font18Subtitle)
 
                             Text("This looks at your banking transactions and accounts and analyses a score based on many factors including:")
-                                .font(Font.inter16)
+                                .font(Font.font16)
                                 .padding(.bottom, 6.0)
 
                             Text("1. Types of payments  \n2. Credit utilisation \n3. Savings accounts")
-                                .font(Font.inter16)
+                                .font(Font.font16)
 
                         }
                     }
@@ -88,17 +88,17 @@ struct MavenInfoView: View {
                             .font(.headline)
 
                         Text("There are 4 types of levels you can have with a maturity level. They are all based on the score you have.")
-                            .font(Font.inter16)
+                            .font(Font.font16)
 
                         VStack(alignment: .leading) {
-                            Text("1. ").font(.inter16) + Text("Explorer").bold() + Text(" (0–399)").font(.interLight16)
-                            Text("2. ").font(.inter16) + Text("Builder").bold() + Text(" (400–649)").font(.interLight16)
-                            Text("3. ").font(.inter16) + Text("Strategist").bold() + Text(" (650–849)").font(.interLight16)
-                            Text("4. ").font(.inter16) + Text("Champion").bold() + Text(" (850–1000)").font(.interLight16)
+                            Text("1. ").font(Font.font16) + Text("Explorer").bold() + Text(" (0–399)").font(Font.font16Light)
+                            Text("2. ").font(Font.font16) + Text("Builder").bold() + Text(" (400–649)").font(Font.font16Light)
+                            Text("3. ").font(Font.font16) + Text("Strategist").bold() + Text(" (650–849)").font(Font.font16Light)
+                            Text("4. ").font(Font.font16) + Text("Champion").bold() + Text(" (850–1000)").font(Font.font16Light)
                         }
 
                         Text("As your score increases, you can bump up to the next level!")
-                            .font(Font.inter16)
+                            .font(Font.font16)
 
                     }
                     .padding(.horizontal, 30.0)
