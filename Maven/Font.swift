@@ -8,20 +8,24 @@
 import SwiftUI
 
 extension Font {
-    static var inter16: Font {
-        Font.custom("Inter", size: 16).weight(.medium)
+    static var font16: Font {
+        .system(size: 16, weight: .regular)
     }
 
-    static var interLight16: Font {
-        Font.custom("Inter", size: 16).weight(.light)
+    static var font16Light: Font {
+        .system(size: 16, weight: .light)
     }
 
-    static var interTitle: Font {
-        Font.custom("Inter", size: 45).weight(.heavy)
+    static var midTitle: Font {
+        .system(size: 36, weight: .heavy)
     }
 
-    static var interSubtitle: Font {
-        Font.custom("Inter", size: 18).weight(.bold)
+    static var mavenTitle: Font {
+        .system(size: 45, weight: .heavy)
+    }
+
+    static var font18Subtitle: Font {
+        .system(size: 18, weight: .bold)
     }
 
 }
