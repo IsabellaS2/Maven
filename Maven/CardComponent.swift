@@ -7,68 +7,6 @@
 
 import SwiftUI
 
-// struct SmallCard: View {
-//    let icon: String
-//    let header: String?
-//    let title: String
-//    let description: String
-//    let tag: String?
-//
-//    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil) {
-//        self.title = title
-//        self.description = description
-//        self.icon = icon
-//        self.header = header
-//        self.tag = tag
-//    }
-//
-//    var body: some View {
-//
-//        Button(action: {
-//            // Action for the button
-//        }) {
-//            VStack(alignment: .leading, spacing: 8) {
-//                HStack {
-//                    Image(systemName: icon)
-//                        .font(.title2)
-//                        .foregroundColor(.black)
-//
-//                    if let header = header {
-//                        Text(header)
-//                            .font(Font.font16Light)
-//                            .foregroundColor(Color.font)
-//                    }
-//                }
-//
-//                Spacer()
-//                    .frame(height: 10)
-//
-//                Text(title)
-//                    .font(Font.font16)
-//                    .foregroundColor(.gray)
-//
-//                Text(description)
-//                    .font(Font.font16)
-//                    .lineLimit(3) // or 2
-//                    .foregroundColor(Color.font)
-//
-//                if let tag = tag {
-//                    Text(tag)
-//                        .font(Font.font16Light)
-//                        .foregroundColor(Color.font)
-//                }
-//            }
-//            .padding()
-//            .background(Color.white)
-//            .cornerRadius(12)
-//            .shadow(radius: 4)
-//            .frame(height: 180)
-//
-//        }
-//    }
-// }
-
-// COMPLETE
 struct CardComponent: View {
     let icon: String
     let header: String?
@@ -124,10 +62,75 @@ struct CardComponent: View {
     }
 }
 
+struct longCardComponent: View {
+    let icon: String
+    let header: String?
+    let title: String
+    let description: String
+    let tag: String?
+
+    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil) {
+        self.title = title
+        self.description = description
+        self.icon = icon
+        self.header = header
+        self.tag = tag
+    }
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Image(systemName: icon)
+                        .font(.title2)
+                        .foregroundColor(.black)
+
+                    if let header = header {
+                        Text(header)
+                            .font(Font.font16Light)
+                            .foregroundColor(Color.font)
+                    }
+
+                    Spacer() // pushes header to the left
+                }
+                .padding(.bottom, 8.0)
+
+                Text(title)
+                    .font(Font.font16)
+                    .foregroundColor(.gray)
+
+                Text(description)
+                    .font(Font.font16)
+                    .foregroundColor(Color.font)
+                    .padding(.bottom, 8.0)
+
+                if let tag = tag {
+                    Text(tag)
+                        .font(Font.font16Light)
+                        .foregroundColor(Color.font)
+                }
+            }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(12)
+            .shadow(radius: 4)
+            .frame(maxWidth: .infinity, minHeight: 175)
+        }
+    }
+}
+
 #Preview {
     CardComponent(
         title: "REPORT AND SCORE",
         description: "Sarah’s Credit Card Balance Transfer Misstep",
+        icon: "creditcard",
+        header: "User Scenario",
+        tag: "What went wrong?"
+    )
+
+    longCardComponent(
+        title: "REPORT AND SCORE",
+        description: "ACLONG CARD Transfer Misstep",
         icon: "creditcard",
         header: "User Scenario",
         tag: "What went wrong?"

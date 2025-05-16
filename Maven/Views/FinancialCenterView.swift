@@ -5,9 +5,6 @@
 //  Created by Isabella Sulisufi on 14/05/2025.
 //
 
-// fix swiftlint issues
-// fix background not covering whole area
-
 import SwiftUI
 
 struct FinancialCenterView: View {
