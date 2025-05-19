@@ -36,7 +36,7 @@ struct UserScenarioHomeView: View {
                         Text("Credit Cards")
                             .font(.font18Subtitle)
 
-                        longCardComponent(
+                        LongCardComponent(
                             title: "CREDIT CARDS",
                             description: "Sarah’s Credit Card Balance Transfer Misstep",
                             icon: "creditcard",
@@ -44,7 +44,7 @@ struct UserScenarioHomeView: View {
                             tag: "What went wrong?"
                         )
 
-                        longCardComponent(
+                        LongCardComponent(
                             title: "CREDIT CARDS",
                             description: "Ellie’s Credit Card Struggles",
                             icon: "creditcard",
@@ -60,7 +60,7 @@ struct UserScenarioHomeView: View {
                             .font(.font18Subtitle)
 
                         HStack {
-                            longCardComponent(
+                            LongCardComponent(
                                 title: "BUY NOW, PAY LATER",
                                 description: "Maria’s BNPL Trouble",
                                 icon: "cart.badge.plus",
@@ -76,7 +76,7 @@ struct UserScenarioHomeView: View {
                         Text("Mortgages")
                             .font(.font18Subtitle)
 
-                        longCardComponent(
+                        LongCardComponent(
                             title: "MORTGAGES",
                             description: "Marcus’s Mortgage Misunderstanding",
                             icon: "house.fill",
@@ -91,14 +91,14 @@ struct UserScenarioHomeView: View {
                         Text("Loans")
                             .font(.font18Subtitle)
 
-                        longCardComponent(
+                        LongCardComponent(
                             title: "LOANS",
                             description: "Jake’s Debt Dilemma",
                             icon: "banknote",
                             header: "User Scenario",
                             tag: "What went wrong?"
                         )
-                        longCardComponent(
+                        LongCardComponent(
                             title: "LOANS",
                             description: "Omar’s Car Loan Oversight",
                             icon: "banknote",

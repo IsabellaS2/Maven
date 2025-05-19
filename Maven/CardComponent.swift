@@ -57,12 +57,12 @@ struct CardComponent: View {
         .background(Color.white)
         .cornerRadius(12)
         .shadow(radius: 4)
-        .frame(height: 175)
+//        .frame(height: 160)
 
     }
 }
 
-struct longCardComponent: View {
+struct LongCardComponent: View {
     let icon: String
     let header: String?
     let title: String
@@ -114,7 +114,8 @@ struct longCardComponent: View {
             .background(Color.white)
             .cornerRadius(12)
             .shadow(radius: 4)
-            .frame(maxWidth: .infinity, minHeight: 175)
+            .frame(maxWidth: .infinity, minHeight: 160)
+            .padding(.bottom, 0)
         }
     }
 }
@@ -128,7 +129,7 @@ struct longCardComponent: View {
         tag: "What went wrong?"
     )
 
-    longCardComponent(
+    LongCardComponent(
         title: "REPORT AND SCORE",
         description: "ACLONG CARD Transfer Misstep",
         icon: "creditcard",
