@@ -28,4 +28,8 @@ extension Font {
         .system(size: 18, weight: .bold)
     }
 
+    static var font24Subtitle: Font {
+        .system(size: 24, weight: .bold)
+    }
+
 }

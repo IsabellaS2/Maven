@@ -57,7 +57,7 @@ struct CardComponent: View {
         .background(Color.white)
         .cornerRadius(12)
         .shadow(radius: 4)
-//        .frame(height: 160)
+        //        .frame(height: 160)
 
     }
 }
