@@ -8,23 +8,51 @@
 import SwiftUI
 
 struct UserScenarioView: View {
+    var title: String
+    var subtitle: String
+    var image: String
+    var description_1: String
+    var description_2: String
+    var description_3: String
+    var description_4: String
+
+    var www_title: String
+    var www_point1: String
+    var www_point2: String
+    var www_point3: String
+
+    var sort_title: String
+    var sort_point1: String
+    var sort_point2: String
+    var sort_point3: String
+
+    var diff_title: String
+    var diff_point1: String
+    var diff_point2: String
+    var diff_point3: String
+
+    var solutions_title: String
+    var solutions_point1: String
+    var solutions_point2: String
+    var solutions_point3: String
+
     var body: some View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
             ScrollView {
-                Text("Ellie’s Credit Card Struggles")
+                Text(title)
                     .font(.midTitle)
                     .multilineTextAlignment(.center)
                     .padding(.top, 20.0)
                     .padding(.bottom, 10.0)
 
-                Text("User Scenario - Credit Cards")
+                Text(subtitle)
                     .font(.font18Subtitle)
                     .padding(.bottom, 6.0)
 
                 HStack {
-                    Image("ellie")
+                    Image(image)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
@@ -32,54 +60,54 @@ struct UserScenarioView: View {
                         .padding(.trailing, 10.0)
 
                     VStack(alignment: .leading) {
-                        Text("This is Ellie!")
+                        Text(description_1)
                             .font(.font16)
                             .padding(.bottom, 2.0)
-                        Text("She is 21 and loves to shop.\nShe just got her first credit card.")
+                        Text(description_2)
                             .font(.font16Light)
                             .padding(.bottom, 2.0)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text("However, she doesn’t really understand how they work.")
+                        Text(description_3)
                             .font(.font16Light)
                     }
                     .padding(10.0)
                 }
-                Text("After only a few months, she missed 2 payments and her credit score dropped by 50 points. ")
+                Text(description_4)
                     .font(.font16Light)
                     .padding(.horizontal, 20.0)
                     .padding(.bottom, 10.0)
 
-                // What did Ellie do wrong?
+                // What did Person do wrong?
                 UserScenarioTextComponent(
-                    title: "What did Ellie do wrong?",
-                    point1: "1. 💰 Ellie didn’t budget her spending - she spent more than she had and didn’t pay it off in time",
-                    point2: "2. ⏲️ Ellie didn’t set up reminders for her credit card payments.",
-                    point3: "3. 📚 Ellie didn’t read about credit card interest rates. She didn’t learn what they are, and what impact they can have."
+                    title: www_title,
+                    point1: www_point1,
+                    point2: www_point2,
+                    point3: www_point3
                 )
 
-                // What can Ellie do now to sort this out
+                // What can Person do now to sort this out
                 UserScenarioTextComponent(
-                    title: "What can Ellie do now to sort this out?",
-                    point1: "1. 🏦 Pay off her missing payments as soon as possible to prevent further interest from accumulating and to bring her account back to good standing.",
-                    point2: "2. 📞 Contact her credit card provider to set up a repayment plan or request waiving late fees if possible.",
-                    point3: "3. ✅ Check her credit report to ensure no errors are impacting her score."
+                    title: sort_title,
+                    point1: sort_point1,
+                    point2: sort_point2,
+                    point3: sort_point3
                 )
 
-                // What could Ellie have done differently?
+                // What could Person have done differently?
                 UserScenarioTextComponent(
-                    title: "What could Ellie have done differently?",
-                    point1: "1. 🚧 Set a spending limit for herself to ensure she could afford her credit card bills.",
-                    point2: "2. 🗓️ Enable automatic payments or set reminders to avoid missing due dates.",
-                    point3: "3. 📽️ Watch videos or read resources about credit card basics to understand how interest and payments work.."
+                    title: diff_title,
+                    point1: diff_point1,
+                    point2: diff_point2,
+                    point3: diff_point3
                 )
 
                 // Solutions & Learning Resources
                 UserScenarioTextComponent(
-                    title: "Solutions & Learning Resources",
-                    point1: "Always pay at least the minimum balance on time.",
-                    point2: "Understand the APR and interest rates before using a credit card..",
-                    point3: "Track your spending to avoid overspending.."
+                    title: solutions_title,
+                    point1: solutions_point1,
+                    point2: solutions_point2,
+                    point3: solutions_point3
                 )
 
                 HStack {
@@ -100,8 +128,4 @@ struct UserScenarioView: View {
         }
     }
 
-}
-
-#Preview {
-    UserScenarioView()
 }
