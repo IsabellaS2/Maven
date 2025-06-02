@@ -1,0 +1,218 @@
+{
+  "ellies_credit_card_struggles": {
+    "title": "Ellie’s Credit Card Struggles",
+    "subtitle": "User Scenario - Credit Cards",
+    "description_1": "This is Ellie!",
+    "description_2": "She is 21 and loves to shop. She just got her first credit card.",
+    "description_3": "However, she doesn’t really understand how they work.",
+    "description_4": "After only a few months, she missed 2 payments and her credit score dropped by 50 points.",
+    "what_went_wrong": {
+      "title": "What did Ellie do wrong?",
+      "text_1": "💰 Ellie didn’t budget her spending - she spent more than she had and didn’t pay it off in time.",
+      "text_2": "⏲️ Ellie didn’t set up reminders for her credit card payments.",
+      "text_3": "📚 Ellie didn’t read about credit card interest rates. She didn’t learn what they are, and what impact they can have."
+    },
+    "how_to_sort": {
+      "title": "What can Ellie do now to sort this out?",
+      "text_1": "🏦 Pay off her missing payments as soon as possible to prevent further interest from accumulating and to bring her account back to good standing.",
+      "text_2": "📞 Contact her credit card provider to set up a repayment plan or request waiving late fees if possible.",
+      "text_3": "✅ Check her credit report to ensure no errors are impacting her score."
+    },
+    "have_done_differently": {
+      "title": "What could Ellie have done differently?",
+      "text_1": "🚧 Set a spending limit for herself to ensure she could afford her credit card bills.",
+      "text_2": "🗓️ Enable automatic payments or set reminders to avoid missing due dates.",
+      "text_3": "📽️ Watch videos or read resources about credit card basics to understand how interest and payments work."
+    },
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "🕒 Always pay at least the minimum balance on time.",
+      "text_2": "📈 Understand the APR and interest rates before using a credit card.",
+      "text_3": "📊 Track your spending to avoid overspending."
+    }
+  },
+
+  "marias_bnpl_trouble": {
+    "title": "Maria’s BNPL Trouble",
+    "subtitle": "User Scenario - BNPL",
+    "description_1": "This is Maria!",
+    "description_2": "Maria is a 23-year-old freelance designer who loves online shopping.",
+    "description_3": "She’s been using BNPL services to buy gadgets and clothes.",
+    "description_4": "However, she recently missed a payment and now has multiple BNPL accounts to track. She’s overwhelmed by fees and deadlines.",
+    "what_went_wrong": {
+      "title": "What did Maria do wrong?",
+      "text_1": "📆 Maria didn’t track her BNPL payments or due dates.",
+      "text_2": "💸 Maria overestimated her ability to pay off purchases in time.",
+      "text_3": "📊 Maria relied on BNPL instead of budgeting for purchases."
+    },
+    "how_to_sort": {
+      "title": "What can Maria do now to sort this out?",
+      "text_1": "🧾 Consolidate her payments by contacting BNPL providers for help.",
+      "text_2": "📋 Create a list of all upcoming payments and prioritise them.",
+      "text_3": "🚫 Avoid making new BNPL purchases until her current balances are clear."
+    },
+    "have_done_differently": {
+      "title": "What could Maria have done differently?",
+      "text_1": "✅ Limit BNPL use to essential purchases and ensure she could afford payments.",
+      "text_2": "🗓️ Use a calendar or app to track payment schedules.",
+      "text_3": "💰 Save up for non-essential purchases instead of using BNPL."
+    },
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "📈 BNPL can be convenient but requires careful tracking.",
+      "text_2": "⏳ Only use BNPL if you’re confident you can pay on time.",
+      "text_3": "💡 Prioritize saving over borrowing for discretionary expenses."
+    }
+  },
+
+  "marcuss_mortgage_misunderstanding": {
+    "title": "Marcus’s Mortgage Misunderstanding",
+    "subtitle": "User Scenario - Mortgages",
+    "description_1": "This is Marcus!",
+    "description_2": "Marcus is a 29-year-old teacher looking to buy his first home",
+    "description_3": "He’s pre-approved for a mortgage but didn’t factor in property taxes, maintenance costs, and homeowner’s insurance.",
+    "description_4": "Now he realises his monthly expenses are higher than expected.",
+
+    "what_went_wrong": {
+      "title": "What did Marcus do wrong?",
+      "text_1": "💸 Marcus didn’t budget for the full cost of homeownership.",
+      "text_2": "📉 Marcus didn’t research additional costs beyond the mortgage payment.",
+      "text_3": "🧠 Marcus didn’t consult a financial advisor or real estate expert."
+    },
+
+    "how_to_sort": {
+      "title": "What can Marcus do now to sort this out?",
+      "text_1": "📊 Reassess his budget and look for areas to cut costs.",
+      "text_2": "💱 Explore options to refinance his mortgage for a lower rate.",
+      "text_3": "🏠 Consider generating extra income, such as renting out a room."
+    },
+
+    "have_done_differently": {
+      "title": "What could Marcus have done differently?",
+      "text_1": "🧾 Calculate total homeownership costs before committing.",
+      "text_2": "💰 Save more upfront to reduce his monthly mortgage.",
+      "text_3": "👥 Consult with professionals to understand the financial impact."
+    },
+
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "Owning a home involves more than just a mortgage — plan for maintenance, taxes, and insurance.",
+      "text_2": "Use homeownership calculators to estimate true monthly costs before buying.",
+      "text_3": "Consult experts to make informed real estate decisions."
+    }
+  },
+
+  "sarahs_credit_card_balance_transfer_misstep": {
+    "title": "Sarah’s Credit Card Balance Transfer Misstep",
+    "subtitle": "User Scenario - Credit Cards - Balance Transfer",
+    "description_1": "This is Sarah!",
+    "description_2": "She is a 33-year-old nurse who decided to transfer her high-interest credit card balance to a new card with a 0% APR offer.",
+
+    "description_3": "She forgot to check the balance transfer fees and didn’t make a plan to pay off the debt within the promotional period.",
+    "description_4": "Now, she’s facing high interest rates on her new card.",
+
+    "what_went_wrong": {
+      "title": "What did Sarah do wrong?",
+      "text_1": "💸 Sarah didn’t factor in the balance transfer fee.",
+      "text_2": "📅 Sarah didn’t set a plan to pay off her debt during the promotional period.",
+      "text_3": "📄 Sarah didn’t read the terms and conditions of the new card."
+    },
+
+    "how_to_sort": {
+      "title": "What can Sarah do now to sort this out?",
+      "text_1": "💳 Review the new card’s interest rate and calculate how much the debt will cost if unpaid.",
+      "text_2": "🧮 Create a realistic budget and repayment plan to start reducing the balance as quickly as possible.",
+      "text_3": "📞 Call the credit card provider to see if there are any options for lowering the interest rate or setting up a structured repayment plan."
+    },
+
+    "have_done_differently": {
+      "title": "What could Sarah have done differently?",
+      "text_1": "🧾 Calculated the total cost of transferring the balance, including fees.",
+      "text_2": "📆 Created a repayment plan to eliminate her debt within the 0% APR period.",
+      "text_3": "🔍 Reviewed the terms and conditions carefully before proceeding."
+    },
+
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "Balance transfers can save money, but only if you account for fees and repayment plans.",
+      "text_2": "Always read the fine print and ensure you understand promotional terms.",
+      "text_3": "Have a clear strategy to pay off debt before the promotional period ends."
+    }
+  },
+
+  "jakes_debt_management_struggles": {
+    "title": "Jake’s Debt Management Struggles",
+    "subtitle": "User Scenario - Managing Multiple Debts",
+    "description_1": "This is Jake!",
+    "description_2": "He is a 24-year-old freelancer who has accumulated debt across multiple credit cards and a personal loan.",
+    "description_3": "At first, he managed his payments, but as his expenses grew, he started missing due dates.",
+    "description_4": "Now, he’s overwhelmed with high interest rates and struggling to make minimum payments.",
+
+    "what_went_wrong": {
+      "title": "What did Jake do wrong?",
+      "text_1": "💳 Jake relied too much on credit without a repayment plan.",
+      "text_2": "📅 Jake didn’t track his multiple debts and due dates.",
+      "text_3": "🧠 Jake didn’t explore options like debt consolidation."
+    },
+
+    "how_to_sort": {
+      "title": "What can Jake do now to sort this out?",
+      "text_1": "📝 List out all his debts, interest rates, and due dates.",
+      "text_2": "🔁 Explore a debt consolidation loan to combine debts into one manageable payment.",
+      "text_3": "📞 Contact creditors to negotiate lower interest rates or better payment terms, and create a strict budget to cut unnecessary expenses."
+    },
+
+    "have_done_differently": {
+      "title": "What could Jake have done differently?",
+      "text_1": "⚠️ Only use credit when necessary and have a plan to repay it.",
+      "text_2": "🔔 Automate payments to avoid late fees and interest spikes.",
+      "text_3": "📚 Learn about financial tools like debt consolidation early on."
+    },
+
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "Managing multiple debts can be overwhelming—tracking payments and interest rates is crucial.",
+      "text_2": "Debt consolidation can help simplify payments and potentially reduce interest rates.",
+      "text_3": "A realistic budget and financial planning can prevent excessive debt accumulation."
+    }
+  },
+
+  "mofizs_car_loan_oversight": {
+    "title": "Mofiz's Car Loan Oversight",
+    "subtitle": "User Scenario - Car Loans",
+    "description_1": "Meet Mofiz!",
+    "description_2": "He’s a 28-year-old software developer who just bought his first car.",
+
+    "description_3": "He chose a brand-new car with a long-term loan that offered low monthly payments.",
+    "description_4": "But he didn’t factor in insurance, fuel, maintenance, and registration costs. Now, he’s struggling to keep up with the total expense.",
+
+    "what_went_wrong": {
+      "title": "What did Mofiz do wrong?",
+      "text_1": "🚗 Mofiz focused only on the monthly loan payment and ignored the total cost of car ownership.",
+      "text_2": "🧾 He didn’t research insurance costs before buying the car.",
+      "text_3": "🔧 Mofiz didn’t budget for routine maintenance and unexpected repairs."
+    },
+
+    "how_to_sort": {
+      "title": "What can Mofiz do now to sort this out?",
+      "text_1": "📋 Review all car-related expenses and create a full monthly budget.",
+      "text_2": "📞 Shop around for more affordable insurance or consider increasing his deductible to lower premiums.",
+      "text_3": "🚙 Consider selling or trading the car for a more affordable option, or refinancing the loan for a better rate."
+    },
+
+    "have_done_differently": {
+      "title": "What could Mofiz have done differently?",
+      "text_1": "🔍 Researched total cost of ownership—including fuel, insurance, and maintenance—before buying.",
+      "text_2": "💡 Chosen a reliable used car to reduce costs and avoid steep depreciation.",
+      "text_3": "💬 Consulted with a financial advisor or used online calculators to plan his car budget realistically."
+    },
+
+    "solutions_and_resources": {
+      "title": "Solutions & Learning Resources",
+      "text_1": "A low monthly payment doesn’t mean the car is affordable—total cost matters.",
+      "text_2": "Use car ownership calculators to estimate ongoing expenses.",
+      "text_3": "Always compare financing, insurance, and maintenance options before committing to a car purchase."
+    }
+  }
+}
+

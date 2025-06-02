@@ -100,7 +100,7 @@ struct UserScenarioHomeView: View {
                         )
                         LongCardComponent(
                             title: "LOANS",
-                            description: "Omar’s Car Loan Oversight",
+                            description: "Mofiz's Car Loan Oversight",
                             icon: "banknote",
                             header: "User Scenario",
                             tag: "What went wrong?"
