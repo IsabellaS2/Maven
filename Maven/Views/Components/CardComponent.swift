@@ -128,6 +128,13 @@ struct LongCardComponent: View {
         header: "User Scenario",
         tag: "What went wrong?"
     )
+    
+    LongCardComponent(
+        title: "💸 On-time Loan Payments",
+        description: "You always pay on time! This builds trust with lenders and strengthens your score.",
+        icon: "",
+        tag: "Keep up the good work!"
+    )
 
     LongCardComponent(
         title: "REPORT AND SCORE",
