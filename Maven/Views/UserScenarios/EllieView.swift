@@ -15,7 +15,7 @@ struct EllieView: View {
             UserScenarioView(
                 title: ellie.title,
                 subtitle: ellie.subtitle,
-                image: "",
+                image: "ellieImage",
                 description_1: ellie.description_1,
                 description_2: ellie.description_2,
                 description_3: ellie.description_3,

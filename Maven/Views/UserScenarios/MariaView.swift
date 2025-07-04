@@ -15,7 +15,7 @@ struct MariaView: View {
             UserScenarioView(
                 title: maria.title,
                 subtitle: maria.subtitle,
-                image: "",
+                image: "mariaImage",
                 description_1: maria.description_1,
                 description_2: maria.description_2,
                 description_3: maria.description_3,

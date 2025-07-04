@@ -28,6 +28,7 @@ struct UserScenarios: Codable {
 struct Scenario: Codable {
     var title: String
     var subtitle: String
+    var image: String?
     var description_1: String
     var description_2: String
     var description_3: String

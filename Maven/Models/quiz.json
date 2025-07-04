@@ -1,0 +1,490 @@
+{
+  "understanding_apr_interest_charges": {
+    "title": "Understanding APR, Interest & Charges",
+    "questions": [
+      {
+        "question": "What does APR stand for?",
+        "options": [
+          "Annual Payment Rate",
+          "Annual Percentage Rate",
+          "Accumulated Penalty Rate",
+          "Average Percentage Return"
+        ],
+        "correct_answer": "Annual Percentage Rate",
+        "explanation": "APR reflects the yearly cost of borrowing, including interest and some fees."
+      },
+      {
+        "question": "What does a 15% APR on a credit card mean?",
+        "options": [
+          "You earn 15% interest annually",
+          "Your credit score increases by 15%",
+          "You’ll pay around 15% in interest if you carry a balance",
+          "You pay 15% tax"
+        ],
+        "correct_answer": "You’ll pay around 15% in interest if you carry a balance",
+        "explanation": "APR is the interest charged if you don’t pay the full balance."
+      },
+      {
+        "question": "What types of charges are usually included in APR?",
+        "options": [
+          "Only interest",
+          "Interest plus fees like balance transfer fees",
+          "Taxes",
+          "Late payment penalties only"
+        ],
+        "correct_answer": "Interest plus fees like balance transfer fees",
+        "explanation": "APR includes interest and certain upfront charges."
+      },
+      {
+        "question": "What’s a grace period on a credit card?",
+        "options": [
+          "The time before you get your card",
+          "A penalty-free loan",
+          "A period when no interest is charged if the balance is paid in full",
+          "A refund window"
+        ],
+        "correct_answer": "A period when no interest is charged if the balance is paid in full",
+        "explanation": "If you pay in full during the grace period, you avoid interest."
+      },
+      {
+        "question": "What happens if you make only minimum payments?",
+        "options": [
+          "Your APR drops",
+          "You won’t pay interest",
+          "You’ll pay more interest over time",
+          "Your credit is untouched"
+        ],
+        "correct_answer": "You’ll pay more interest over time",
+        "explanation": "Minimum payments extend the repayment period and increase interest paid."
+      }
+    ]
+  },
+
+  "credit_scores_reports": {
+    "title": "Credit Scores & Reports",
+    "questions": [
+      {
+        "question": "What does a credit score represent?",
+        "options": [
+          "Your income",
+          "Your total savings",
+          "Your financial trustworthiness",
+          "Your credit limit"
+        ],
+        "correct_answer": "Your financial trustworthiness",
+        "explanation": "It’s a number that shows how likely you are to repay debt."
+      },
+      {
+        "question": "Which factor has the biggest impact on your credit score?",
+        "options": [
+          "Number of cards",
+          "Payment history",
+          "Job title",
+          "Marital status"
+        ],
+        "correct_answer": "Payment history",
+        "explanation": "Paying on time is key to a strong credit score."
+      },
+      {
+        "question": "What is a credit report?",
+        "options": [
+          "A list of your recent bank balances",
+          "A summary of your credit history",
+          "Your monthly statement",
+          "A record of your debit card usage"
+        ],
+        "correct_answer": "A summary of your credit history",
+        "explanation": "It includes accounts, debts, and payment history."
+      },
+      {
+        "question": "Why is it important to regularly review your credit report?",
+        "options": [
+          "To find investment opportunities",
+          "To catch errors or signs of identity fraud",
+          "To update your job title",
+          "To increase your credit limit"
+        ],
+        "correct_answer": "To catch errors or signs of identity fraud",
+        "explanation": "Checking your credit report helps you spot inaccuracies or suspicious activity that could hurt your score or indicate fraud."
+      },
+      {
+        "question": "Which action could lower your credit score?",
+        "options": [
+          "Paying off a loan",
+          "Applying for many new credit cards in a short time",
+          "Checking your score",
+          "Having a low income"
+        ],
+        "correct_answer": "Applying for many new credit cards in a short time",
+        "explanation": "Too many applications can suggest risk to lenders."
+      }
+    ]
+  },
+
+  "credit_cards_basics": {
+    "title": "Credit Cards - Basics & Best Practices",
+    "questions": [
+      {
+        "question": "What is a credit limit?",
+        "options": [
+          "The amount you owe",
+          "The max you can borrow on a card",
+          "Your income",
+          "The interest charged"
+        ],
+        "correct_answer": "The max you can borrow on a card",
+        "explanation": "It’s the ceiling on what you can borrow."
+      },
+      {
+        "question": "What happens if you go over your credit limit?",
+        "options": [
+          "Your score improves",
+          "You may face extra fees",
+          "The balance is cancelled",
+          "You get a refund"
+        ],
+        "correct_answer": "You may face extra fees",
+        "explanation": "Exceeding your limit can lead to charges and score drops."
+      },
+      {
+        "question": "When do you pay interest on credit card purchases?",
+        "options": [
+          "Immediately",
+          "Only if you pay late",
+          "If you don’t pay the full balance by the due date",
+          "Always"
+        ],
+        "correct_answer": "If you don’t pay the full balance by the due date",
+        "explanation": "Paying the full balance avoids interest."
+      },
+      {
+        "question": "Which action helps build credit history?",
+        "options": [
+          "Paying off the full balance on time",
+          "Using only debit",
+          "Canceling credit cards often",
+          "Avoiding credit entirely"
+        ],
+        "correct_answer": "Paying off the full balance on time",
+        "explanation": "Regular on-time payments build credit."
+      },
+      {
+        "question": "Why is making only the minimum payment on a credit card risky?",
+        "options": [
+          "It improves your credit score",
+          "You’ll pay more in interest over time",
+          "Your account will be closed",
+          "You won’t build credit history"
+        ],
+        "correct_answer": "You’ll pay more in interest over time",
+        "explanation": "Paying only the minimum keeps your debt around longer and leads to more interest accumulating."
+      }
+    ]
+  },
+
+  "bnpl_basics": {
+    "title": "BNPL (Buy Now, Pay Later)",
+    "questions": [
+      {
+        "question": "What is BNPL?",
+        "options": [
+          "A savings plan",
+          "A loan from a friend",
+          "A short-term credit method to delay full payment",
+          "A type of debit"
+        ],
+        "correct_answer": "A short-term credit method to delay full payment",
+        "explanation": "It lets you split payments over time."
+      },
+      {
+        "question": "Which is a risk of using BNPL?",
+        "options": [
+          "Increased rewards",
+          "Unlimited borrowing",
+          "Overspending or missing due dates",
+          "Paying early"
+        ],
+        "correct_answer": "Overspending or missing due dates",
+        "explanation": "Easy access can lead to poor tracking."
+      },
+      {
+        "question": "Does BNPL affect your credit score?",
+        "options": [
+          "Always",
+          "Never",
+          "It might, especially if you miss payments",
+          "Only if you're under 25"
+        ],
+        "correct_answer": "It might, especially if you miss payments",
+        "explanation": "Some BNPL services report to credit agencies."
+      },
+      {
+        "question": "Before using a Buy Now, Pay Later (BNPL) service, what is most important to review?",
+        "options": [
+          "The return policy of the store",
+          "Whether the provider reports to credit agencies",
+          "The full repayment schedule, including fees and any interest that applies after the interest-free period",
+          "If your debit card is linked to the account"
+        ],
+        "correct_answer": "The full repayment schedule, including fees and any interest that applies after the interest-free period",
+        "explanation": "BNPL agreements can have fees or interest if not paid on time, so reviewing the full terms helps you avoid unexpected costs."
+      },
+      {
+        "question": "What is a smart habit when using BNPL?",
+        "options": [
+          "Using it on every purchase",
+          "Ignoring due dates",
+          "Setting reminders for payments",
+          "Making minimum payments"
+        ],
+        "correct_answer": "Setting reminders for payments",
+        "explanation": "Tracking deadlines avoids fees."
+      }
+    ]
+  },
+
+  "mortgage_basics": {
+    "title": "Mortgage Basics",
+    "questions": [
+      {
+        "question": "What is a mortgage?",
+        "options": [
+          "A type of investment fund",
+          "A loan used to buy property or land",
+          "A savings account",
+          "An insurance policy"
+        ],
+        "correct_answer": "A loan used to buy property or land",
+        "explanation": "A mortgage is a long-term loan specifically for purchasing property, typically repaid over 15–30 years."
+      },
+      {
+        "question": "What happens if you miss multiple mortgage payments?",
+        "options": [
+          "You get a refund",
+          "Your interest rate increases automatically",
+          "The lender can start foreclosure proceedings",
+          "Your loan is cancelled"
+        ],
+        "correct_answer": "The lender can start foreclosure proceedings",
+        "explanation": "Missing multiple payments can lead to foreclosure, where the lender takes ownership of the property."
+      },
+      {
+        "question": "What is a fixed-rate mortgage?",
+        "options": [
+          "A loan with an interest rate that can go up or down",
+          "A loan with a fixed monthly fee",
+          "A loan where the interest rate stays the same for a set period",
+          "A loan that can only be paid off early"
+        ],
+        "correct_answer": "A loan where the interest rate stays the same for a set period",
+        "explanation": "Fixed-rate mortgages provide stability by locking in your interest rate for a set time."
+      },
+      {
+        "question": "Why is a deposit important when applying for a mortgage?",
+        "options": [
+          "It reduces the loan amount you need",
+          "It improves your credit score",
+          "It pays your legal fees",
+          "It guarantees a low interest rate"
+        ],
+        "correct_answer": "It reduces the loan amount you need",
+        "explanation": "A larger deposit means borrowing less, which can make the loan more affordable and lower your interest rate."
+      },
+      {
+        "question": "What is an advantage of making extra mortgage payments?",
+        "options": [
+          "You’ll owe more in the long run",
+          "It lowers your credit score",
+          "You reduce your loan term and pay less interest",
+          "Your property taxes decrease"
+        ],
+        "correct_answer": "You reduce your loan term and pay less interest",
+        "explanation": "Extra payments can help you repay the loan faster and save money on interest."
+      }
+    ]
+  },
+
+  "personal_loans": {
+    "title": "Understanding Personal Loans",
+    "questions": [
+      {
+        "question": "What are personal loans commonly used for?",
+        "options": [
+          "Buying stocks",
+          "Emergency or planned expenses like home repairs or medical bills",
+          "Paying credit card minimums",
+          "Opening a bank account"
+        ],
+        "correct_answer": "Emergency or planned expenses like home repairs or medical bills",
+        "explanation": "People use personal loans for a variety of needs like consolidating debt, making large purchases, or covering unexpected costs."
+      },
+      {
+        "question": "What typically affects your interest rate on a personal loan?",
+        "options": [
+          "Your favorite bank branch",
+          "Your age and marital status",
+          "Your credit history and income",
+          "The color of your credit card"
+        ],
+        "correct_answer": "Your credit history and income",
+        "explanation": "Lenders assess your creditworthiness and ability to repay when setting rates."
+      },
+      {
+        "question": "How are most personal loans repaid?",
+        "options": [
+          "Through a credit card",
+          "With a balloon payment at the end",
+          "In monthly installments over a fixed period",
+          "All at once, after two years"
+        ],
+        "correct_answer": "In monthly installments over a fixed period",
+        "explanation": "Personal loans are usually repaid in set monthly amounts until the loan is paid off."
+      },
+      {
+        "question": "What should you check before applying for a personal loan?",
+        "options": [
+          "Your passport expiry date",
+          "The number of your old loans",
+          "Fees, interest rates, and repayment terms",
+          "The lender’s logo"
+        ],
+        "correct_answer": "Fees, interest rates, and repayment terms",
+        "explanation": "Understanding the full cost of the loan helps you avoid surprises and budget properly."
+      },
+      {
+        "question": "What’s one risk of missing a personal loan payment?",
+        "options": [
+          "You get more time to repay",
+          "You build your credit",
+          "It could damage your credit score and result in fees",
+          "The loan disappears"
+        ],
+        "correct_answer": "It could damage your credit score and result in fees",
+        "explanation": "Late payments can lead to penalties and hurt your credit history."
+      }
+    ]
+  },
+
+  "balance_transfers": {
+    "title": "Balance Transfers Explained",
+    "questions": [
+      {
+        "question": "What is a balance transfer?",
+        "options": [
+          "Moving funds between your bank accounts",
+          "Transferring money to a friend",
+          "Moving credit card debt to another card, often with a lower interest rate",
+          "Paying your phone bill early"
+        ],
+        "correct_answer": "Moving credit card debt to another card, often with a lower interest rate",
+        "explanation": "Balance transfers help you pay off debt faster by reducing interest costs."
+      },
+      {
+        "question": "Why would someone use a balance transfer?",
+        "options": [
+          "To earn cashback",
+          "To avoid paying rent",
+          "To manage or consolidate high-interest debt",
+          "To qualify for a mortgage"
+        ],
+        "correct_answer": "To manage or consolidate high-interest debt",
+        "explanation": "Lower interest rates on a new card can help reduce the cost of existing debt."
+      },
+      {
+        "question": "What fee is often charged for a balance transfer?",
+        "options": [
+          "A loyalty bonus",
+          "Transfer fee (often 1–3% of the amount moved)",
+          "Annual income fee",
+          "Bank account fee"
+        ],
+        "correct_answer": "Transfer fee (often 1–3% of the amount moved)",
+        "explanation": "Most providers charge a small percentage of the transferred amount as a one-time fee."
+      },
+      {
+        "question": "What should you review in the fine print of a balance transfer offer?",
+        "options": [
+          "Rewards program eligibility",
+          "Currency exchange rates",
+          "The promotional period and what happens after it ends",
+          "Your phone number on file"
+        ],
+        "correct_answer": "The promotional period and what happens after it ends",
+        "explanation": "Introductory 0% rates usually expire, after which a higher rate kicks in."
+      },
+      {
+        "question": "What’s a risk of doing frequent balance transfers?",
+        "options": [
+          "You’ll get cashback",
+          "You may boost your credit score",
+          "You might appear risky to lenders and hurt your credit score",
+          "It eliminates all your debt"
+        ],
+        "correct_answer": "You might appear risky to lenders and hurt your credit score",
+        "explanation": "Too many credit applications can lower your score and signal financial instability."
+      }
+    ]
+  },
+
+  "bank_accounts_savings": {
+   "title": "Bank Accounts & Savings (UK)",
+   "questions": [
+     {
+       "question": "What is a current account typically used for in the UK?",
+       "options": [
+         "Long-term investing",
+         "Everyday spending, receiving wages, and paying bills",
+         "Pension savings",
+         "Holding foreign currency"
+       ],
+       "correct_answer": "Everyday spending, receiving wages, and paying bills",
+       "explanation": "Current accounts are everyday bank accounts used for transactions like salary payments and direct debits."
+     },
+     {
+       "question": "What is the main purpose of a savings account?",
+       "options": [
+         "Frequent withdrawals",
+         "Earning interest on money set aside",
+         "Paying household bills",
+         "Managing credit card repayments"
+       ],
+       "correct_answer": "Earning interest on money set aside",
+       "explanation": "Savings accounts are used to grow your money safely over time with interest."
+     },
+     {
+       "question": "What is FSCS protection?",
+       "options": [
+         "A UK travel insurance scheme",
+         "Fraud monitoring service",
+         "Government guarantee on eligible deposits up to £85,000 per person, per bank",
+         "An investment return guarantee"
+       ],
+       "correct_answer": "Government guarantee on eligible deposits up to £85,000 per person, per bank",
+       "explanation": "The Financial Services Compensation Scheme protects deposits if a UK-regulated bank fails."
+     },
+     {
+       "question": "Why should you compare interest rates when opening a savings account?",
+       "options": [
+         "To avoid overdraft charges",
+         "To maximise returns on your savings",
+         "To qualify for government benefits",
+         "To lower your council tax"
+       ],
+       "correct_answer": "To maximise returns on your savings",
+       "explanation": "Higher interest means your money earns more over time, especially with compounding."
+     },
+     {
+       "question": "What is an emergency fund?",
+       "options": [
+         "Money kept in a workplace pension",
+         "Cash set aside for holidays",
+         "Savings reserved for unexpected expenses like car repairs or job loss",
+         "A government grant"
+       ],
+       "correct_answer": "Savings reserved for unexpected expenses like car repairs or job loss",
+       "explanation": "Emergency funds provide financial security for unforeseen costs or income disruption."
+     }
+   ]
+ }
+}
+
