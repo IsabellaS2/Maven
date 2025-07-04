@@ -1,0 +1,75 @@
+{
+  "user": {
+    "id": "explorer_002",
+    "name": "Lena Explorer",
+    "email": "lena@example.com"
+  },
+  "behaviour": {
+    "accounts": {
+      "current_accounts": [
+        {
+          "accountId": "curr_001",
+          "name": "Monzo Current Account",
+          "balance": {
+            "current": 250.25,
+            "currency": "GBP"
+          },
+          "sort_code": "04-00-04",
+          "account_number": "12345678"
+        }
+      ],
+      "savings": []
+    },
+    "income": {
+      "source": "",
+      "frequency": "",
+      "average_amount": 0,
+      "last_paid_date": null,
+      "next_expected_date": null,
+      "is_stable": false
+    },
+    "credit_cards": [],
+    "loans": [],
+    "bnpl": {
+      "active": true,
+      "providers": [
+        {
+          "name": "Klarna",
+          "transactions_last_30_days": 5,
+          "total_spent": 149.99
+        }
+      ]
+    },
+    "debt_to_income_ratio": null,
+    "transactions": [],
+    "categories": []
+  },
+  "knowledge": {
+    "quiz": {
+      "max_total_points": 120,
+      "quizzes": []
+    },
+    "user_scenarios": {
+      "max_total_points": 60,
+      "scenarios": [
+        {
+          "id": "scenario_004",
+          "completed_on": "2025-06-05",
+          "points": 10,
+          "expires_on": "2025-07-05"
+        },
+      ]
+    },
+    "improve_videos": {
+      "max_total_points": 120,
+      "videos": [
+        {
+          "id": "video_001",
+          "watched_on": "2025-06-12",
+          "points": 4,
+          "expires_on": "2025-07-12"
+          },
+      ]
+    }
+  }
+}
