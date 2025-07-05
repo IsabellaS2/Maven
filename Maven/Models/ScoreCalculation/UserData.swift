@@ -5,7 +5,7 @@
 import Foundation
 
 // MARK: - Root
-struct ExplorerUserData: Codable {
+struct UserData: Codable {
     var user: User
     var behaviour: Behaviour
     var knowledge: Knowledge
