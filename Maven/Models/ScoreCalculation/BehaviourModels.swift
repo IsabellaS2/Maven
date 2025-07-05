@@ -7,7 +7,7 @@ import Foundation
 // Behaviour and related financial info
 struct Behaviour: Codable {
     var accounts: Accounts
-    var income: Income
+    var income: Income?
     var creditCards: [CreditCard]
     var loans: [Loan]
     var bnpl: BNPL
