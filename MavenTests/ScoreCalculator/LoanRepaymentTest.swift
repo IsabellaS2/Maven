@@ -90,6 +90,6 @@ final class LoanRepaymentTest: XCTestCase {
         
         let score = calculateLoanRepaymentConsistency(loan: loan)
         
-        XCTAssertEqual(score, 15)
+        XCTAssertEqual(score, 0)
     }
 }

@@ -227,6 +227,21 @@ final class IncomeStabilityTest: XCTestCase {
 
         XCTAssertEqual(score, 0)
     }
+    
+    func testEmptyIncomeFieldsReturnZero() {
+        let income = Income(
+            source: "",
+            frequency: "",
+            averageAmount: 0,
+            lastPaidDate: nil,
+            nextExpectedDate: nil,
+            isStable: false
+        )
+        
+        let score = calculateIncomeStability(income: income)
+        
+        XCTAssertEqual(score, 0)
+    }
 
     func testNilIncomeReturnsZero() {
         let score = calculateIncomeStability(income: nil)
