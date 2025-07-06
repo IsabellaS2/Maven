@@ -7,15 +7,6 @@
 
 import Foundation
 
-//if frequency == "Monthly":
-//    gap = next_expected_date - last_paid_date
-//    if gap is close to 30 ± 3 days for several months:
-//        status = "Always consistent"
-//    elif some gaps vary more (e.g. between 25–45 days occasionally):
-//        status = "Mostly consistent"
-//    else:
-//        status = "Irregular"
-
 func parseDate(_ dateString: String?) -> Date? {
     guard let dateString = dateString else { return nil }
     let formatter = DateFormatter()
@@ -23,15 +14,14 @@ func parseDate(_ dateString: String?) -> Date? {
     return formatter.date(from: dateString)
 }
 
-
-func calculateIncomeStability(income: Income) -> Int {
-    guard let lastDate = parseDate(income.lastPaidDate),
-              let nextDate = parseDate(income.nextExpectedDate) else {
-            return 0
-        }
+func calculateIncomeStability(income: Income?) -> Int {
+    guard let income = income,
+          let lastDate = parseDate(income.lastPaidDate),
+          let nextDate = parseDate(income.nextExpectedDate) else {
+        return 0 
+    }
 
     let gap = Calendar.current.dateComponents([.day], from: lastDate, to: nextDate).day ?? 0
-    
     
     switch income.frequency {
     case "Monthly":
@@ -58,7 +48,6 @@ func calculateIncomeStability(income: Income) -> Int {
         } else {
             return 0
         }
-        
     default:
         return 0
     }
