@@ -6,10 +6,10 @@
 import Foundation
 
 struct Accounts: Codable {
-    var savingsAccounts: [SavingsAccount]
-    var creditCards: [CreditCard]
+    var savingsAccounts: [SavingsAccount]?
+    var creditCards: [CreditCard]?
     var loans: [Loan]?
-    var bnplProviders: [BNPLUsageProvider]
+    var bnplProviders: [BNPLUsageProvider]?
     var transactions: [Transaction]?
     var creditScore: CreditScore
 
