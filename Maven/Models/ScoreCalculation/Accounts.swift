@@ -11,14 +11,12 @@ struct Accounts: Codable {
     var loans: [Loan]?
     var bnplProviders: [BNPLUsageProvider]?
     var transactions: [Transaction]?
-    var creditScore: CreditScore
 
     enum CodingKeys: String, CodingKey {
         case savingsAccounts = "savings_accounts"
         case creditCards = "credit_cards"
         case loans, transactions
         case bnplProviders = "bnpl_providers"
-        case creditScore = "credit_score"
     }
 }
 

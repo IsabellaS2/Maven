@@ -11,14 +11,16 @@ struct Behaviour: Codable {
     var creditCards: [CreditCard]?
     var loans: [Loan]?
     var bnpl: BNPL?
-    var debtToIncomeRatio: Double?
     var transactions: [Transaction]
     var categories: [Category]
+    var debtToIncomeRatio: Double?
+    var lastPaidDate: String?
 
     enum CodingKeys: String, CodingKey {
         case accounts, income, loans, bnpl, transactions, categories
         case creditCards = "credit_cards"
         case debtToIncomeRatio = "debt_to_income_ratio"
+        case lastPaidDate = "last_paid_date"
     }
 }
 
@@ -117,15 +119,15 @@ struct Category: Codable {
     }
 }
 
-struct CreditScore: Codable {
-    var score: Int
-    var band: String
-    var debtToIncomeRatio: Double?
-    var lastPaidDate: String?
-
-    enum CodingKeys: String, CodingKey {
-        case score, band
-        case debtToIncomeRatio = "debt_to_income_ratio"
-        case lastPaidDate = "last_paid_date"
-    }
-}
+//struct CreditScore: Codable {
+//    var score: Int
+//    var band: String
+//    var debtToIncomeRatio: Double?
+//    var lastPaidDate: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case score, band
+//        case debtToIncomeRatio = "debt_to_income_ratio"
+//        case lastPaidDate = "last_paid_date"
+//    }
+//}
