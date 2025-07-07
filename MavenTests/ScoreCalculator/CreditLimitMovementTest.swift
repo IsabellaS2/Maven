@@ -113,7 +113,5 @@ final class CreditLimitMovementTest: XCTestCase {
         )
         let score = calculateCreditLimitMovement(cc: cc, today: fakeToday)
         XCTAssertEqual(score, 0)
-    }
-
-    
+    }    
 }
