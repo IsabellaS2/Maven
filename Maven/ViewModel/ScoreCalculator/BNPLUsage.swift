@@ -5,7 +5,6 @@
 //  Created by Isabella Sulisufi on 06/07/2025.
 //
 
-
 func calculateBNPLUsageInLast30Days(bnplUsage: BNPLUsageProvider?) -> Int {
     guard let usage = bnplUsage else {
         return 35
