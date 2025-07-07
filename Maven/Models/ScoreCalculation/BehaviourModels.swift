@@ -45,10 +45,12 @@ struct CreditCard: Codable {
     var limit: Double
     var balance: Double
     var lastLimitIncrease: String?
+    var lastLimitDecrease: String?
 
     enum CodingKeys: String, CodingKey {
         case provider, limit, balance
         case lastLimitIncrease = "last_limit_increase"
+        case lastLimitDecrease = "last_limit_decrease"
     }
 }
 

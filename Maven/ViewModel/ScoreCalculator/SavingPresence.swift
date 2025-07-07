@@ -14,7 +14,6 @@ func calculateSavingsPresence(savings: SavingsAccount?) -> Int {
         return 75
     } else if amount >= 100 {
         return 40
-    } else {
-        return 10
     }
+    return 10
 }

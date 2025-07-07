@@ -9,7 +9,7 @@ func calculateLoanRepaymentConsistency(loan: Loan?) -> Int {
     guard let consistency = loan?.repaymentConsistency, !consistency.isEmpty else {
         return 15
     }
-    
+
     switch consistency {
     case "always_consistent":
         return 35
