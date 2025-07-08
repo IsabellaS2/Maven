@@ -8,6 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var vm: HomeViewModel
+    
+    var levels: [MavenLevel] = [
+        MavenLevel(name: "Explorer", range: 0...399),
+        MavenLevel(name: "Builder", range: 400...649),
+        MavenLevel(name: "Strategist", range: 650...849),
+        MavenLevel(name: "Champion", range: 850...1000)
+    ]
+    
+   var currentLevel: MavenLevel {
+       levels.first { $0.range.contains(vm.totalScore) } ?? levels[0]
+    }
+    
+    var progress: CGFloat {
+        let lower = CGFloat(currentLevel.range.lowerBound)
+        let upper = CGFloat(currentLevel.range.upperBound)
+        return CGFloat(vm.totalScore - Int(lower)) / (upper - lower)
+    }
+    
     var body: some View {
         ZStack {
             Color("background")
@@ -21,11 +41,39 @@ struct HomeView: View {
                 Text("What is a MAVEN Score?")
                     .font(Font.font16)
                     .underline(true, pattern: .solid)
-
-                Text("450")
+                
+                Text("\(vm.totalScore)")
                     .font(.system(size: 64, weight: .heavy))
-                Text("Level: Builder")
+
+                Text("Level: \(currentLevel.name)")
                     .padding(.bottom, 20.0)
+
+                ZStack(alignment: .leading) {
+                    // Background with border
+                    Rectangle()
+                        .frame(height: 32)
+                        .foregroundColor(.clear)
+                        .overlay(
+                            Rectangle()
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                        .background(Color.gray.opacity(0.2))
+                    
+                    // Progress fill
+                    Rectangle()
+                        .frame(width: progressBarWidth, height: 32)
+                        .foregroundColor(Color("progressBar"))
+                }
+                .padding(.horizontal)
+
+                
+                HStack {
+                    Text("\(currentLevel.range.lowerBound)")
+                    Spacer()
+                    Text("\(currentLevel.range.upperBound)")
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 20.0)
 
                 // Latest Updates
                 VStack(alignment: .leading) {
@@ -67,7 +115,7 @@ struct HomeView: View {
                         .padding(10.0)
                         .background(Color.white)
                         .cornerRadius(10)
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 175)
 
                         VStack(alignment: .leading) {
                             Text("📊 Your Financial Habits ")
@@ -85,7 +133,7 @@ struct HomeView: View {
                         .padding(10.0)
                         .background(Color.white)
                         .cornerRadius(10)
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 180)
                     }
                     .frame(height: 200.0)
                 }
@@ -95,8 +143,9 @@ struct HomeView: View {
             .padding()
         }
     }
-}
-
-#Preview {
-    HomeView()
+    
+    private var progressBarWidth: CGFloat {
+        let screenWidth = UIScreen.main.bounds.width - 40
+        return screenWidth * progress
+    }
 }
