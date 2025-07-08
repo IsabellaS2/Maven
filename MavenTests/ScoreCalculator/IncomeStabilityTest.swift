@@ -25,7 +25,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
 
         XCTAssertEqual(income.frequency, "Monthly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
     
@@ -42,7 +42,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
 
         XCTAssertEqual(income.frequency, "Monthly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
     
@@ -77,7 +77,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
         
         XCTAssertEqual(income.frequency, "Bi-weekly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
     
@@ -94,7 +94,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
 
         XCTAssertEqual(income.frequency, "Bi-weekly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
     
@@ -129,7 +129,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
         
         XCTAssertEqual(income.frequency, "Weekly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
     
@@ -146,7 +146,7 @@ final class IncomeStabilityTest: XCTestCase {
         let score = calculateIncomeStability(income: income)
 
         XCTAssertEqual(income.frequency, "Weekly")
-        XCTAssertTrue(income.isStable)
+        XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
     
