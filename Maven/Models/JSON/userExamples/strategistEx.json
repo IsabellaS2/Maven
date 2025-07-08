@@ -1,0 +1,129 @@
+{
+  "user": {
+    "id": "strategist_001",
+    "name": "Alex Strategist",
+    "email": "alex.strategist@example.com"
+  },
+  "behaviour": {
+    "accounts": {
+      "current_accounts": [
+        {
+          "accountId": "curr_200",
+          "name": "HSBC Current Account",
+          "balance": {
+            "current": 1500.0,
+            "currency": "GBP"
+          },
+          "sort_code": "40-00-00",
+          "account_number": "44556677"
+        }
+      ],
+      "savings": [
+        {
+          "accountId": "save_200",
+          "name": "High Interest Saver",
+          "balance": {
+            "current": 750.0,
+            "currency": "GBP"
+          }
+        }
+      ]
+    },
+    "income": {
+      "source": "Full-time Employment",
+      "frequency": "Monthly",
+      "average_amount": 3500.0,
+      "last_paid_date": "2025-06-10",
+      "next_expected_date": "2025-07-10",
+      "is_stable": true
+    },
+    "credit_cards": [
+      {
+        "provider": "Capital One",
+        "limit": 4000,
+        "balance": 1000.0,
+        "last_limit_increase": "2025-05-20",
+        "last_limit_decrease": null
+      }
+    ],
+    "loans": [
+      {
+        "provider": "NatWest",
+        "amount": 5000,
+        "monthly_repayment": 350,
+        "repayment_consistency": "always_consistent"
+      }
+    ],
+    "bnpl": {
+      "active": true,
+      "providers": [
+        {
+          "name": "Clearpay",
+          "transactions_last_30_days": 1,
+          "total_spent": 49.99
+        }
+      ]
+    },
+    "debt_to_income_ratio": 0.25,
+    "payment_history": {
+      "on_time_payments_last_6_months": 6,
+      "missed_payments_last_6_months": 0
+    }
+  },
+  "knowledge": {
+    "quiz": {
+      "max_total_points": 120,
+      "quizzes": [
+        {
+          "id": "quiz_001",
+          "completed_on": "2025-06-01",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-01"
+        },
+        {
+          "id": "quiz_002",
+          "completed_on": "2025-05-20",
+          "score": 12,
+          "max_score": 15,
+          "expires_on": "2025-08-20"
+        }
+      ]
+    },
+    "user_scenarios": {
+      "max_total_points": 60,
+      "scenarios": [
+        {
+          "id": "scenario_005",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "scenario_006",
+          "completed_on": "2025-06-15",
+          "points": 10,
+          "expires_on": "2025-07-15"
+        }
+      ]
+    },
+    "improve_videos": {
+      "max_total_points": 120,
+      "videos": [
+        {
+          "id": "video_001",
+          "watched_on": "2025-06-10",
+          "points": 6,
+          "expires_on": "2025-07-10"
+        },
+        {
+          "id": "video_002",
+          "watched_on": "2025-06-11",
+          "points": 6,
+          "expires_on": "2025-07-11"
+        }
+      ]
+    }
+  }
+}
+

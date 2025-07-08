@@ -11,16 +11,18 @@ struct Behaviour: Codable {
     var creditCards: [CreditCard]?
     var loans: [Loan]?
     var bnpl: BNPL?
-    var transactions: [Transaction]
-    var categories: [Category]
+    var transactions: [Transaction]?
+    var categories: [Category]?
     var debtToIncomeRatio: Double?
     var lastPaidDate: String?
+    var paymentHistory: PaymentHistory?
 
     enum CodingKeys: String, CodingKey {
         case accounts, income, loans, bnpl, transactions, categories
         case creditCards = "credit_cards"
         case debtToIncomeRatio = "debt_to_income_ratio"
         case lastPaidDate = "last_paid_date"
+        case paymentHistory = "payment_history"
     }
 }
 
@@ -30,13 +32,14 @@ struct Income: Codable {
     var averageAmount: Double
     var lastPaidDate: String?
     var nextExpectedDate: String?
-    var isStable: Bool
+    var isStable: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case source, frequency, isStable
+        case source, frequency
         case averageAmount = "average_amount"
         case lastPaidDate = "last_paid_date"
         case nextExpectedDate = "next_expected_date"
+        case isStable = "is_stable"
     }
 }
 
@@ -71,7 +74,7 @@ struct Loan: Codable {
 
 struct BNPL: Codable {
     var active: Bool
-    var providers: [BNPLAccountProvider]
+    var providers: [BNPLUsageProvider]
 }
 
 struct BNPLAccountProvider: Codable {
@@ -118,6 +121,16 @@ struct Category: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name
+    }
+}
+
+struct PaymentHistory: Codable {
+    var onTimePaymentsLast6Months: Int?
+    var missedPaymentsLast6Months: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case onTimePaymentsLast6Months = "on_time_payments_last_6_months"
+        case missedPaymentsLast6Months = "missed_payments_last_6_months"
     }
 }
 
