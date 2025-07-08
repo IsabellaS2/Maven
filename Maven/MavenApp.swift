@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MavenApp: App {
+    
+    let viewModel = HomeViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(vm: viewModel)
         }
     }
 }
