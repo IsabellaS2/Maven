@@ -1,0 +1,248 @@
+{
+  "user": {
+    "id": "champion_001",
+    "name": "Chloe Champion",
+    "email": "chloe.champion@example.com"
+  },
+  "behaviour": {
+    "accounts": {
+      "current_accounts": [
+        {
+          "accountId": "curr_500",
+          "name": "HSBC Current Account",
+          "balance": {
+            "current": 1450.5,
+            "currency": "GBP"
+          },
+          "sort_code": "40-00-00",
+          "account_number": "99887766"
+        }
+      ],
+      "savings": [
+        {
+          "accountId": "save_500",
+          "name": "Premium Saver",
+          "balance": {
+            "current": 1200.0,
+            "currency": "GBP"
+          }
+        }
+      ]
+    },
+    "income": {
+      "source": "Full-time Employment",
+      "frequency": "Monthly",
+      "average_amount": 4000.0,
+      "last_paid_date": "2025-06-15",
+      "next_expected_date": "2025-07-15",
+      "is_stable": true
+    },
+    "credit_cards": [
+      {
+        "provider": "Barclays",
+        "limit": 5000,
+        "balance": 800,
+        "last_limit_increase": "2025-05-20"
+      }
+    ],
+    "loans": [
+      {
+        "provider": "NatWest",
+        "monthly_repayment": 350,
+        "balance_remaining": 3000,
+        "repayment_consistency": "always_consistent"
+      }
+    ],
+    "bnpl": {
+      "active": true,
+      "providers": [
+        {
+          "name": "Klarna",
+          "transactions_last_30_days": 0
+        }
+      ]
+    },
+    "debt_to_income_ratio": 0.2,
+    "transactions": [],
+    "categories": [],
+    "payment_history": {
+      "on_time_payments_last_6_months": 6,
+      "missed_payments_last_6_months": 0
+    }
+  },
+  "knowledge": {
+    "quiz": {
+      "max_total_points": 120,
+      "quizzes": [
+        {
+          "id": "quiz_01",
+          "completed_on": "2025-06-10",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_02",
+          "completed_on": "2025-06-10",
+          "score": 9,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_03",
+          "completed_on": "2025-06-10",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_04",
+          "completed_on": "2025-06-10",
+          "score": 12,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_05",
+          "completed_on": "2025-06-10",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_06",
+          "completed_on": "2025-06-10",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_07",
+          "completed_on": "2025-06-10",
+          "score": 12,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        },
+        {
+          "id": "quiz_08",
+          "completed_on": "2025-06-10",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-10"
+        }
+      ]
+    },
+    "user_scenarios": {
+      "max_total_points": 60,
+      "scenarios": [
+        {
+          "id": "scenario_01",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "scenario_02",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "scenario_03",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "scenario_05",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "scenario_06",
+          "completed_on": "2025-06-12",
+          "points": 10,
+          "expires_on": "2025-07-12"
+        }
+      ]
+    },
+    "improve_videos": {
+      "max_total_points": 120,
+      "videos": [
+        {
+          "id": "video_022",
+          "watched_on": "2025-06-12",
+          "points": 6,
+          "expires_on": "2025-07-12"
+        },
+        {
+          "id": "video_023",
+          "watched_on": "2025-06-13",
+          "points": 6,
+          "expires_on": "2025-07-13"
+        },
+        {
+          "id": "video_025",
+          "watched_on": "2025-06-15",
+          "points": 6,
+          "expires_on": "2025-07-15"
+        },
+        {
+          "id": "video_026",
+          "watched_on": "2025-06-16",
+          "points": 6,
+          "expires_on": "2025-07-16"
+        },
+        {
+          "id": "video_028",
+          "watched_on": "2025-06-18",
+          "points": 6,
+          "expires_on": "2025-07-18"
+        },
+        {
+          "id": "video_030",
+          "watched_on": "2025-06-20",
+          "points": 6,
+          "expires_on": "2025-07-20"
+        },
+        {
+          "id": "video_032",
+          "watched_on": "2025-06-22",
+          "points": 6,
+          "expires_on": "2025-07-22"
+        },
+        {
+          "id": "video_033",
+          "watched_on": "2025-06-23",
+          "points": 6,
+          "expires_on": "2025-07-23"
+        },
+        {
+          "id": "video_035",
+          "watched_on": "2025-06-25",
+          "points": 6,
+          "expires_on": "2025-07-25"
+        },
+        {
+          "id": "video_036",
+          "watched_on": "2025-06-26",
+          "points": 6,
+          "expires_on": "2025-07-26"
+        },
+        {
+          "id": "video_037",
+          "watched_on": "2025-06-27",
+          "points": 6,
+          "expires_on": "2025-07-27"
+        },
+        {
+          "id": "video_039",
+          "watched_on": "2025-06-29",
+          "points": 6,
+          "expires_on": "2025-07-29"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "user": {
+    "id": "builder_001",
+    "name": "Sam Builder",
+    "email": "sam.builder@example.com"
+  },
+  "behaviour": {
+    "accounts": {
+      "current_accounts": [
+        {
+          "accountId": "curr_100",
+          "name": "Barclays Current Account",
+          "balance": {
+            "current": 820.75,
+            "currency": "GBP"
+          },
+          "sort_code": "20-00-00",
+          "account_number": "11223344"
+        }
+      ],
+      "savings": [
+        {
+          "accountId": "save_100",
+          "name": "Easy Saver",
+          "balance": {
+            "current": 250.0,
+            "currency": "GBP"
+          }
+        }
+      ]
+    },
+    "income": {
+      "source": "Part-time Employment",
+      "frequency": "Monthly",
+      "average_amount": 1100.0,
+      "last_paid_date": "2025-06-01",
+      "next_expected_date": "2025-07-01",
+      "is_stable": true
+    },
+    "credit_cards": [
+      {
+        "provider": "Capital One",
+        "limit": 1200,
+        "balance": 420.0,
+        "last_limit_increase": nil,
+        "last_limit_decrease": nil
+      }
+    ],
+    "loans": [],
+    "bnpl": {
+      "active": true,
+      "providers": [
+        {
+          "name": "Clearpay",
+          "transactions_last_30_days": 3,
+          "total_spent": 95.0
+        }
+      ]
+    },
+    "debt_to_income_ratio": 0.35,
+    "payment_history": {
+      "on_time_payments_last_6_months": 6,
+      "missed_payments_last_6_months": 0
+    }
+    "transactions": [
+      {
+        "transactionId": "tx_b1001",
+        "accountId": "curr_100",
+        "date": "2025-06-01",
+        "description": "Wages - Retail Shift",
+        "amount": 1100.0,
+        "category": "income",
+        "type": "credit"
+      },
+      {
+        "transactionId": "tx_b1002",
+        "accountId": "curr_100",
+        "date": "2025-06-05",
+        "description": "Clearpay Repayment",
+        "amount": -30.0,
+        "category": "bnpl",
+        "type": "debit"
+      },
+      {
+        "transactionId": "tx_b1003",
+        "accountId": "curr_100",
+        "date": "2025-06-07",
+        "description": "Groceries - Lidl",
+        "amount": -45.0,
+        "category": "groceries",
+        "type": "debit"
+      }
+    ],
+    "categories": [
+      "income",
+      "bnpl",
+      "groceries",
+      "subscriptions"
+    ]
+  },
+  "knowledge": {
+    "quiz": {
+      "max_total_points": 120,
+      "quizzes": [
+        {
+          "id": "quiz_001",
+          "completed_on": "2025-06-01",
+          "score": 15,
+          "max_score": 15,
+          "expires_on": "2025-09-01"
+        },
+        {
+          "id": "quiz_003",
+          "completed_on": "2025-06-01",
+          "score": 12,
+          "max_score": 15,
+          "expires_on": "2025-09-01"
+        }
+       ]
+    },
+    "user_scenarios": {
+      "max_total_points": 60,
+      "scenarios": [
+        {
+          "id": "scenario_010",
+          "completed_on": "2025-06-15",
+          "points": 10,
+          "expires_on": "2025-07-15"
+        }
+      ]
+    },
+    "improve_videos": {
+      "max_total_points": 120,
+      "videos": [
+        {
+          "id": "video_004",
+          "watched_on": "2025-06-10",
+          "points": 6,
+          "expires_on": "2025-07-10"
+        }
+      ]
+    }
+  }
+}
+
