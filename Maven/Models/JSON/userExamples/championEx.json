@@ -8,7 +8,7 @@
     "accounts": {
       "current_accounts": [
         {
-          "accountId": "curr_500",
+          "account_id": "curr_500",
           "name": "HSBC Current Account",
           "balance": {
             "current": 1450.5,
@@ -20,7 +20,7 @@
       ],
       "savings": [
         {
-          "accountId": "save_500",
+          "account_id": "save_500",
           "name": "Premium Saver",
           "balance": {
             "current": 1200.0,

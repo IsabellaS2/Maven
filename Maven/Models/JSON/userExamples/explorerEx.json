@@ -8,7 +8,7 @@
     "accounts": {
       "current_accounts": [
         {
-          "accountId": "curr_001",
+          "account_id": "curr_001",
           "name": "Monzo Current Account",
           "balance": {
             "current": 250.25,

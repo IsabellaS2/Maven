@@ -12,7 +12,7 @@ struct Behaviour: Codable {
     var loans: [Loan]?
     var bnpl: BNPL?
     var transactions: [Transaction]?
-    var categories: [Category]?
+    var categories: [String]?
     var debtToIncomeRatio: Double?
     var lastPaidDate: String?
     var paymentHistory: PaymentHistory?
@@ -80,7 +80,7 @@ struct BNPL: Codable {
 struct BNPLAccountProvider: Codable {
     var name: String
     var providers: Int
-    var totalSpent: Double
+    var totalSpent: Double?
 
     enum CodingKeys: String, CodingKey {
         case name, providers
@@ -91,7 +91,7 @@ struct BNPLAccountProvider: Codable {
 struct BNPLUsageProvider: Codable {
     var name: String
     var transactionsLast30Days: Int
-    var totalSpent: Double
+    var totalSpent: Double?
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -106,21 +106,13 @@ struct Transaction: Codable {
     var date: String
     var description: String
     var amount: Double
-    var category: Category
+    var category: String
     var type: String
 
     enum CodingKeys: String, CodingKey {
-        case transactionId = "transactionId"
-        case accountId, date, description, amount, category, type
-    }
-}
-
-struct Category: Codable {
-    var id: String
-    var name: String
-
-    enum CodingKeys: String, CodingKey {
-        case id, name
+        case transactionId = "transaction_id"
+        case accountId = "account_id"
+        case date, description, amount, category, type
     }
 }
 

@@ -13,7 +13,7 @@ struct Accounts: Codable {
     var transactions: [Transaction]?
 
     enum CodingKeys: String, CodingKey {
-        case savingsAccounts = "savings_accounts"
+        case savingsAccounts = "savings"
         case creditCards = "credit_cards"
         case loans, transactions
         case bnplProviders = "bnpl_providers"
@@ -28,7 +28,8 @@ struct CurrentAccount: Codable {
     var accountNumber: String
 
     enum CodingKeys: String, CodingKey {
-        case accountId, name, balance
+        case name, balance
+        case accountId = "account_id"
         case sortCode = "sort_code"
         case accountNumber = "account_number"
     }
