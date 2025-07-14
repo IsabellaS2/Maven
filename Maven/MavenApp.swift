@@ -7,13 +7,43 @@
 
 import SwiftUI
 
+//@main
+//struct MavenApp: App {
+//    
+//    let viewModel = HomeViewModel()
+//    var body: some Scene {
+//        WindowGroup {
+//            HomeView(vm: viewModel)
+//        }
+//    }
+//}
+
 @main
 struct MavenApp: App {
-    
-    let viewModel = HomeViewModel()
+    @StateObject var router = Router()
+
     var body: some Scene {
+        let viewModel = HomeViewModel()
+        let navViewModel = NavigationViewModel(router: router)
+
         WindowGroup {
-            HomeView(vm: viewModel)
+            NavigationStack(path: $router.navPath) {
+                HomeView(vm: viewModel, nav: navViewModel)
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                            
+                        case .financialCenterView:
+                            FinancialCenterView()
+                            
+                        case .financialHabitsView:
+                            FinancialHabitsView()
+                            
+                        case .infoView:
+                            MavenInfoView()
+                        }
+                    }
+            }
+            .environmentObject(router)
         }
     }
 }
