@@ -12,44 +12,34 @@ import SnapshotTesting
 
 final class HomeViewSnapshotTests: XCTestCase {
     
-    func testHomeViewSnapshotExplorerLevel() {
-        let view = HomeView(score: 250)
+    func makeView(score: Int) -> UIViewController {
+        let viewModel = HomeViewModel()
+        viewModel.totalScore = score
 
-        // Set the view size explicitly
+        let view = HomeView(vm: viewModel)
         let viewController = UIHostingController(rootView: view)
         viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
-
+        return viewController
+    }
+    
+    func testHomeViewSnapshotExplorerLevel() {
+        let viewController = makeView(score: 250)
         assertSnapshot(of: viewController, as: .image)
     }
     
     func testHomeViewSnapshotBuilderLevel() {
-        let view = HomeView(score: 520)
-
-        // Set the view size explicitly
-        let viewController = UIHostingController(rootView: view)
-        viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
-
+        let viewController = makeView(score: 520)
         assertSnapshot(of: viewController, as: .image)
     }
     
     func testHomeViewSnapshotStrategistLevel() {
-        let view = HomeView(score: 725)
-
-        // Set the view size explicitly
-        let viewController = UIHostingController(rootView: view)
-        viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
-
+        let viewController = makeView(score: 725)
         assertSnapshot(of: viewController, as: .image)
     }
 
     
     func testHomeViewSnapshotChampionLevel() {
-        let view = HomeView(score: 895)
-
-        // Set the view size explicitly
-        let viewController = UIHostingController(rootView: view)
-        viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
-
+        let viewController = makeView(score: 895)
         assertSnapshot(of: viewController, as: .image)
     }
     

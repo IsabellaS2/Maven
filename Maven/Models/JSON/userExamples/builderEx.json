@@ -8,7 +8,7 @@
     "accounts": {
       "current_accounts": [
         {
-          "accountId": "curr_100",
+          "account_id": "curr_100",
           "name": "Barclays Current Account",
           "balance": {
             "current": 820.75,
@@ -20,7 +20,7 @@
       ],
       "savings": [
         {
-          "accountId": "save_100",
+          "account_id": "save_100",
           "name": "Easy Saver",
           "balance": {
             "current": 250.0,
@@ -42,8 +42,8 @@
         "provider": "Capital One",
         "limit": 1200,
         "balance": 420.0,
-        "last_limit_increase": nil,
-        "last_limit_decrease": nil
+        "last_limit_increase": null,
+        "last_limit_decrease": null
       }
     ],
     "loans": [],
@@ -61,11 +61,11 @@
     "payment_history": {
       "on_time_payments_last_6_months": 6,
       "missed_payments_last_6_months": 0
-    }
+    },
     "transactions": [
       {
-        "transactionId": "tx_b1001",
-        "accountId": "curr_100",
+        "transaction_id": "tx_b1001",
+        "account_id": "curr_100",
         "date": "2025-06-01",
         "description": "Wages - Retail Shift",
         "amount": 1100.0,
@@ -73,8 +73,8 @@
         "type": "credit"
       },
       {
-        "transactionId": "tx_b1002",
-        "accountId": "curr_100",
+        "transaction_id": "tx_b1002",
+        "account_id": "curr_100",
         "date": "2025-06-05",
         "description": "Clearpay Repayment",
         "amount": -30.0,
@@ -82,8 +82,8 @@
         "type": "debit"
       },
       {
-        "transactionId": "tx_b1003",
-        "accountId": "curr_100",
+        "transaction_id": "tx_b1003",
+        "account_id": "curr_100",
         "date": "2025-06-07",
         "description": "Groceries - Lidl",
         "amount": -45.0,

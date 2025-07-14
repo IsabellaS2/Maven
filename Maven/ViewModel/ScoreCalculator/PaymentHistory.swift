@@ -5,7 +5,7 @@
 //  Created by Isabella Sulisufi on 08/07/2025.
 //
 
-func calculatePaymentHisotry(paymentHistory: PaymentHistory?) -> Int {
+func calculatePaymentHistory(paymentHistory: PaymentHistory?) -> Int {
     guard let paymentHistory = paymentHistory else {
         return 100
     }

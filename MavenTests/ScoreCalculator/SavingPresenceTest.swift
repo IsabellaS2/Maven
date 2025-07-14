@@ -18,7 +18,7 @@ final class SavingPresenceTest: XCTestCase {
             balance: Balance(current: 750.0, currency: "GBP")
         )
         
-        let score = calculateSavingsPresence(savings: savings)
+        let score = calculateSavingsPresence(savingsAccounts: [savings])
         XCTAssertEqual(score, 75)
     }
     
@@ -29,7 +29,7 @@ final class SavingPresenceTest: XCTestCase {
                balance: Balance(current: 500.0, currency: "GBP")
            )
 
-           let score = calculateSavingsPresence(savings: savings)
+           let score = calculateSavingsPresence(savingsAccounts: [savings])
            XCTAssertEqual(score, 40)
        }
 
@@ -40,7 +40,7 @@ final class SavingPresenceTest: XCTestCase {
                balance: Balance(current: 250.0, currency: "GBP")
            )
 
-           let score = calculateSavingsPresence(savings: savings)
+           let score = calculateSavingsPresence(savingsAccounts: [savings])
            XCTAssertEqual(score, 40)
        }
 
@@ -51,7 +51,7 @@ final class SavingPresenceTest: XCTestCase {
                balance: Balance(current: 100.0, currency: "GBP")
            )
 
-           let score = calculateSavingsPresence(savings: savings)
+           let score = calculateSavingsPresence(savingsAccounts: [savings])
            XCTAssertEqual(score, 40)
        }
 
@@ -62,7 +62,7 @@ final class SavingPresenceTest: XCTestCase {
                balance: Balance(current: 50.0, currency: "GBP")
            )
 
-           let score = calculateSavingsPresence(savings: savings)
+           let score = calculateSavingsPresence(savingsAccounts: [savings])
            XCTAssertEqual(score, 10)
        }
 
@@ -73,12 +73,12 @@ final class SavingPresenceTest: XCTestCase {
                balance: Balance(current: 0.0, currency: "GBP")
            )
 
-           let score = calculateSavingsPresence(savings: savings)
+           let score = calculateSavingsPresence(savingsAccounts: [savings])
            XCTAssertEqual(score, 10)
        }
 
-       func testSavingsIsNilReturns25() {
-           let score = calculateSavingsPresence(savings: nil)
+       func testSavingsIsEmptyReturns25() {
+           let score = calculateSavingsPresence(savingsAccounts: [])
            XCTAssertEqual(score, 25)
        }
 }
