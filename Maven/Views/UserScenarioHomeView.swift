@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct UserScenarioHomeView: View {
+    @ObservedObject var nav: NavigationViewModel
+
     var body: some View {
 
         ZStack {
@@ -41,7 +43,10 @@ struct UserScenarioHomeView: View {
                             description: "Sarah’s Credit Card Balance Transfer Misstep",
                             icon: "creditcard",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToSarahView()
+                            }
                         )
 
                         LongCardComponent(
@@ -49,7 +54,10 @@ struct UserScenarioHomeView: View {
                             description: "Ellie’s Credit Card Struggles",
                             icon: "creditcard",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToEllieView()
+                            }
                         )
                     }
                     .padding(.bottom, 10.0)
@@ -65,7 +73,10 @@ struct UserScenarioHomeView: View {
                                 description: "Maria’s BNPL Trouble",
                                 icon: "cart.badge.plus",
                                 header: "User Scenario",
-                                tag: "What went wrong?"
+                                tag: "What went wrong?",
+                                navigation: {
+                                    nav.navigateToMariaView()
+                                }
                             )
                         }
                     }
@@ -81,7 +92,10 @@ struct UserScenarioHomeView: View {
                             description: "Marcus’s Mortgage Misunderstanding",
                             icon: "house.fill",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToMarcusView()
+                            }
                         )
                     }
                     .padding(.bottom, 10.0)
@@ -96,14 +110,20 @@ struct UserScenarioHomeView: View {
                             description: "Jake’s Debt Dilemma",
                             icon: "banknote",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToJakeView()
+                            }
                         )
                         LongCardComponent(
                             title: "LOANS",
                             description: "Mofiz's Car Loan Oversight",
                             icon: "banknote",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToMofizView()
+                            }
                         )
                     }
                     .padding(.bottom, 10.0)
@@ -115,6 +135,3 @@ struct UserScenarioHomeView: View {
     }
 }
 
-#Preview {
-    UserScenarioHomeView()
-}

@@ -25,4 +25,29 @@ class NavigationViewModel: ObservableObject {
     func navigateToInfoView() {
         router.navigate(to: .infoView)
     }
+    
+    // MARK: - User Scenarios
+    func navigateToEllieView() {
+        router.navigate(to: .ellieView)
+    }
+    
+    func navigateToJakeView() {
+        router.navigate(to: .jakeView)
+    }
+    
+    func navigateToMarcusView() {
+        router.navigate(to: .marcusView)
+    }
+    
+    func navigateToMariaView() {
+        router.navigate(to: .mariaView)
+    }
+    
+    func navigateToMofizView() {
+        router.navigate(to: .mofizView)
+    }
+    
+    func navigateToSarahView() {
+        router.navigate(to: .sarahView)
+    }
 }

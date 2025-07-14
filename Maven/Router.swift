@@ -13,6 +13,13 @@ final class Router: ObservableObject {
         case financialCenterView
         case financialHabitsView
         case infoView
+        
+        case ellieView
+        case jakeView
+        case marcusView
+        case mariaView
+        case mofizView
+        case sarahView
     }
 
     @Published var navPath = NavigationPath()
