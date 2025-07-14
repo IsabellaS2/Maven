@@ -81,7 +81,7 @@ class HomeViewModel: ObservableObject {
     }
 
     func loadAndProcessJSON() {
-        if let url = Bundle.main.url(forResource: "strategistEx", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "builderEx", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
                 processUserData(from: jsonData)

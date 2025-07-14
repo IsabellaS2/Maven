@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var vm: HomeViewModel
+    @ObservedObject var nav: NavigationViewModel
     
     var levels: [MavenLevel] = [
         MavenLevel(name: "Explorer", range: 0...399),
@@ -37,10 +38,17 @@ struct HomeView: View {
                 Text("MAVEN Score")
                     .font(Font.mavenTitle)
                     .padding(.bottom, 6.0)
+                
+                Button(action: {
+                    nav.navigateToInfoView()
+                }) {
+                    Text("What is a MAVEN score?")
+                        .font(.headline)
+                        .underline(true, pattern: .solid)
 
-                Text("What is a MAVEN Score?")
-                    .font(Font.font16)
-                    .underline(true, pattern: .solid)
+                }
+                .buttonStyle(PlainButtonStyle())
+
                 
                 Text("\(vm.totalScore)")
                     .font(.system(size: 64, weight: .heavy))
@@ -97,43 +105,64 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     Text("🚀 Boost Your Score!")
                         .font(Font.font16)
+                    
+                    
+                    
                     // Cards - Financial Knowledge Centre and Financial Habits
                     HStack(spacing: 4) {
-                        VStack(alignment: .leading) {
-                            Text("📚 Financial Knowledge Center")
-                                .font(Font.font16)
-                                .padding(.bottom, 2.0)
-
-                            Text("Learn, grow, and master your money")
-                                .font(Font.font16Light)
-
-                            Spacer()
-                            Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
-                                .font(Font.font16Light)
-
+                        
+                        
+                        // Card 1 - Financial Knowledge Centre
+                        Button(action: {
+                            nav.navigateToFinancialHabits()
+                        }) {
+                            VStack(alignment: .leading) {
+                                Text("📚 Financial Knowledge Center")
+                                    .font(Font.font16)
+                                    .padding(.bottom, 2.0)
+                                
+                                Text("Learn, grow, and master your money")
+                                    .font(Font.font16Light)
+                                
+                                Spacer()
+                                Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
+                                    .font(Font.font16Light)
+                                
+                            }
+                            .padding(10.0)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .frame(width: 175)
                         }
-                        .padding(10.0)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .frame(width: 175)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        
+                        // Card 2 - Financial Habits
+                        Button(action: {
+                            nav.navigateToFinancialCenter()
+                        }) {
+                            VStack(alignment: .leading) {
+                                Text("📊 Your Financial Habits")
+                                    .font(Font.font16)
+                                    .padding(.bottom, 2.0)
 
-                        VStack(alignment: .leading) {
-                            Text("📊 Your Financial Habits ")
-                                .font(Font.font16)
-                                .padding(.bottom, 2.0)
+                                Text("See how your behaviour shapes your score!")
+                                    .font(Font.font16Light)
 
-                            Text("See how your behaviour shapes your score!")
-                                .font(Font.font16Light)
+                                Spacer()
 
-                            Spacer()
-                            Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
-                                .font(Font.font16Light)
-
+                                Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
+                                    .font(Font.font16Light)
+                            }
+                            .padding(10.0)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .frame(width: 180)
                         }
-                        .padding(10.0)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .frame(width: 180)
+                        .buttonStyle(PlainButtonStyle())
+
+
+            
                     }
                     .frame(height: 200.0)
                 }
