@@ -110,7 +110,3 @@ struct MavenInfoView: View {
         }
     }
 }
-
-#Preview {
-    MavenInfoView()
-}

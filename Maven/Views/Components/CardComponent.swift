@@ -13,72 +13,19 @@ struct CardComponent: View {
     let title: String
     let description: String
     let tag: String?
+    let navigation: () -> Void
 
-    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil) {
+    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil, navigation: @escaping () -> Void = {}) {
         self.title = title
         self.description = description
         self.icon = icon
         self.header = header
         self.tag = tag
+        self.navigation = navigation
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Image(systemName: icon)
-                    .font(.title2)
-                    .foregroundColor(.black)
-
-                if let header = header {
-                    Text(header)
-                        .font(Font.font16Light)
-                        .foregroundColor(Color.font)
-                }
-            }
-            .padding(.bottom, 8.0)
-
-            Text(title)
-                .font(Font.font16)
-                .foregroundColor(.gray)
-
-            Text(description)
-                .font(Font.font16)
-                .foregroundColor(Color.font)
-                .padding(.bottom, 8.0)
-
-            if let tag = tag {
-                Text(tag)
-                    .font(Font.font16Light)
-                    .foregroundColor(Color.font)
-            }
-
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(12)
-        .shadow(radius: 4)
-        //        .frame(height: 160)
-
-    }
-}
-
-struct LongCardComponent: View {
-    let icon: String
-    let header: String?
-    let title: String
-    let description: String
-    let tag: String?
-
-    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil) {
-        self.title = title
-        self.description = description
-        self.icon = icon
-        self.header = header
-        self.tag = tag
-    }
-
-    var body: some View {
-        HStack {
+        Button(action: navigation) {
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     Image(systemName: icon)
@@ -90,8 +37,6 @@ struct LongCardComponent: View {
                             .font(Font.font16Light)
                             .foregroundColor(Color.font)
                     }
-
-                    Spacer() // pushes header to the left
                 }
                 .padding(.bottom, 8.0)
 
@@ -109,14 +54,85 @@ struct LongCardComponent: View {
                         .font(Font.font16Light)
                         .foregroundColor(Color.font)
                 }
+
             }
             .padding()
             .background(Color.white)
             .cornerRadius(12)
             .shadow(radius: 4)
-            .frame(maxWidth: .infinity, minHeight: 160)
-            .padding(.bottom, 0)
         }
+        .accessibilityIdentifier("cardComponent")
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct LongCardComponent: View {
+    let icon: String
+    let header: String?
+    let title: String
+    let description: String
+    let tag: String?
+    let navigation: () -> Void
+
+    init(
+        title: String,
+        description: String,
+        icon: String,
+        header: String? = nil,
+        tag: String? = nil,
+        navigation: @escaping () -> Void = {}
+    ) {
+        self.title = title
+        self.description = description
+        self.icon = icon
+        self.header = header
+        self.tag = tag
+        self.navigation = navigation
+    }
+
+    var body: some View {
+        Button(action: navigation) {
+            HStack {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: icon)
+                            .font(.title2)
+                            .foregroundColor(.black)
+
+                        if let header = header {
+                            Text(header)
+                                .font(Font.font16Light)
+                                .foregroundColor(Color.font)
+                        }
+
+                        Spacer()
+                    }
+                    .padding(.bottom, 8.0)
+
+                    Text(title)
+                        .font(Font.font16)
+                        .foregroundColor(.gray)
+
+                    Text(description)
+                        .font(Font.font16)
+                        .foregroundColor(Color.font)
+                        .padding(.bottom, 8.0)
+
+                    if let tag = tag {
+                        Text(tag)
+                            .font(Font.font16Light)
+                            .foregroundColor(Color.font)
+                    }
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(12)
+                .shadow(radius: 4)
+                .frame(maxWidth: .infinity, minHeight: 160)
+                .padding(.bottom, 0)
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FinancialCenterView: View {
+    @ObservedObject var nav: NavigationViewModel
+
     var body: some View {
         ZStack {
             Color("background")
@@ -40,12 +42,25 @@ struct FinancialCenterView: View {
 
                     // Improve Section
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Improve Videos")
-                            .font(.font18Subtitle)
+                        
+                        Button {
+                            // navigate to improve home page
+                        } label: {
+                            HStack {
+                                Image(systemName: "house.fill")
+                                    .frame(width: 32, height: 32)
+                                                                
+                                VStack(alignment: .leading) {
+                                    Text("Improve Videos")
+                                        .font(.font18Subtitle)
 
-                        Text("Quick, insightful lessons to help you master your money.")
-                            .font(.system(size: 16, weight: .light))
-
+                                    Text("Quick, insightful lessons to help you master your money.")
+                                        .font(.system(size: 16, weight: .light))
+                                }
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
                         HStack {
                             CardComponent(
                                 title: "CREDIT CARDS",
@@ -66,18 +81,34 @@ struct FinancialCenterView: View {
 
                     // User Scenarios
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("User Scenarios")
-                            .font(.font18Subtitle)
-
-                        Text("Learn by doing with real-world financial scenarios.")
-                            .font(.system(size: 16, weight: .light))
+                        
+                        Button {
+                            // navigate to User scenario home page
+                        } label: {
+                            HStack {
+                                Image(systemName: "house.fill")
+                                    .frame(width: 32, height: 32)
+                                                                
+                                VStack(alignment: .leading) {
+                                    Text("User Scenarios")
+                                        .font(.font18Subtitle)
+                                    
+                                    Text("Learn by doing with real-world financial scenarios.")
+                                        .font(.system(size: 16, weight: .light))
+                                }
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
 
                         CardComponent(
                             title: "BUY NOW, PAY LATER",
                             description: "Sarah’s Credit Card Balance Transfer Misstep",
                             icon: "creditcard",
                             header: "User Scenario",
-                            tag: "What went wrong?"
+                            tag: "What went wrong?",
+                            navigation: {
+                                nav.navigateToSarahView()
+                            }
                         )
 
                         HStack {
@@ -85,14 +116,20 @@ struct FinancialCenterView: View {
                                                   description: "Ellie’s Credit Card Struggles",
                                                   icon: "creditcard",
                                                   header: "User Scenario",
-                                                  tag: "What went wrong?"
+                                                  tag: "What went wrong?",
+                                                  navigation: {
+                                                      nav.navigateToEllieView()
+                                                  }
                             )
                             Spacer()
                             CardComponent(        title: "BUY NOW, PAY LATER",
                                                   description: "Maria’s BNPL Trouble",
                                                   icon: "creditcard",
                                                   header: "User Scenario",
-                                                  tag: "What went wrong?"
+                                                  tag: "What went wrong?",
+                                                  navigation: {
+                                                      nav.navigateToMariaView()
+                                                  }
 
                             )
                         }
@@ -101,11 +138,24 @@ struct FinancialCenterView: View {
 
                     // Quizzes
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Quizzes")
-                            .font(.font18Subtitle)
+                        
+                        Button {
+                            // navigate to quiz home page
+                        } label: {
+                            HStack {
+                                Image(systemName: "house.fill")
+                                    .frame(width: 32, height: 32)
 
-                        Text("Test your financial knowledge and see how much you really know!")
-                            .font(.system(size: 16, weight: .light))
+                                VStack(alignment: .leading) {
+                                    Text("Quizzes")
+                                        .font(.font18Subtitle)
+
+                                    Text("Test your financial knowledge and see how much you really know!")
+                                        .font(.system(size: 16, weight: .light))
+                                }
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
 
                         HStack {
                             CardComponent(        title: "CREDIT CARDS",
@@ -126,12 +176,4 @@ struct FinancialCenterView: View {
             }
         }
     }
-}
-
-#Preview {
-    FinancialCenterView()
-}
-
-#Preview {
-    FinancialCenterView()
 }
