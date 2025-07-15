@@ -12,37 +12,37 @@ final class UserScenarioCalcTest: XCTestCase {
     func testCalculateSixScenariosTotalPoints() {
         let scenarios = makeScenarios(count: 6, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 60)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 60)
     }
     
     func testCalculateFiveScenariosTotalPoints() {
         let scenarios = makeScenarios(count: 5, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 50)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 50)
     }
     
     func testCalculateFourScenariosTotalPoints() {
         let scenarios = makeScenarios(count: 4, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 40)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 40)
     }
     
     func testCalculateThreeScenariosTotalPoints() {
         let scenarios = makeScenarios(count: 3, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 30)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 30)
     }
     
     func testCalculateTwoScenariosTotalPoints() {
         let scenarios = makeScenarios(count: 2, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 20)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 20)
     }
     
     func testCalculateOneScenarioTotalPoints() {
         let scenarios = makeScenarios(count: 1, points: 10)
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 10)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 10)
     }
     
     func testCalculateExpiredScenarioNoPoints() {
@@ -55,7 +55,7 @@ final class UserScenarioCalcTest: XCTestCase {
             )
         ]
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 0)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 0)
     }
     
     func testCalculateScenarioWithZeroPoints() {
@@ -68,7 +68,7 @@ final class UserScenarioCalcTest: XCTestCase {
             )
         ]
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalPoints(from: summary), 0)
+        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 0)
     }
     
     // MARK: - Helper

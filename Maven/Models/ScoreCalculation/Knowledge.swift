@@ -25,7 +25,18 @@ struct Quiz: Codable {
 }
 
 struct QuizItem: Codable {
-    // Extend when needed
+    var id: String
+    var completedOn: String
+    var score: Int
+    var maxScore: Int
+    var expiresOn: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, score
+        case completedOn = "completed_on"
+        case maxScore = "max_score"
+        case expiresOn = "expires_on"
+    }
 }
 
 struct UserScenariosSummary: Codable {
@@ -66,12 +77,11 @@ struct VideoItem: Codable {
     var id: String
     var watchedOn: String
     var points: Int
-    var expiresOn: String
+    var completionAmount: Double
 
     enum CodingKeys: String, CodingKey {
-        case id
+        case id, points
         case watchedOn = "watched_on"
-        case points
-        case expiresOn = "expires_on"
+        case completionAmount = "completion_amount"
     }
 }
