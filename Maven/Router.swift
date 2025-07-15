@@ -10,10 +10,16 @@ import SwiftUI
 final class Router: ObservableObject {
 
     public enum Destination: Codable, Hashable {
+        
+        //Pages
         case financialCenterView
         case financialHabitsView
         case infoView
+        case improveHomeView
+        case userScenarioView
+        case quizView
         
+        // User Scenario
         case ellieView
         case jakeView
         case marcusView

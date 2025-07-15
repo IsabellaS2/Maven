@@ -56,12 +56,12 @@
     "user_scenarios": {
       "max_total_points": 60,
       "scenarios": [
-        {
-          "id": "scenario_004",
-          "completed_on": "2025-06-05",
-          "points": 10,
-          "expires_on": "2025-07-05"
-        },
+          {
+            "id": "scenario_01",
+            "completed_on": "2025-07-15",
+            "points": 10,
+            "expires_on": "2025-08-15"
+          },
       ]
     },
     "improve_videos": {

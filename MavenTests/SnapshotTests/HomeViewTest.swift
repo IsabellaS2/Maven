@@ -14,9 +14,11 @@ final class HomeViewSnapshotTests: XCTestCase {
     
     func makeView(score: Int) -> UIViewController {
         let viewModel = HomeViewModel()
+        let router = Router()
+        let navViewModel = NavigationViewModel(router: router)
         viewModel.totalScore = score
 
-        let view = HomeView(vm: viewModel)
+        let view = HomeView(vm: viewModel, nav: navViewModel)
         let viewController = UIHostingController(rootView: view)
         viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
         return viewController

@@ -44,7 +44,7 @@ struct FinancialCenterView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            // navigate to improve home page
+                            nav.navigateToImproveHomeView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")
@@ -83,7 +83,7 @@ struct FinancialCenterView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            // navigate to User scenario home page
+                            nav.navigateToUserScenarioHomeView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")
@@ -140,7 +140,7 @@ struct FinancialCenterView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            // navigate to quiz home page
+                            nav.navigateToQuizView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")

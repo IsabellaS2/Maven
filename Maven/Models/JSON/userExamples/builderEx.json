@@ -123,9 +123,9 @@
       "scenarios": [
         {
           "id": "scenario_010",
-          "completed_on": "2025-06-15",
+          "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-07-15"
+          "expires_on": "2025-08-15"
         }
       ]
     },

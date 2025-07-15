@@ -38,6 +38,7 @@ class HomeViewModel: ObservableObject {
             let income = userData.behaviour.income
             let savings = userData.behaviour.accounts?.savingsAccounts ?? []
             let behaviour = userData.behaviour
+            let knowledge = userData.knowledge
 
             let paymentHistoryScore = calculatePaymentHistory(paymentHistory: paymentHistory)
             let creditUtilisationScore = calculateCreditUtilisation(cc: creditCard)
@@ -48,6 +49,8 @@ class HomeViewModel: ObservableObject {
             let creditLimitMovementScore = calculateCreditLimitMovement(cc: creditCard)
             let loanRepaymentScore = calculateLoanRepaymentConsistency(loan: loan)
             let incomeStabilityScore = calculateIncomeStability(income: income)
+            
+            let userScenarioScore = calculateTotalUserScenarioPoints(from: knowledge.userScenarios)
 
             let totalScore = paymentHistoryScore +
                              creditUtilisationScore +
@@ -57,7 +60,8 @@ class HomeViewModel: ObservableObject {
                              creditMixScore +
                              creditLimitMovementScore +
                              loanRepaymentScore +
-                             incomeStabilityScore
+                             incomeStabilityScore +
+                             userScenarioScore
 
             DispatchQueue.main.async {
                 self.creditMixScore = creditMixScore
@@ -73,6 +77,9 @@ class HomeViewModel: ObservableObject {
             print("Credit Limit Movement Score:", creditLimitMovementScore, "out of 45")
             print("Loan Repayment Score:", loanRepaymentScore, "out of 35")
             print("Income Stability Score:", incomeStabilityScore, "out of 35")
+            print("***************Knowledge***************")
+            print("User Scenario Score:", userScenarioScore, "out of 60")
+
             print("Total Score:", totalScore)
 
         } catch {
@@ -81,7 +88,7 @@ class HomeViewModel: ObservableObject {
     }
 
     func loadAndProcessJSON() {
-        if let url = Bundle.main.url(forResource: "builderEx", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "strategistEx", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
                 processUserData(from: jsonData)

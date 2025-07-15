@@ -107,7 +107,3 @@ struct QuizHomeView: View {
         }
     }
 }
-
-#Preview {
-    QuizHomeView()
-}

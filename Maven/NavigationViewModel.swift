@@ -26,7 +26,15 @@ class NavigationViewModel: ObservableObject {
         router.navigate(to: .infoView)
     }
     
+    func navigateToImproveHomeView() {
+        router.navigate(to: .improveHomeView)
+    }
+    
     // MARK: - User Scenarios
+    func navigateToUserScenarioHomeView() {
+        router.navigate(to: .userScenarioView)
+    }
+    
     func navigateToEllieView() {
         router.navigate(to: .ellieView)
     }
@@ -50,4 +58,11 @@ class NavigationViewModel: ObservableObject {
     func navigateToSarahView() {
         router.navigate(to: .sarahView)
     }
+    
+    // MARK: - Quiz
+    func navigateToQuizView() {
+        router.navigate(to: .quizView)
+    }
+    
+    
 }
