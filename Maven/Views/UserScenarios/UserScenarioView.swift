@@ -108,20 +108,6 @@ struct UserScenarioView: View {
                     point2: solutions_point2,
                     point3: solutions_point3
                 )
-
-                HStack {
-                    CardComponent(
-                        title: "CREDIT CARDS",
-                        description: "What is a purchase credit card?",
-                        icon: "cart"
-                    )
-                    LongCardComponent(
-                        title: "CREDIT CARDS",
-                        description: "What is a credit balance?",
-                        icon: "scalemass"
-                    )
-                }
-
             }
             .padding(10.0)
         }

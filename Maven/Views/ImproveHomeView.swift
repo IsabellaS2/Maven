@@ -108,6 +108,3 @@ struct ImproveHomeView: View {
 
 }
 
-#Preview {
-    ImproveHomeView()
-}

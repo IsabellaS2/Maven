@@ -48,7 +48,3 @@ struct FinancialHabitsView: View {
         }
     }
 }
-
-#Preview {
-    FinancialHabitsView()
-}

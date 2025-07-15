@@ -31,6 +31,15 @@ struct MavenApp: App {
                         case .infoView:
                             MavenInfoView()
                             
+                        case .improveHomeView:
+                            ImproveHomeView()
+                            
+                        case .userScenarioView:
+                            UserScenarioHomeView(nav: navViewModel)
+                            
+                        case .quizView:
+                            QuizHomeView()
+                            
                         case .ellieView:
                             EllieView(ellie: userScenarios!.elliesCreditCardStruggles)
 

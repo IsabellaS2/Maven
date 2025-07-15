@@ -135,35 +135,35 @@
     "user_scenarios": {
       "max_total_points": 60,
       "scenarios": [
-        {
-          "id": "scenario_01",
-          "completed_on": "2025-06-12",
-          "points": 10,
-          "expires_on": "2025-07-12"
-        },
+          {
+            "id": "scenario_01",
+            "completed_on": "2025-07-15",
+            "points": 10,
+            "expires_on": "2025-08-15"
+          },
         {
           "id": "scenario_02",
-          "completed_on": "2025-06-12",
+          "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-07-12"
+          "expires_on": "2025-08-15"
         },
         {
           "id": "scenario_03",
-          "completed_on": "2025-06-12",
+          "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-07-12"
+          "expires_on": "2025-08-15"
         },
         {
           "id": "scenario_05",
-          "completed_on": "2025-06-12",
+          "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-07-12"
+          "expires_on": "2025-08-15"
         },
         {
           "id": "scenario_06",
-          "completed_on": "2025-06-12",
+          "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-07-12"
+          "expires_on": "2025-08-15"
         }
       ]
     },
