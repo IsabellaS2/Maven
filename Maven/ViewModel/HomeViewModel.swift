@@ -18,16 +18,6 @@ class HomeViewModel: ObservableObject {
     func processUserData(from jsonData: Data) {
         let decoder = JSONDecoder()
         
-//        payment history
-//        credit utilisation
-//        bnpl usage
-//        saving presence
-//        debt to income ratio
-//        credit mix
-//        credit limit movement
-//        loan repayment
-//        income consistency
-
         do {
 
             let userData = try decoder.decode(UserData.self, from: jsonData)
@@ -51,6 +41,9 @@ class HomeViewModel: ObservableObject {
             let incomeStabilityScore = calculateIncomeStability(income: income)
             
             let userScenarioScore = calculateTotalUserScenarioPoints(from: knowledge.userScenarios)
+            let quizScore = calculateTotalValidQuizPoints(from: knowledge.quiz.quizzes)
+            let improveVideo = calculateTotalImproveVideoPoints(from: knowledge.improveVideos)
+
 
             let totalScore = paymentHistoryScore +
                              creditUtilisationScore +
@@ -61,8 +54,10 @@ class HomeViewModel: ObservableObject {
                              creditLimitMovementScore +
                              loanRepaymentScore +
                              incomeStabilityScore +
-                             userScenarioScore
-
+                             userScenarioScore +
+                             quizScore +
+                             improveVideo
+            
             DispatchQueue.main.async {
                 self.creditMixScore = creditMixScore
                 self.totalScore = totalScore
@@ -79,6 +74,8 @@ class HomeViewModel: ObservableObject {
             print("Income Stability Score:", incomeStabilityScore, "out of 35")
             print("***************Knowledge***************")
             print("User Scenario Score:", userScenarioScore, "out of 60")
+            print("Quiz Score:", quizScore, "out of 120")
+            print("Improve Video Score:", improveVideo, "out of 120")
 
             print("Total Score:", totalScore)
 
@@ -86,9 +83,14 @@ class HomeViewModel: ObservableObject {
             print("Error decoding JSON:", error)
         }
     }
+    
+    //explorerEx
+    //builderEx
+    //strategistEx
+    //championEx
 
     func loadAndProcessJSON() {
-        if let url = Bundle.main.url(forResource: "strategistEx", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "championEx", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
                 processUserData(from: jsonData)

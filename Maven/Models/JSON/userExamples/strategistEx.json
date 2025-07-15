@@ -76,17 +76,17 @@
       "quizzes": [
         {
           "id": "quiz_001",
-          "completed_on": "2025-06-01",
+          "completed_on": "2025-06-22",
           "score": 15,
           "max_score": 15,
-          "expires_on": "2025-09-01"
+          "expires_on": "2025-09-22"
         },
         {
           "id": "quiz_002",
-          "completed_on": "2025-05-20",
+          "completed_on": "2025-06-20",
           "score": 12,
           "max_score": 15,
-          "expires_on": "2025-08-20"
+          "expires_on": "2025-09-22"
         }
       ]
     },
@@ -97,19 +97,19 @@
             "id": "scenario_03",
             "completed_on": "2025-07-15",
             "points": 10,
-            "expires_on": "2025-08-15"
+            "expires_on": "2025-09-12",
           },
           {
             "id": "scenario_05",
             "completed_on": "2025-07-15",
             "points": 10,
-            "expires_on": "2025-08-15"
+            "expires_on": "2025-09-12",
           },
           {
             "id": "scenario_06",
             "completed_on": "2025-07-15",
             "points": 10,
-            "expires_on": "2025-08-15"
+            "expires_on": "2025-09-12",
           }
       ]
     },
@@ -118,16 +118,23 @@
       "videos": [
         {
           "id": "video_001",
-          "watched_on": "2025-06-10",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-10"
+          "completion_amount": 0.9
         },
         {
           "id": "video_002",
-          "watched_on": "2025-06-11",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-11"
+          "completion_amount": 0.9
+        },
+        {
+          "id": "video_006",
+          "watched_on": "2025-07-15",
+          "points": 6,
+          "completion_amount": 0.4
         }
+
       ]
     }
   }

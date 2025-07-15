@@ -58,9 +58,9 @@
       "scenarios": [
           {
             "id": "scenario_01",
-            "completed_on": "2025-07-15",
+            "completed_on": "2025-07-22",
             "points": 10,
-            "expires_on": "2025-08-15"
+            "expires_on": "2025-09-22",
           },
       ]
     },
@@ -69,10 +69,10 @@
       "videos": [
         {
           "id": "video_001",
-          "watched_on": "2025-06-12",
-          "points": 4,
-          "expires_on": "2025-07-12"
-          },
+          "watched_on": "2025-07-15",
+          "points": 6,
+          "completion_amount": 0.9
+        }
       ]
     }
   }

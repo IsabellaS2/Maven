@@ -107,16 +107,16 @@
           "completed_on": "2025-06-01",
           "score": 15,
           "max_score": 15,
-          "expires_on": "2025-09-01"
+          "expires_on": "2025-10-01"
         },
         {
           "id": "quiz_003",
           "completed_on": "2025-06-01",
           "score": 12,
           "max_score": 15,
-          "expires_on": "2025-09-01"
+          "expires_on": "2025-10-01"
         }
-       ]
+      ]
     },
     "user_scenarios": {
       "max_total_points": 60,
@@ -125,7 +125,7 @@
           "id": "scenario_010",
           "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-08-15"
+          "expires_on": "2025-10-15",
         }
       ]
     },
@@ -134,12 +134,11 @@
       "videos": [
         {
           "id": "video_004",
-          "watched_on": "2025-06-10",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-10"
+          "completion_amount": 0.9
         }
       ]
     }
   }
 }
-

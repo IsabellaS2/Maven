@@ -139,31 +139,31 @@
             "id": "scenario_01",
             "completed_on": "2025-07-15",
             "points": 10,
-            "expires_on": "2025-08-15"
+            "expires_on": "2025-10-15"
           },
         {
           "id": "scenario_02",
           "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-08-15"
+          "expires_on": "2025-10-15"
         },
         {
           "id": "scenario_03",
           "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-08-15"
+          "expires_on": "2025-10-15"
         },
         {
           "id": "scenario_05",
           "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-08-15"
+          "expires_on": "2025-10-15"
         },
         {
           "id": "scenario_06",
           "completed_on": "2025-07-15",
           "points": 10,
-          "expires_on": "2025-08-15"
+          "expires_on": "2025-09-12",
         }
       ]
     },
@@ -172,75 +172,75 @@
       "videos": [
         {
           "id": "video_022",
-          "watched_on": "2025-06-12",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-12"
+          "completion_amount": 0.9
         },
         {
           "id": "video_023",
-          "watched_on": "2025-06-13",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-13"
+          "completion_amount": 1.0
         },
         {
           "id": "video_025",
-          "watched_on": "2025-06-15",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-15"
+          "completion_amount": 0.9
         },
         {
           "id": "video_026",
-          "watched_on": "2025-06-16",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-16"
+          "completion_amount": 0.9
         },
         {
           "id": "video_028",
-          "watched_on": "2025-06-18",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-18"
+          "completion_amount": 1.0
         },
         {
           "id": "video_030",
-          "watched_on": "2025-06-20",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-20"
+          "completion_amount": 0.88
         },
         {
           "id": "video_032",
-          "watched_on": "2025-06-22",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-22"
+          "completion_amount": 1.0
         },
         {
           "id": "video_033",
-          "watched_on": "2025-06-23",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-23"
+          "completion_amount": 0.96
         },
         {
           "id": "video_035",
-          "watched_on": "2025-06-25",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-25"
+          "completion_amount": 0.8
         },
         {
           "id": "video_036",
-          "watched_on": "2025-06-26",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-26"
+          "completion_amount": 1.0
         },
         {
           "id": "video_037",
-          "watched_on": "2025-06-27",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-27"
+          "completion_amount": 0.9
         },
         {
           "id": "video_039",
-          "watched_on": "2025-06-29",
+          "watched_on": "2025-07-15",
           "points": 6,
-          "expires_on": "2025-07-29"
+          "completion_amount": 0.9
         }
       ]
     }
