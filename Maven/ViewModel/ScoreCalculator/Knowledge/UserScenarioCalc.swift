@@ -7,13 +7,12 @@
 import Foundation
 
 func calculateTotalUserScenarioPoints(from summary: UserScenariosSummary, now: Date = Date()) -> Int {
-    print("Now is \(now)")
     return summary.scenarios.reduce(0) { total, scenario in
         guard
             let expiresDate = parseDate(scenario.expiresOn),
             let completedDate = parseDate(scenario.completedOn)
         else {
-            print("❌ Failed to parse dates for scenario id: \(scenario.id), completedOn: \(scenario.completedOn), expiresOn: \(scenario.expiresOn)")
+            print("Failed to parse dates for scenario id: \(scenario.id), completedOn: \(scenario.completedOn), expiresOn: \(scenario.expiresOn)")
             return total
         }
         
@@ -23,7 +22,7 @@ func calculateTotalUserScenarioPoints(from summary: UserScenariosSummary, now: D
             print("✅ Adding points \(scenario.points) for scenario \(scenario.id)")
             return total + scenario.points
         } else {
-            print("❌ Not adding points for scenario \(scenario.id), expired or invalid date range")
+            print("Scenario \(scenario.id), expired or invalid date range")
             return total
         }
     }
