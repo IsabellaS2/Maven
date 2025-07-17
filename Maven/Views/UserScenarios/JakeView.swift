@@ -20,7 +20,7 @@ struct JakeView: View {
                     UserScenarioView(
                         title: jake.title,
                         subtitle: jake.subtitle,
-                        image: "",
+                        image: "jakeImage",
                         description_1: jake.description_1,
                         description_2: jake.description_2,
                         description_3: jake.description_3,

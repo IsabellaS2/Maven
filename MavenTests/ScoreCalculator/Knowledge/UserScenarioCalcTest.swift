@@ -8,81 +8,62 @@
 import XCTest
 @testable import Maven
 
-final class UserScenarioCalcTest: XCTestCase {
-    func testCalculateSixScenariosTotalPoints() {
-        let scenarios = makeScenarios(count: 6, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 60)
-    }
-    
-    func testCalculateFiveScenariosTotalPoints() {
-        let scenarios = makeScenarios(count: 5, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 50)
-    }
-    
-    func testCalculateFourScenariosTotalPoints() {
-        let scenarios = makeScenarios(count: 4, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 40)
-    }
-    
-    func testCalculateThreeScenariosTotalPoints() {
-        let scenarios = makeScenarios(count: 3, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 30)
-    }
-    
-    func testCalculateTwoScenariosTotalPoints() {
-        let scenarios = makeScenarios(count: 2, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 20)
-    }
-    
-    func testCalculateOneScenarioTotalPoints() {
-        let scenarios = makeScenarios(count: 1, points: 10)
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 10)
-    }
-    
-    func testCalculateExpiredScenarioNoPoints() {
+final class UserScenarioCalcTests: XCTestCase {
+
+    func testCalculateTotalUserScenarioPoints_AllValidPointsAdded() {
         let scenarios = [
-            ScenarioItem(
-                id: "scenario_001",
-                completedOn: "2025-06-01T00:00:00Z",
-                points: 10,
-                expiresOn: "2000-01-01T00:00:00Z"  // expired
-            )
+            ScenarioItem(id: "1", completedOn: "2025-07-10", points: 10, expiresOn: "2025-08-01"),
+            ScenarioItem(id: "2", completedOn: "2025-07-12", points: 10, expiresOn: "2025-08-10")
         ]
         let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 0)
-    }
-    
-    func testCalculateScenarioWithZeroPoints() {
-        let scenarios = [
-            ScenarioItem(
-                id: "scenario_001",
-                completedOn: "2025-06-01T00:00:00Z",
-                points: 0,
-                expiresOn: "2099-12-31T00:00:00Z"
-            )
-        ]
-        let summary = UserScenariosSummary(maxTotalPoints: 60, scenarios: scenarios)
-        XCTAssertEqual(calculateTotalUserScenarioPoints(from: summary), 0)
-    }
-    
-    // MARK: - Helper
-    private func makeScenarios(count: Int, points: Int) -> [ScenarioItem] {
-        let baseCompletedOn = "2025-06-01T00:00:00Z"
-        let baseExpiresOn = "2099-12-31T00:00:00Z"
+        let now = parseDate("2025-07-15")!
         
-        return (1...count).map { i in
-            ScenarioItem(
-                id: "scenario_00\(i)",
-                completedOn: baseCompletedOn,
-                points: points,
-                expiresOn: baseExpiresOn
-            )
-        }
+        let totalPoints = calculateTotalUserScenarioPoints(from: summary, now: now)
+        XCTAssertEqual(totalPoints, 20)
+    }
+    
+    func testCalculateTotalUserScenarioPoints_ScenarioExpired_NoPointsAdded() {
+        let scenarios = [
+            ScenarioItem(id: "1", completedOn: "2025-06-30", points: 10, expiresOn: "2025-07-01")
+        ]
+        let summary = UserScenariosSummary(maxTotalPoints: 50, scenarios: scenarios)
+        let now = parseDate("2025-07-15")!
+        
+        let totalPoints = calculateTotalUserScenarioPoints(from: summary, now: now)
+        XCTAssertEqual(totalPoints, 0)
+    }
+    
+    func testCalculateTotalUserScenarioPoints_ScenarioCompletedAfterExpiry_NoPointsAdded() {
+        let scenarios = [
+            ScenarioItem(id: "1", completedOn: "2025-07-12", points: 10, expiresOn: "2025-07-10")
+        ]
+        let summary = UserScenariosSummary(maxTotalPoints: 50, scenarios: scenarios)
+        let now = parseDate("2025-07-15")!
+        
+        let totalPoints = calculateTotalUserScenarioPoints(from: summary, now: now)
+        XCTAssertEqual(totalPoints, 0)
+    }
+    
+    func testCalculateTotalUserScenarioPoints_InvalidDates_NoPointsAdded() {
+        let scenarios = [
+            ScenarioItem(id: "1", completedOn: "invalid-date", points: 10, expiresOn: "2025-07-10"),
+            ScenarioItem(id: "2", completedOn: "2025-07-10", points: 10, expiresOn: "invalid-date")
+        ]
+        let summary = UserScenariosSummary(maxTotalPoints: 100, scenarios: scenarios)
+        let now = parseDate("2025-07-15")!
+        
+        let totalPoints = calculateTotalUserScenarioPoints(from: summary, now: now)
+        XCTAssertEqual(totalPoints, 0)
+    }
+    
+    func testCalculateTotalUserScenarioPoints_ExpiredButCompletedBeforeExpiry_NoPointsAdded() {
+        let scenarios = [
+            ScenarioItem(id: "1", completedOn: "2025-07-09", points: 10, expiresOn: "2025-07-10")
+        ]
+        let summary = UserScenariosSummary(maxTotalPoints: 20, scenarios: scenarios)
+        let now = parseDate("2025-07-15")!
+        
+        let totalPoints = calculateTotalUserScenarioPoints(from: summary, now: now)
+        XCTAssertEqual(totalPoints, 0)
     }
 }

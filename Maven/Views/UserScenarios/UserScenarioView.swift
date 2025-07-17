@@ -55,7 +55,7 @@ struct UserScenarioView: View {
                     Image(image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 150, height: 160)
+                        .frame(width: 160, height: 180)
                         .padding(.trailing, 10.0)
 
                     VStack(alignment: .leading) {
