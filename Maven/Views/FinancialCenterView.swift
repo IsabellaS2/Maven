@@ -39,42 +39,37 @@ struct FinancialCenterView: View {
                             .font(.font16)
 
                     }
-
-                    // Improve Section
+                    // Quizzes
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            nav.navigateToImproveHomeView()
+                            nav.navigateToQuizView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")
                                     .frame(width: 32, height: 32)
-                                                                
+
                                 VStack(alignment: .leading) {
-                                    Text("Improve Videos")
+                                    Text("Quizzes")
                                         .font(.font18Subtitle)
 
-                                    Text("Quick, insightful lessons to help you master your money.")
+                                    Text("Test your financial knowledge and see how much you really know!")
                                         .font(.system(size: 16, weight: .light))
                                 }
                             }
                         }
                         .buttonStyle(PlainButtonStyle())
-                        
-                        HStack {
-                            CardComponent(
-                                title: "CREDIT CARDS",
-                                description: "What is a Credit Card?",
-                                icon: "creditcard",
-                                header: "QUIZ")
 
+                        HStack {
+                            CardComponent(        title: "CREDIT CARDS",
+                                                  description: "Test your knowledge",
+                                                  icon: "creditcard",
+                                                  header: "QUIZ")
                             Spacer()
-                            CardComponent(
-                                title: "REPORT AND SCORE",
-                                description: "What is a good and bad credit score?",
-                                icon: "creditcard",
-                                header: "QUIZ"
-                            )
+                            LongCardComponent(        title: "LOANS",
+                                                  description: "Test your knowledge",
+                                                  icon: "creditcard",
+                                                  header: "QUIZ")
                         }
                     }
                     .padding(.bottom, 10.0)
@@ -135,42 +130,45 @@ struct FinancialCenterView: View {
                         }
                     }
                     .padding(.bottom, 12.0)
-
-                    // Quizzes
+                    
+                    // Improve Section
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            nav.navigateToQuizView()
+                            nav.navigateToImproveHomeView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")
                                     .frame(width: 32, height: 32)
-
+                                                                
                                 VStack(alignment: .leading) {
-                                    Text("Quizzes")
+                                    Text("Improve Videos")
                                         .font(.font18Subtitle)
 
-                                    Text("Test your financial knowledge and see how much you really know!")
+                                    Text("Quick, insightful lessons to help you master your money.")
                                         .font(.system(size: 16, weight: .light))
                                 }
                             }
                         }
                         .buttonStyle(PlainButtonStyle())
-
+                        
                         HStack {
-                            CardComponent(        title: "CREDIT CARDS",
-                                                  description: "Test your knowledge",
-                                                  icon: "creditcard",
-                                                  header: "QUIZ")
+                            CardComponent(
+                                title: "CREDIT CARDS",
+                                description: "What is a Credit Card?",
+                                icon: "creditcard",
+                                header: "Improve")
+
                             Spacer()
-                            CardComponent(        title: "LOANS",
-                                                  description: "Test your knowledge",
-                                                  icon: "creditcard",
-                                                  header: "QUIZ")
+                            CardComponent(
+                                title: "REPORT AND SCORE",
+                                description: "What is a good and bad credit score?",
+                                icon: "creditcard",
+                                header: "Improve"
+                            )
                         }
                     }
                     .padding(.bottom, 10.0)
-
                 }
                 .padding(.horizontal, 15.0)
             }

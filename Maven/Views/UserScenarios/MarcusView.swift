@@ -20,7 +20,7 @@ struct MarcusView: View {
                     UserScenarioView(
                         title: marcus.title,
                         subtitle: marcus.subtitle,
-                        image: "",
+                        image: "marcusImage",
                         description_1: marcus.description_1,
                         description_2: marcus.description_2,
                         description_3: marcus.description_3,

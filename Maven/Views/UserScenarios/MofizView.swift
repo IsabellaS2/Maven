@@ -20,7 +20,7 @@ struct MofizView: View {
                     UserScenarioView(
                         title: mofiz.title,
                         subtitle: mofiz.subtitle,
-                        image: "",
+                        image: "mofizImage",
                         description_1: mofiz.description_1,
                         description_2: mofiz.description_2,
                         description_3: mofiz.description_3,
