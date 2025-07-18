@@ -10,6 +10,7 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var creditMixScore: Int = 0
     @Published var totalScore: Int = 0
+    @Published var behaviour: Behaviour?
 
     init() {
         loadAndProcessJSON()
@@ -61,6 +62,7 @@ class HomeViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.creditMixScore = creditMixScore
                 self.totalScore = totalScore
+                self.behaviour = behaviour
             }
 
             print("Payment History Score:", paymentHistoryScore, "out of 200")

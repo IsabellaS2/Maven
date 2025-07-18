@@ -57,6 +57,13 @@ struct CreditCard: Codable {
     }
 }
 
+extension CreditCard {
+    var utilisation: Double {
+        guard limit > 0 else { return 0 }
+        return balance / limit
+    }
+}
+
 struct Loan: Codable {
     var provider: String
     var amount: Double?
@@ -125,16 +132,3 @@ struct PaymentHistory: Codable {
         case missedPaymentsLast6Months = "missed_payments_last_6_months"
     }
 }
-
-//struct CreditScore: Codable {
-//    var score: Int
-//    var band: String
-//    var debtToIncomeRatio: Double?
-//    var lastPaidDate: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case score, band
-//        case debtToIncomeRatio = "debt_to_income_ratio"
-//        case lastPaidDate = "last_paid_date"
-//    }
-//}
