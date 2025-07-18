@@ -1,0 +1,80 @@
+{
+  "whats_going_well": {
+    "title": "✅ What’s Going Well",
+
+    "on_time_loan_payments": {
+      "title": "💸 On-time Loan Payments",
+      "description_1": "You always pay on time! This builds trust with lenders and strengthens your score.",
+      "description_2": "Keep up the good work!"
+    },
+
+    "healthy_savings": {
+      "title": "💰 Healthy Savings Balance",
+      "description_1": "Well done! You have a solid savings cushion for emergencies.",
+      "description_2": "Continue to add to your savings for future security."
+    },
+
+    "stable_income": {
+      "title": "💼 Stable Income",
+      "description_1": "Your income is stable, which gives you a good foundation for financial planning.",
+      "description_2": "Continue budgeting to ensure you manage your income effectively."
+    },
+
+    "smart_bnpl_management": {
+      "title": "🛒 Smart BNPL Management",
+      "description_1": "You’re managing BNPL purchases well, keeping them to a minimum.",
+      "description_2": "Keep it up to maintain a healthy financial balance."
+    },
+
+    "no_late_payments": {
+      "title": "⏰ No Late Payments",
+      "description_1": "You’ve avoided late payments—great job!",
+      "description_2": "Staying on top of payments will keep your score strong."
+    },
+
+    "low_debt_to_income": {
+      "title": "📉 Low Debt-to-Income Ratio",
+      "description_1": "Your debt-to-income ratio is healthy, giving you more financial flexibility.",
+      "description_2": "Keep up the good work managing your debt."
+    }
+  },
+
+  "what_needs_improvement": {
+    "title": "⚠️ What Needs Improvement",
+    "missed_credit_cards": {
+      "title": "💳 Missed Credit Card Payments",
+      "description_1": "Missing a payment can hurt your credit score and stay on your report for up to six years.",
+      "description_2": "Set reminders or use auto-pay to make at least the minimum payment on payday."
+    },
+
+    "high_bnpl_usage": {
+      "title": "🛒 High BNPL Usage",
+      "description_1": "Frequent BNPL use can impact your creditworthiness.",
+      "description_2": "Limit BNPL to two purchases per month or budget to avoid overuse."
+    },
+
+    "low_savings": {
+      "title": "💰 Low Savings Balance",
+      "description_1": "Limited savings can leave you vulnerable during emergencies.",
+      "description_2": "Try setting up automatic transfers to build your savings."
+    },
+
+    "over_limit_spending": {
+      "title": "⚠️ Spending Over Credit Limit",
+      "description_1": "Exceeding your credit limit can harm your score and incur extra fees.",
+      "description_2": "Try to stay below your limit to avoid penalties."
+    },
+
+    "missed_loan_payments": {
+      "title": "💸 Missed Loan Payments",
+      "description_1": "Missing loan payments can increase your debt and hurt your credit score.",
+      "description_2": "Set up a payment reminder or direct debit to avoid missing payments."
+    },
+
+    "high_debt_to_income": {
+      "title": "📊 High Debt-to-Income Ratio",
+      "description_1": "A high debt-to-income ratio could limit your borrowing options.",
+      "description_2": "Work on paying down debt to improve your financial flexibility."
+    }
+  }
+}

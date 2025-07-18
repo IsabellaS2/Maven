@@ -24,10 +24,10 @@ struct MavenApp: App {
                             
                         case .financialCenterView:
                             FinancialCenterView(nav: navViewModel)
-                            
+                                                        
                         case .financialHabitsView:
-                            FinancialHabitsView()
-                            
+                            viewModel.behaviour.map { FinancialHabitsView(behaviour: $0, nav: navViewModel) }
+
                         case .infoView:
                             MavenInfoView()
                             
