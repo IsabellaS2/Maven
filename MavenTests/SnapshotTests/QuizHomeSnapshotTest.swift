@@ -13,8 +13,10 @@ import SnapshotTesting
 final class QuizHomeSnapshotTest: XCTestCase {
     
     func makeView() -> UIViewController {
+        let router = Router()
+        let navViewModel = NavigationViewModel(router: router)
         
-        let view = QuizHomeView()
+        let view = QuizHomeView(nav: navViewModel)
         let viewController = UIHostingController(rootView: view)
         viewController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 1300)
         return viewController

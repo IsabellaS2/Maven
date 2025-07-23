@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct QuizQuestionsView: View {
+struct QuizQuestionView: View {
     @ObservedObject var nav: NavigationViewModel
 
     let quiz: QuizSet
@@ -16,17 +16,23 @@ struct QuizQuestionsView: View {
     @State private var currentIndex = 0
     @State private var score = 0
     @State private var showResult = false
+    @State private var showHintSheet = false
+    @State private var hintsRemaining = 2
 
     var body: some View {
         if showResult {
             QuizResultView(nav: nav, score: score, total: quiz.questions.count)
         } else {
             let question = quiz.questions[currentIndex]
-
+            
+            
+            ZStack {
+                Color("background")
+                    .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 20) {
                 Text(question.question)
-                    .font(.headline)
-
+                    .font(.font18Subtitle)
+                
                 ForEach(question.options, id: \.self) { option in
                     Button(action: {
                         if option == question.correct_answer {
@@ -39,18 +45,47 @@ struct QuizQuestionsView: View {
                         }
                     }) {
                         Text(option)
+                            .foregroundColor(Color.font)
                             .padding()
+                            .frame(maxWidth: .infinity)
                             .background(Color.gray.opacity(0.1))
                             .cornerRadius(8)
                     }
                 }
-
-                Text("Tip: \(question.explanation)")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
+                
+                if hintsRemaining > 0 {
+                    Button("Need a hint? You have \(hintsRemaining) hint\(hintsRemaining == 1 ? "" : "s") remaining") {
+                        showHintSheet = true
+                        hintsRemaining -= 1
+                    }
                     .padding(.top)
+                    .foregroundColor(Color.font)
+
+                } else {
+                    Text("No hints remaining")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .padding(.top)
+                }
             }
             .padding()
+            .sheet(isPresented: $showHintSheet) {
+                VStack(spacing: 10) {
+                    Text("Hint")
+                        .font(.headline)
+                    Text(question.explanation)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    
+                    Button("Got it!") {
+                        showHintSheet = false
+                    }
+                    .padding()
+                }
+                .presentationDetents([.fraction(0.30)])
+                .presentationDragIndicator(.visible)
+            }
+        }
         }
     }
 }

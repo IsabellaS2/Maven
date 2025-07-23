@@ -29,7 +29,7 @@ struct Question: Codable, Hashable, Identifiable {
 }
 
 struct QuizData {
-    static let allQuizzes: QuizDatabase = {
+    static var allQuizzes: QuizDatabase = {
         loadJSON(fileName: "quiz", as: QuizDatabase.self) ?? [:]
     }()
 }

@@ -18,7 +18,7 @@ struct QuizHomeView: View {
                 .ignoresSafeArea()
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .center, spacing: 16) {
                     Text("Quizzes")
                         .font(.midTitle)
                         .multilineTextAlignment(.center)
@@ -46,8 +46,8 @@ struct QuizHomeView: View {
             }
         }
     }
-
-    private func iconForCategory(_ category: String) -> String {
+    
+    func iconForCategory(_ category: String) -> String {
         switch category.lowercased() {
             case "credit": return "creditcard"
             case "borrowing money": return "banknote"
