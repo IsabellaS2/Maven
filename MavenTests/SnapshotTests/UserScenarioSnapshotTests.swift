@@ -19,7 +19,7 @@ final class UserScenarioSnapshotTests: XCTestCase {
     }
 
     private func loadUserScenariosOrFail() -> UserScenarios {
-        guard let userScenarios = loadScenarios() else {
+        guard let userScenarios = loadJSON(fileName: "scenarios", as: UserScenarios.self) else {
             fatalError("Failed to load user scenarios in test")
         }
         return userScenarios

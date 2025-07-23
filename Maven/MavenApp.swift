@@ -14,7 +14,7 @@ struct MavenApp: App {
     var body: some Scene {
         let viewModel = HomeViewModel()
         let navViewModel = NavigationViewModel(router: router)
-        let userScenarios: UserScenarios? = loadScenarios()
+        let userScenarios: UserScenarios? = loadJSON(fileName: "scenarios", as: UserScenarios.self)
 
         WindowGroup {
             NavigationStack(path: $router.navPath) {
@@ -37,8 +37,14 @@ struct MavenApp: App {
                         case .userScenarioView:
                             UserScenarioHomeView(nav: navViewModel)
                             
-                        case .quizView:
-                            QuizHomeView()
+                        case .quizHomeView:
+                            QuizHomeView(nav: navViewModel)
+                            
+                        case .quizIntroView(let quizID):
+                            QuizIntroView(quizID: quizID, nav: navViewModel)
+
+                        case .quizQuestionView(let quiz):
+                            QuizQuestionsView( nav: navViewModel, quiz: quiz)
                             
                         case .ellieView:
                             EllieView(ellie: userScenarios!.elliesCreditCardStruggles)

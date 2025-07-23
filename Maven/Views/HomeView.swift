@@ -114,7 +114,7 @@ struct HomeView: View {
                         
                         // Card 1 - Financial Knowledge Centre
                         Button(action: {
-                            nav.navigateToFinancialHabits()
+                            nav.navigateToFinancialCenter()
                         }) {
                             VStack(alignment: .leading) {
                                 Text("📚 Financial Knowledge Center")
@@ -139,7 +139,7 @@ struct HomeView: View {
                         
                         // Card 2 - Financial Habits
                         Button(action: {
-                            nav.navigateToFinancialCenter()
+                            nav.navigateToFinancialHabits()
                         }) {
                             VStack(alignment: .leading) {
                                 Text("📊 Your Financial Habits")

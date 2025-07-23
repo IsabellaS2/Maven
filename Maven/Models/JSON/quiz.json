@@ -1,6 +1,7 @@
 {
   "understanding_apr_interest_charges": {
     "title": "Understanding APR, Interest & Charges",
+    "category": "Credit",
     "questions": [
       {
         "question": "What does APR stand for?",
@@ -62,6 +63,7 @@
 
   "credit_scores_reports": {
     "title": "Credit Scores & Reports",
+    "category": "Credit",
     "questions": [
       {
         "question": "What does a credit score represent?",
@@ -118,11 +120,12 @@
         "correct_answer": "Applying for many new credit cards in a short time",
         "explanation": "Too many applications can suggest risk to lenders."
       }
-    ]
+    ],
   },
 
   "credit_cards_basics": {
     "title": "Credit Cards - Basics & Best Practices",
+    "category": "Credit",
     "questions": [
       {
         "question": "What is a credit limit?",
@@ -184,6 +187,7 @@
 
   "bnpl_basics": {
     "title": "BNPL (Buy Now, Pay Later)",
+    "category": "Borrowing Money",
     "questions": [
       {
         "question": "What is BNPL?",
@@ -245,6 +249,7 @@
 
   "mortgage_basics": {
     "title": "Mortgage Basics",
+    "category": "Borrowing Money",
     "questions": [
       {
         "question": "What is a mortgage?",
@@ -306,6 +311,7 @@
 
   "personal_loans": {
     "title": "Understanding Personal Loans",
+    "category": "Borrowing Money",
     "questions": [
       {
         "question": "What are personal loans commonly used for?",
@@ -367,6 +373,7 @@
 
   "balance_transfers": {
     "title": "Balance Transfers Explained",
+    "category": "Borrowing Money",
     "questions": [
       {
         "question": "What is a balance transfer?",
@@ -428,6 +435,7 @@
 
   "bank_accounts_savings": {
    "title": "Bank Accounts & Savings (UK)",
+   "category": "Accounts",
    "questions": [
      {
        "question": "What is a current account typically used for in the UK?",

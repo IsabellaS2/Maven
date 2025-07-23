@@ -60,9 +60,20 @@ class NavigationViewModel: ObservableObject {
     }
     
     // MARK: - Quiz
-    func navigateToQuizView() {
-        router.navigate(to: .quizView)
+    func navigateToQuizHomeView() {
+        router.navigate(to: .quizHomeView)
     }
     
     
+    func navigateToQuizIntroView(quizID: String) {
+        router.navigate(to: .quizIntroView(quizID: quizID))
+    }
+
+    func navigateToQuizQuestionView(quizID: String) {
+        if let quiz = QuizData.allQuizzes[quizID] {
+            router.navigate(to: .quizQuestionView(quiz: quiz))
+        } else {
+            print("⚠️ Quiz not found for ID: \(quizID)")
+        }
+    }
 }
