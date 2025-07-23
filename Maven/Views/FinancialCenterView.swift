@@ -43,7 +43,7 @@ struct FinancialCenterView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Button {
-                            nav.navigateToQuizView()
+                            nav.navigateToQuizHomeView()
                         } label: {
                             HStack {
                                 Image(systemName: "house.fill")

@@ -15,7 +15,7 @@ struct FinancialHabitsView: View {
     
     init(behaviour: Behaviour, nav: NavigationViewModel) {
         self.behaviour = behaviour
-        self.habitsData = loadFinancialHabits()
+        self.habitsData = loadJSON(fileName: "financialHabits", as: FinancialHabitsData.self)
         self._nav = ObservedObject(wrappedValue: nav)
     }
 
