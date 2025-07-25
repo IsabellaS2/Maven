@@ -46,7 +46,7 @@ final class PaymentHistoryTests: XCTestCase {
         let score = calculatePaymentHistory(paymentHistory: paymentHistory)
         XCTAssertEqual(score, 30)
     }
-    
+
     func testFourOrMoreMissedAndNoOnTimeReturns10() {
         let paymentHistory = PaymentHistory(onTimePaymentsLast6Months: 0, missedPaymentsLast6Months: 5)
         let score = calculatePaymentHistory(paymentHistory: paymentHistory)
@@ -59,4 +59,3 @@ final class PaymentHistoryTests: XCTestCase {
         XCTAssertEqual(score, 100)
     }
 }
-

@@ -21,31 +21,31 @@ struct EllieView: View {
                         title: ellie.title,
                         subtitle: ellie.subtitle,
                         image: "ellieImage",
-                        description_1: ellie.description_1,
-                        description_2: ellie.description_2,
-                        description_3: ellie.description_3,
-                        description_4: ellie.description_4,
-                        www_title: ellie.what_went_wrong.title,
-                        www_point1: ellie.what_went_wrong.text_1,
-                        www_point2: ellie.what_went_wrong.text_2,
-                        www_point3: ellie.what_went_wrong.text_3,
-                        
-                        sort_title: ellie.how_to_sort.title,
-                        sort_point1: ellie.how_to_sort.text_1,
-                        sort_point2: ellie.how_to_sort.text_2,
-                        sort_point3: ellie.how_to_sort.text_3,
-                        
-                        diff_title: ellie.have_done_differently.title,
-                        diff_point1: ellie.have_done_differently.text_1,
-                        diff_point2: ellie.have_done_differently.text_2,
-                        diff_point3: ellie.have_done_differently.text_3,
-                        
-                        solutions_title: ellie.solutions_and_resources.title,
-                        solutions_point1: ellie.solutions_and_resources.text_1,
-                        solutions_point2: ellie.solutions_and_resources.text_2,
-                        solutions_point3: ellie.solutions_and_resources.text_3
+                        description1: ellie.description1,
+                        description2: ellie.description2,
+                        description3: ellie.description3,
+                        description4: ellie.description4,
+                        wwwTitle: ellie.whatWentWrong.title,
+                        wwwPoint1: ellie.whatWentWrong.text1,
+                        wwwPoint2: ellie.whatWentWrong.text2,
+                        wwwPoint3: ellie.whatWentWrong.text3,
+
+                        sortTitle: ellie.howToSort.title,
+                        sortPoint1: ellie.howToSort.text1,
+                        sortPoint2: ellie.howToSort.text2,
+                        sortPoint3: ellie.howToSort.text3,
+
+                        diffTitle: ellie.haveDoneDifferently.title,
+                        diffPoint1: ellie.haveDoneDifferently.text1,
+                        diffPoint2: ellie.haveDoneDifferently.text2,
+                        diffPoint3: ellie.haveDoneDifferently.text3,
+
+                        solutionsTitle: ellie.solutionsAndResources.title,
+                        solutionsPoint1: ellie.solutionsAndResources.text1,
+                        solutionsPoint2: ellie.solutionsAndResources.text2,
+                        solutionsPoint3: ellie.solutionsAndResources.text3
                     )
-                    
+
                     HStack {
                         CardComponent(
                             title: "CREDIT CARDS",

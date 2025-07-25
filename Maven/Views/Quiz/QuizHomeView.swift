@@ -27,10 +27,13 @@ struct QuizHomeView: View {
                     Text("🧠💰 Ready to test your financial knowledge?")
                         .font(.font16)
 
-                    Text("""
-                    Take these engaging quizzes to learn key strategies and tips for improving your financial health and boosting your MAVEN Score. Let’s see how much you know! 🚀✅
-                    """)
-                        .font(.font16)
+                    Text(
+                        """
+                        Take these engaging quizzes to learn key strategies and tips for improving your
+                        financial health and boosting your MAVEN Score. Let’s see how much you know! 🚀✅
+                        """
+                    )
+                    .font(.font16)
 
                     ForEach(quizzes, id: \.key) { quizID, quiz in
                         CardComponent(
@@ -46,13 +49,17 @@ struct QuizHomeView: View {
             }
         }
     }
-    
+
     func iconForCategory(_ category: String) -> String {
         switch category.lowercased() {
-            case "credit": return "creditcard"
-            case "borrowing money": return "banknote"
-            case "accounts": return "building.columns"
-            default: return "questionmark.circle"
+        case "credit":
+            return "creditcard"
+        case "borrowing money":
+            return "banknote"
+        case "accounts":
+            return "building.columns"
+        default:
+            return "questionmark.circle"
         }
     }
 }

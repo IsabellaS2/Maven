@@ -12,12 +12,14 @@ func calculateTotalUserScenarioPoints(from summary: UserScenariosSummary, now: D
             let expiresDate = parseDate(scenario.expiresOn),
             let completedDate = parseDate(scenario.completedOn)
         else {
-            print("Failed to parse dates for scenario id: \(scenario.id), completedOn: \(scenario.completedOn), expiresOn: \(scenario.expiresOn)")
+            print("Failed to parse dates for scenario id: \(scenario.id), " +
+                  "completedOn: \(scenario.completedOn), " +
+                  "expiresOn: \(scenario.expiresOn)")
             return total
         }
-        
+
         print("Scenario \(scenario.id): completedDate=\(completedDate), expiresDate=\(expiresDate), now=\(now)")
-        
+
         if completedDate <= expiresDate && expiresDate > now {
             print("✅ Adding points \(scenario.points) for scenario \(scenario.id)")
             return total + scenario.points
@@ -27,4 +29,3 @@ func calculateTotalUserScenarioPoints(from summary: UserScenariosSummary, now: D
         }
     }
 }
-

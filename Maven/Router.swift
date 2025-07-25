@@ -10,8 +10,8 @@ import SwiftUI
 final class Router: ObservableObject {
 
     public enum Destination: Hashable {
-        
-        //Pages
+
+        // Pages
         case financialCenterView
         case financialHabitsView
         case infoView
@@ -20,7 +20,6 @@ final class Router: ObservableObject {
         case quizHomeView
         case quizIntroView(quizID: String)
         case quizQuestionView(quiz: QuizSet)
-
 
         // User Scenario
         case ellieView

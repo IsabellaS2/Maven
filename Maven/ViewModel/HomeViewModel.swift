@@ -18,9 +18,8 @@ class HomeViewModel: ObservableObject {
 
     func processUserData(from jsonData: Data) {
         let decoder = JSONDecoder()
-        
-        do {
 
+        do {
             let userData = try decoder.decode(UserData.self, from: jsonData)
             let paymentHistory = userData.behaviour.paymentHistory
             let creditCard = userData.behaviour.creditCards?.first
@@ -32,19 +31,18 @@ class HomeViewModel: ObservableObject {
             let knowledge = userData.knowledge
 
             let paymentHistoryScore = calculatePaymentHistory(paymentHistory: paymentHistory)
-            let creditUtilisationScore = calculateCreditUtilisation(cc: creditCard)
+            let creditUtilisationScore = calculateCreditUtilisation(creditCard: creditCard)
             let bnplUsageScore = calculateBNPLUsageInLast30Days(bnplUsage: bnplProvider)
             let savingsPresenceScore = calculateSavingsPresence(savingsAccounts: savings)
             let debtToIncomeScore = calculateDebtToIncomeRatio(data: behaviour)
-            let creditMixScore = calculateCreditMix(cc: creditCard, loan: loan, bnpl: bnplProvider)
-            let creditLimitMovementScore = calculateCreditLimitMovement(cc: creditCard)
+            let creditMixScore = calculateCreditMix(creditCard: creditCard, loan: loan, bnpl: bnplProvider)
+            let creditLimitMovementScore = calculateCreditLimitMovement(creditCard: creditCard)
             let loanRepaymentScore = calculateLoanRepaymentConsistency(loan: loan)
             let incomeStabilityScore = calculateIncomeStability(income: income)
-            
+
             let userScenarioScore = calculateTotalUserScenarioPoints(from: knowledge.userScenarios)
             let quizScore = calculateTotalValidQuizPoints(from: knowledge.quiz.quizzes)
             let improveVideo = calculateTotalImproveVideoPoints(from: knowledge.improveVideos)
-
 
             let totalScore = paymentHistoryScore +
                              creditUtilisationScore +
@@ -58,7 +56,7 @@ class HomeViewModel: ObservableObject {
                              userScenarioScore +
                              quizScore +
                              improveVideo
-            
+
             DispatchQueue.main.async {
                 self.creditMixScore = creditMixScore
                 self.totalScore = totalScore
@@ -85,11 +83,11 @@ class HomeViewModel: ObservableObject {
             print("Error decoding JSON:", error)
         }
     }
-    
-    //explorerEx
-    //builderEx
-    //strategistEx
-    //championEx
+
+    // explorerEx
+    // builderEx
+    // strategistEx
+    // championEx
 
     func loadAndProcessJSON() {
         if let url = Bundle.main.url(forResource: "championEx", withExtension: "json") {

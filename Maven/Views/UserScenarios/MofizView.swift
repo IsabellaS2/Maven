@@ -14,38 +14,38 @@ struct MofizView: View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
-            
+
             ScrollView {
                 VStack(spacing: 8) {
                     UserScenarioView(
                         title: mofiz.title,
                         subtitle: mofiz.subtitle,
                         image: "mofizImage",
-                        description_1: mofiz.description_1,
-                        description_2: mofiz.description_2,
-                        description_3: mofiz.description_3,
-                        description_4: mofiz.description_4,
-                        www_title: mofiz.what_went_wrong.title,
-                        www_point1: mofiz.what_went_wrong.text_1,
-                        www_point2: mofiz.what_went_wrong.text_2,
-                        www_point3: mofiz.what_went_wrong.text_3,
-                        
-                        sort_title: mofiz.how_to_sort.title,
-                        sort_point1: mofiz.how_to_sort.text_1,
-                        sort_point2: mofiz.how_to_sort.text_2,
-                        sort_point3: mofiz.how_to_sort.text_3,
-                        
-                        diff_title: mofiz.have_done_differently.title,
-                        diff_point1: mofiz.have_done_differently.text_1,
-                        diff_point2: mofiz.have_done_differently.text_2,
-                        diff_point3: mofiz.have_done_differently.text_3,
-                        
-                        solutions_title: mofiz.solutions_and_resources.title,
-                        solutions_point1: mofiz.solutions_and_resources.text_1,
-                        solutions_point2: mofiz.solutions_and_resources.text_2,
-                        solutions_point3: mofiz.solutions_and_resources.text_3
+                        description1: mofiz.description1,
+                        description2: mofiz.description2,
+                        description3: mofiz.description3,
+                        description4: mofiz.description4,
+                        wwwTitle: mofiz.whatWentWrong.title,
+                        wwwPoint1: mofiz.whatWentWrong.text1,
+                        wwwPoint2: mofiz.whatWentWrong.text2,
+                        wwwPoint3: mofiz.whatWentWrong.text3,
+
+                        sortTitle: mofiz.howToSort.title,
+                        sortPoint1: mofiz.howToSort.text1,
+                        sortPoint2: mofiz.howToSort.text2,
+                        sortPoint3: mofiz.howToSort.text3,
+
+                        diffTitle: mofiz.haveDoneDifferently.title,
+                        diffPoint1: mofiz.haveDoneDifferently.text1,
+                        diffPoint2: mofiz.haveDoneDifferently.text2,
+                        diffPoint3: mofiz.haveDoneDifferently.text3,
+
+                        solutionsTitle: mofiz.solutionsAndResources.title,
+                        solutionsPoint1: mofiz.solutionsAndResources.text1,
+                        solutionsPoint2: mofiz.solutionsAndResources.text2,
+                        solutionsPoint3: mofiz.solutionsAndResources.text3
                     )
-                    
+
                     HStack {
                         CardComponent(
                             title: "LOANS",
@@ -64,5 +64,3 @@ struct MofizView: View {
         }
     }
 }
-
-

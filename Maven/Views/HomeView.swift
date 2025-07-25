@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @ObservedObject var vm: HomeViewModel
+
+    @ObservedObject var homeVM: HomeViewModel
     @ObservedObject var nav: NavigationViewModel
-    
+
     var levels: [MavenLevel] = [
         MavenLevel(name: "Explorer", range: 0...399),
         MavenLevel(name: "Builder", range: 400...649),
         MavenLevel(name: "Strategist", range: 650...849),
         MavenLevel(name: "Champion", range: 850...1000)
     ]
-    
-   var currentLevel: MavenLevel {
-       levels.first { $0.range.contains(vm.totalScore) } ?? levels[0]
+
+    var currentLevel: MavenLevel {
+        levels.first { $0.range.contains(homeVM.totalScore) } ?? levels[0]
     }
-    
+
     var progress: CGFloat {
         let lower = CGFloat(currentLevel.range.lowerBound)
         let upper = CGFloat(currentLevel.range.upperBound)
-        return CGFloat(vm.totalScore - Int(lower)) / (upper - lower)
+        return CGFloat(homeVM.totalScore - Int(lower)) / (upper - lower)
     }
-    
+
     var body: some View {
         ZStack {
             Color("background")
@@ -38,26 +38,26 @@ struct HomeView: View {
                 Text("MAVEN Score")
                     .font(Font.mavenTitle)
                     .padding(.bottom, 6.0)
-                
-                Button(action: {
-                    nav.navigateToInfoView()
-                }) {
-                    Text("What is a MAVEN score?")
-                        .font(.headline)
-                        .underline(true, pattern: .solid)
 
-                }
+                Button(
+                    action: {
+                        nav.navigateToInfoView()
+                    },
+                    label: {
+                        Text("What is a MAVEN score?")
+                            .font(.headline)
+                            .underline(true, pattern: .solid)
+                    }
+                )
                 .buttonStyle(PlainButtonStyle())
 
-                
-                Text("\(vm.totalScore)")
+                Text("\(homeVM.totalScore)")
                     .font(.system(size: 64, weight: .heavy))
 
                 Text("Level: \(currentLevel.name)")
                     .padding(.bottom, 20.0)
 
                 ZStack(alignment: .leading) {
-                    // Background with border
                     Rectangle()
                         .frame(height: 32)
                         .foregroundColor(.clear)
@@ -66,15 +66,13 @@ struct HomeView: View {
                                 .stroke(Color.black, lineWidth: 1)
                         )
                         .background(Color.gray.opacity(0.2))
-                    
-                    // Progress fill
+
                     Rectangle()
                         .frame(width: progressBarWidth, height: 32)
                         .foregroundColor(Color("progressBar"))
                 }
                 .padding(.horizontal)
 
-                
                 HStack {
                     Text("\(currentLevel.range.lowerBound)")
                     Spacer()
@@ -83,7 +81,6 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 20.0)
 
-                // Latest Updates
                 VStack(alignment: .leading) {
                     Text("📢 Latest Updates")
 
@@ -101,78 +98,71 @@ struct HomeView: View {
                     Spacer()
                 }
 
-                // Boost your score
                 VStack(alignment: .leading) {
                     Text("🚀 Boost Your Score!")
                         .font(Font.font16)
-                    
-                    
-                    
-                    // Cards - Financial Knowledge Centre and Financial Habits
+
                     HStack(spacing: 4) {
-                        
-                        
-                        // Card 1 - Financial Knowledge Centre
-                        Button(action: {
-                            nav.navigateToFinancialCenter()
-                        }) {
-                            VStack(alignment: .leading) {
-                                Text("📚 Financial Knowledge Center")
-                                    .font(Font.font16)
-                                    .padding(.bottom, 2.0)
-                                
-                                Text("Learn, grow, and master your money")
-                                    .font(Font.font16Light)
-                                
-                                Spacer()
-                                Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
-                                    .font(Font.font16Light)
-                                
+                        Button(
+                            action: {
+                                nav.navigateToFinancialCenter()
+                            },
+                            label: {
+                                VStack(alignment: .leading) {
+                                    Text("📚 Financial Knowledge Center")
+                                        .font(Font.font16)
+                                        .padding(.bottom, 2.0)
+
+                                    Text("Learn, grow, and master your money")
+                                        .font(Font.font16Light)
+
+                                    Spacer()
+                                    Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
+                                        .font(Font.font16Light)
+                                }
+                                .padding(10.0)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .frame(width: 175)
                             }
-                            .padding(10.0)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .frame(width: 175)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        
-                        // Card 2 - Financial Habits
-                        Button(action: {
-                            nav.navigateToFinancialHabits()
-                        }) {
-                            VStack(alignment: .leading) {
-                                Text("📊 Your Financial Habits")
-                                    .font(Font.font16)
-                                    .padding(.bottom, 2.0)
-
-                                Text("See how your behaviour shapes your score!")
-                                    .font(Font.font16Light)
-
-                                Spacer()
-
-                                Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
-                                    .font(Font.font16Light)
-                            }
-                            .padding(10.0)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .frame(width: 180)
-                        }
+                        )
                         .buttonStyle(PlainButtonStyle())
 
+                        Button(
+                            action: {
+                                nav.navigateToFinancialHabits()
+                            },
+                            label: {
+                                VStack(alignment: .leading) {
+                                    Text("📊 Your Financial Habits")
+                                        .font(Font.font16)
+                                        .padding(.bottom, 2.0)
 
-            
+                                    Text("See how your behaviour shapes your score!")
+                                        .font(Font.font16Light)
+
+                                    Spacer()
+                                    Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
+                                        .font(Font.font16Light)
+                                }
+                                .padding(10.0)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .frame(width: 180)
+                            }
+                        )
+                        .buttonStyle(PlainButtonStyle())
                     }
                     .frame(height: 200.0)
                 }
                 .padding(.horizontal, 4.0)
+
                 Spacer()
             }
             .padding()
         }
     }
-    
+
     private var progressBarWidth: CGFloat {
         let screenWidth = UIScreen.main.bounds.width - 40
         return screenWidth * progress

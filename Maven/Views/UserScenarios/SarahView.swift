@@ -21,31 +21,31 @@ struct SarahView: View {
                         title: sarah.title,
                         subtitle: sarah.subtitle,
                         image: "sarahImage",
-                        description_1: sarah.description_1,
-                        description_2: sarah.description_2,
-                        description_3: sarah.description_3,
-                        description_4: sarah.description_4,
-                        www_title: sarah.what_went_wrong.title,
-                        www_point1: sarah.what_went_wrong.text_1,
-                        www_point2: sarah.what_went_wrong.text_2,
-                        www_point3: sarah.what_went_wrong.text_3,
-                        
-                        sort_title: sarah.how_to_sort.title,
-                        sort_point1: sarah.how_to_sort.text_1,
-                        sort_point2: sarah.how_to_sort.text_2,
-                        sort_point3: sarah.how_to_sort.text_3,
-                        
-                        diff_title: sarah.have_done_differently.title,
-                        diff_point1: sarah.have_done_differently.text_1,
-                        diff_point2: sarah.have_done_differently.text_2,
-                        diff_point3: sarah.have_done_differently.text_3,
-                        
-                        solutions_title: sarah.solutions_and_resources.title,
-                        solutions_point1: sarah.solutions_and_resources.text_1,
-                        solutions_point2: sarah.solutions_and_resources.text_2,
-                        solutions_point3: sarah.solutions_and_resources.text_3
+                        description1: sarah.description1,
+                        description2: sarah.description2,
+                        description3: sarah.description3,
+                        description4: sarah.description4,
+                        wwwTitle: sarah.whatWentWrong.title,
+                        wwwPoint1: sarah.whatWentWrong.text1,
+                        wwwPoint2: sarah.whatWentWrong.text2,
+                        wwwPoint3: sarah.whatWentWrong.text3,
+
+                        sortTitle: sarah.howToSort.title,
+                        sortPoint1: sarah.howToSort.text1,
+                        sortPoint2: sarah.howToSort.text2,
+                        sortPoint3: sarah.howToSort.text3,
+
+                        diffTitle: sarah.haveDoneDifferently.title,
+                        diffPoint1: sarah.haveDoneDifferently.text1,
+                        diffPoint2: sarah.haveDoneDifferently.text2,
+                        diffPoint3: sarah.haveDoneDifferently.text3,
+
+                        solutionsTitle: sarah.solutionsAndResources.title,
+                        solutionsPoint1: sarah.solutionsAndResources.text1,
+                        solutionsPoint2: sarah.solutionsAndResources.text2,
+                        solutionsPoint3: sarah.solutionsAndResources.text3
                     )
-                    
+
                     HStack(spacing: 16) {
                         LongCardComponent(
                             title: "CREDIT CARDS",

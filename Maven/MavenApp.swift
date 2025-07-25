@@ -18,52 +18,52 @@ struct MavenApp: App {
 
         WindowGroup {
             NavigationStack(path: $router.navPath) {
-                HomeView(vm: viewModel, nav: navViewModel)
+                HomeView(homeVM: viewModel, nav: navViewModel)
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
-                            
+
                         case .financialCenterView:
                             FinancialCenterView(nav: navViewModel)
-                                                        
+
                         case .financialHabitsView:
                             viewModel.behaviour.map { FinancialHabitsView(behaviour: $0, nav: navViewModel) }
 
                         case .infoView:
                             MavenInfoView()
-                            
+
                         case .improveHomeView:
                             ImproveHomeView()
-                            
+
                         case .userScenarioView:
                             UserScenarioHomeView(nav: navViewModel)
-                            
+
                         case .quizHomeView:
                             QuizHomeView(nav: navViewModel)
-                            
+
                         case .quizIntroView(let quizID):
                             QuizIntroView(quizID: quizID, nav: navViewModel)
 
                         case .quizQuestionView(let quiz):
-                            QuizQuestionsView( nav: navViewModel, quiz: quiz)
-                            
+                            QuizQuestionView( nav: navViewModel, quiz: quiz)
+
                         case .ellieView:
                             EllieView(ellie: userScenarios!.elliesCreditCardStruggles)
 
                         case .jakeView:
                             JakeView(jake: userScenarios!.jakesDebtManagementStruggles)
-                        
+
                         case .marcusView:
                             MarcusView(marcus: userScenarios!.marcussMortgageMisunderstanding)
-                            
+
                         case .mariaView:
                             MariaView(maria: userScenarios!.mariasBnplTrouble)
-                        
+
                         case .mofizView:
                             MofizView(mofiz: userScenarios!.mofizsCarLoanOversight)
-                            
+
                         case .sarahView:
                             SarahView(sarah: userScenarios!.sarahsCreditCardBalanceTransferMisstep)
-                            
+
                         }
                     }
             }

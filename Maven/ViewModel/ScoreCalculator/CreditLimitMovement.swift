@@ -7,13 +7,13 @@
 
 import Foundation
 
-func calculateCreditLimitMovement(cc: CreditCard?, today: Date = Date()) -> Int {
-    guard let cc = cc else {
+func calculateCreditLimitMovement(creditCard: CreditCard?, today: Date = Date()) -> Int {
+    guard let creditCard = creditCard else {
         return 20
     }
-    
-    let increaseDate = parseDate(cc.lastLimitIncrease)
-    let decreaseDate = parseDate(cc.lastLimitDecrease)
+
+    let increaseDate = parseDate(creditCard.lastLimitIncrease)
+    let decreaseDate = parseDate(creditCard.lastLimitDecrease)
 
     if decreaseDate != nil {
         return 0

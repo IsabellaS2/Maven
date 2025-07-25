@@ -9,7 +9,7 @@ import XCTest
 @testable import Maven
 
 final class QuizHomeViewTest: XCTestCase {
-    
+
     func testIconForCategory_returnsCorrectIcon() {
         let view = QuizHomeView(nav: NavigationViewModel(router: Router()))
 

@@ -5,8 +5,8 @@
 //  Created by Isabella Sulisufi on 08/07/2025.
 //
 
-func calculateCreditMix(cc: CreditCard?, loan: Loan?, bnpl: BNPLUsageProvider?) -> Int {
-    let hasCreditCard = cc != nil
+func calculateCreditMix(creditCard: CreditCard?, loan: Loan?, bnpl: BNPLUsageProvider?) -> Int {
+    let hasCreditCard = creditCard != nil
     let hasLoan = loan != nil
     let hasBNPL = bnpl != nil
 

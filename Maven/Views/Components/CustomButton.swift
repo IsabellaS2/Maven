@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomButton: View {
-    
+
     let text: String
     let color: Color
     let width: CGFloat
@@ -28,7 +28,6 @@ struct CustomButton: View {
             .cornerRadius(15)
             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
         }
-        
 
     }
 }

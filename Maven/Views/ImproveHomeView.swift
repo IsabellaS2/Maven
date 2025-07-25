@@ -107,4 +107,3 @@ struct ImproveHomeView: View {
     }
 
 }
-

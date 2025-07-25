@@ -15,7 +15,13 @@ struct CardComponent: View {
     let tag: String?
     let navigation: () -> Void
 
-    init(title: String, description: String, icon: String, header: String? = nil, tag: String? = nil, navigation: @escaping () -> Void = {}) {
+    init(title: String,
+         description: String,
+         icon: String,
+         header: String? = nil,
+         tag: String? = nil,
+         navigation: @escaping () -> Void = {}
+    ) {
         self.title = title
         self.description = description
         self.icon = icon
@@ -144,7 +150,7 @@ struct LongCardComponent: View {
         header: "User Scenario",
         tag: "What went wrong?"
     )
-    
+
     LongCardComponent(
         title: "💸 On-time Loan Payments",
         description: "You always pay on time! This builds trust with lenders and strengthens your score.",

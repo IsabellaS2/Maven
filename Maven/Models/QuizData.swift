@@ -9,7 +9,6 @@ import Foundation
 
 typealias QuizDatabase = [String: QuizSet]
 
-
 struct QuizSet: Codable, Hashable {
     let title: String
     let category: String
@@ -20,11 +19,13 @@ struct Question: Codable, Hashable, Identifiable {
     var id = UUID()
     let question: String
     let options: [String]
-    let correct_answer: String
+    let correctAnswer: String
     let explanation: String
 
     private enum CodingKeys: String, CodingKey {
-        case question, options, correct_answer, explanation
+        case question, options, explanation
+        case correctAnswer = "correct_answer"
+
     }
 }
 
@@ -33,4 +34,3 @@ struct QuizData {
         loadJSON(fileName: "quiz", as: QuizDatabase.self) ?? [:]
     }()
 }
-

@@ -29,39 +29,80 @@ struct Scenario: Codable {
     var title: String
     var subtitle: String
     var image: String?
-    var description_1: String
-    var description_2: String
-    var description_3: String
-    var description_4: String
-    var what_went_wrong: WhatWentWrong
-    var how_to_sort: HowToSort
-    var have_done_differently: HaveDoneDifferently
-    var solutions_and_resources: SolutionsAndResources
+    var description1: String
+    var description2: String
+    var description3: String
+    var description4: String
+    var whatWentWrong: WhatWentWrong
+    var howToSort: HowToSort
+    var haveDoneDifferently: HaveDoneDifferently
+    var solutionsAndResources: SolutionsAndResources
+
+    enum CodingKeys: String, CodingKey {
+        case title, subtitle, image
+        case description1 = "description_1"
+        case description2 = "description_2"
+        case description3 = "description_3"
+        case description4 = "description_4"
+        case whatWentWrong = "what_went_wrong"
+        case howToSort = "how_to_sort"
+        case haveDoneDifferently = "have_done_differently"
+        case solutionsAndResources = "solutions_and_resources"
+    }
 }
+
 struct WhatWentWrong: Codable {
     var title: String
-    var text_1: String
-    var text_2: String
-    var text_3: String
+    var text1: String
+    var text2: String
+    var text3: String
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case text1 = "text_1"
+        case text2 = "text_2"
+        case text3 = "text_3"
+    }
 }
 
 struct HowToSort: Codable {
     var title: String
-    var text_1: String
-    var text_2: String
-    var text_3: String
+    var text1: String
+    var text2: String
+    var text3: String
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case text1 = "text_1"
+        case text2 = "text_2"
+        case text3 = "text_3"
+    }
 }
 
 struct HaveDoneDifferently: Codable {
     var title: String
-    var text_1: String
-    var text_2: String
-    var text_3: String
+    var text1: String
+    var text2: String
+    var text3: String
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case text1 = "text_1"
+        case text2 = "text_2"
+        case text3 = "text_3"
+    }
 }
 
 struct SolutionsAndResources: Codable {
     var title: String
-    var text_1: String
-    var text_2: String
-    var text_3: String
+    var text1: String
+    var text2: String
+    var text3: String
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case text1 = "text_1"
+        case text2 = "text_2"
+        case text3 = "text_3"
+    }
 }

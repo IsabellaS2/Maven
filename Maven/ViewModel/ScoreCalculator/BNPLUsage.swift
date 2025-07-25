@@ -9,7 +9,7 @@ func calculateBNPLUsageInLast30Days(bnplUsage: BNPLUsageProvider?) -> Int {
     guard let usage = bnplUsage else {
         return 35
     }
-    
+
     switch usage.transactionsLast30Days {
     case 0...1:
         return 80

@@ -22,9 +22,11 @@ struct UserScenarioHomeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 20)
                 VStack(alignment: .leading) {
-                    Text("🚶‍♂️💡 Walk through real-world financial scenarios to understand the consequences of your choices. ")
-                        .font(.font16)
-                        .padding(.bottom, 6.0)
+
+                    Text("🚶‍♂️💡 Walk through real-world financial scenarios" +
+                    " to understand the consequences of your choices.")
+                    .font(.font16)
+                    .padding(.bottom, 6.0)
 
                     Text("""
                         Learn what went wrong, how to fix it, and what you could have done differently \
@@ -134,4 +136,3 @@ struct UserScenarioHomeView: View {
         }
     }
 }
-

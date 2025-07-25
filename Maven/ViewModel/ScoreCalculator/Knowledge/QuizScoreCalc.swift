@@ -9,7 +9,7 @@ import Foundation
 
 func calculateTotalValidQuizPoints(from quizzes: [QuizItem], currentDate: Date = Date()) -> Int {
     let calendar = Calendar.current
-    
+
     guard let threeMonthsAgo = calendar.date(byAdding: .month, value: -3, to: currentDate) else {
         return 0
     }
@@ -34,6 +34,3 @@ func calculateTotalValidQuizPoints(from quizzes: [QuizItem], currentDate: Date =
 
     return total
 }
-
-
-

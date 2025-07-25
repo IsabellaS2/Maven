@@ -30,7 +30,7 @@ struct QuizItem: Codable {
     var score: Int
     var maxScore: Int
     var expiresOn: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id, score
         case completedOn = "completed_on"
