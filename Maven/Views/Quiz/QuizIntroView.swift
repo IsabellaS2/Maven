@@ -15,21 +15,21 @@ struct QuizIntroView: View {
     init(quizID: String, nav: NavigationViewModel) {
         self.quizID = quizID
         self.nav = nav
-        self.quiz = QuizData.allQuizzes[quizID]! 
+        self.quiz = QuizData.allQuizzes[quizID]!
     }
 
     var body: some View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
-            
+
             VStack {
                 VStack(spacing: 20) {
                     Text(quiz.title)
                         .font(.midTitle)
                         .multilineTextAlignment(.center)
                         .padding(.top, 20)
-                    
+
                     Text("Category: \(quiz.category)")
                         .font(.font18Subtitle)
 
@@ -37,7 +37,7 @@ struct QuizIntroView: View {
                         .font(.font16)
 
                     Spacer()
-                
+
                     CustomButton(
                         text: "Continue",
                         color: .white,
@@ -46,7 +46,7 @@ struct QuizIntroView: View {
                             nav.navigateToQuizQuestionView(quizID: quizID)
                         }
                     )
-                    
+
                     CustomButton(
                         text: "Go Back",
                         color: .gray,
@@ -55,7 +55,7 @@ struct QuizIntroView: View {
                             nav.navigateToQuizHomeView()
                         }
                     )
-                    
+
                     Spacer()
                 }
                 .padding()
@@ -63,5 +63,3 @@ struct QuizIntroView: View {
         }
     }
 }
-
-

@@ -41,7 +41,7 @@ final class DebtToIncomeRatioTest: XCTestCase {
      func testRatioBetweenPointThreeAndPointFiveReturns30() {
          let behaviour = makeBehaviour(incomeAmount: 3000, ratio: 0.3)
          XCTAssertEqual(calculateDebtToIncomeRatio(data: behaviour), 30)
-         
+
          let behaviour2 = makeBehaviour(incomeAmount: 3000, ratio: 0.5)
          XCTAssertEqual(calculateDebtToIncomeRatio(data: behaviour2), 30)
      }
@@ -50,7 +50,7 @@ final class DebtToIncomeRatioTest: XCTestCase {
          let behaviour = makeBehaviour(incomeAmount: 5000, ratio: 0.51)
          XCTAssertEqual(calculateDebtToIncomeRatio(data: behaviour), 10)
      }
-    
+
     func testNoIncomeNoDebt() {
         let behaviour = makeBehaviour(incomeAmount: nil, ratio: nil)
         XCTAssertEqual(calculateDebtToIncomeRatio(data: behaviour), 25)

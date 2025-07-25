@@ -17,54 +17,53 @@ class NavigationViewModel: ObservableObject {
     func navigateToFinancialCenter() {
         router.navigate(to: .financialCenterView)
     }
-    
+
     func navigateToFinancialHabits() {
         router.navigate(to: .financialHabitsView)
     }
-    
+
     func navigateToInfoView() {
         router.navigate(to: .infoView)
     }
-    
+
     func navigateToImproveHomeView() {
         router.navigate(to: .improveHomeView)
     }
-    
+
     // MARK: - User Scenarios
     func navigateToUserScenarioHomeView() {
         router.navigate(to: .userScenarioView)
     }
-    
+
     func navigateToEllieView() {
         router.navigate(to: .ellieView)
     }
-    
+
     func navigateToJakeView() {
         router.navigate(to: .jakeView)
     }
-    
+
     func navigateToMarcusView() {
         router.navigate(to: .marcusView)
     }
-    
+
     func navigateToMariaView() {
         router.navigate(to: .mariaView)
     }
-    
+
     func navigateToMofizView() {
         router.navigate(to: .mofizView)
     }
-    
+
     func navigateToSarahView() {
         router.navigate(to: .sarahView)
     }
-    
+
     // MARK: - Quiz
     func navigateToQuizHomeView() {
         router.navigate(to: .quizHomeView)
     }
-    
-    
+
     func navigateToQuizIntroView(quizID: String) {
         router.navigate(to: .quizIntroView(quizID: quizID))
     }

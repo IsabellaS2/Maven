@@ -9,17 +9,17 @@ func calculateDebtToIncomeRatio(data: Behaviour?) -> Int {
     guard let data = data else {
         return 0
     }
-    
+
     let income = data.income?.averageAmount
     let ratio = data.debtToIncomeRatio
-    
+
     if income == nil {
         if ratio == nil || ratio == 0 {
             return 25
         }
         return 0
     }
-    
+
     if let ratio = ratio {
         switch ratio {
         case ..<0.3:
@@ -30,6 +30,6 @@ func calculateDebtToIncomeRatio(data: Behaviour?) -> Int {
             return 10
         }
     }
-    
+
     return 0
 }

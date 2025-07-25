@@ -18,30 +18,24 @@ func calculateIncomeStability(income: Income?) -> Int {
 
     switch income.frequency {
     case "Monthly":
-        if gap >= 27 && gap <= 33 {
-            return 35
-        } else if gap >= 25 && gap <= 38 {
-            return 20
-        }
-        return 0
+        return scoreForGap(gap, idealRange: 27...33, acceptableRange: 25...38)
 
     case "Bi-weekly":
-        if gap >= 13 && gap <= 15 {
-            return 35
-        } else if gap >= 12 && gap <= 17 {
-            return 20
-        }
-        return 0
+        return scoreForGap(gap, idealRange: 13...15, acceptableRange: 12...17)
 
     case "Weekly":
-        if gap >= 6 && gap <= 8 {
-            return 35
-        } else if gap >= 5 && gap <= 10 {
-            return 20
-        }
-        return 0
+        return scoreForGap(gap, idealRange: 6...8, acceptableRange: 5...10)
 
     default:
         return 0
     }
+}
+
+private func scoreForGap(_ gap: Int, idealRange: ClosedRange<Int>, acceptableRange: ClosedRange<Int>) -> Int {
+    if idealRange.contains(gap) {
+        return 35
+    } else if acceptableRange.contains(gap) {
+        return 20
+    }
+    return 0
 }

@@ -1,4 +1,3 @@
-
 //
 //  Accounts.swift
 //
@@ -50,4 +49,3 @@ struct Balance: Codable {
     var current: Double
     var currency: String
 }
-

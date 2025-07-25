@@ -32,7 +32,15 @@ struct MavenInfoView: View {
                         Text("What is a MAVEN score?")
                             .font(.headline)
 
-                        Text("A MAVEN score is a unique financial literacy and behaviour score that measures how well you understand and manage credit. Unlike a traditional credit score (which only looks at past borrowing history), this score reflects your financial knowledge and behaviour.")
+                        Text(
+                            """
+                            A MAVEN score is a unique financial literacy and behaviour score that measures 
+                            how well you understand and manage credit. Unlike a traditional credit score (which 
+                            only looks at past borrowing history), this score reflects your financial
+                            knowledge and behaviour.
+                            """
+                        )
+                        .font(Font.font16)
                     }
                     .padding(.horizontal, 15.0)
 
@@ -56,13 +64,19 @@ struct MavenInfoView: View {
                             Text("Financial Knowledge")
                                 .font(Font.font18Subtitle)
 
-                            Text("This calculates your financial knowledge based on your interactions and results with products on ClearScore. This can include:")
-                                .font(Font.font16)
-                                .padding(.bottom, 6.0)
+                            Text(
+                                "This calculates your financial knowledge based on your interactions and results with "
+                                + "products on ClearScore. This can include:"
+                            )
+                            .font(Font.font16)
+                            .padding(.bottom, 6.0)
 
-                            Text("1. Completing Quizzes\n2. Watching Improve Videos\n3. Completing User Scenarios")
-                                .font(Font.font16)
-
+                            Text(
+                                "1. Completing Quizzes\n"
+                                + "2. Watching Improve Videos\n"
+                                + "3. Completing User Scenarios"
+                            )
+                            .font(Font.font16)
                         }
                         .padding(.bottom, 12.0)
 
@@ -71,13 +85,19 @@ struct MavenInfoView: View {
                             Text("Behaviour")
                                 .font(Font.font18Subtitle)
 
-                            Text("This looks at your banking transactions and accounts and analyses a score based on many factors including:")
-                                .font(Font.font16)
-                                .padding(.bottom, 6.0)
+                            Text(
+                                "This looks at your banking transactions and accounts and analyses"
+                                + " a score based on many factors including:"
+                            )
+                            .font(Font.font16)
+                            .padding(.bottom, 6.0)
 
-                            Text("1. Types of payments  \n2. Credit utilisation \n3. Savings accounts")
-                                .font(Font.font16)
-
+                            Text(
+                                "1. Types of payments\n"
+                                + "2. Credit utilisation\n"
+                                + "3. Savings accounts"
+                            )
+                            .font(Font.font16)
                         }
                     }
                     .padding(.horizontal, 30.0)
@@ -87,22 +107,34 @@ struct MavenInfoView: View {
                         Text("What does the level mean?")
                             .font(.headline)
 
-                        Text("There are 4 types of levels you can have with a maturity level. They are all based on the score you have.")
-                            .font(Font.font16)
+                        Text(
+                            "There are 4 types of levels you can have with a maturity level."
+                            + "They are all based on the score you have."
+                        )
+                        .font(Font.font16)
 
                         VStack(alignment: .leading) {
-                            Text("1. ").font(Font.font16) + Text("Explorer").bold() + Text(" (0–399)").font(Font.font16Light)
-                            Text("2. ").font(Font.font16) + Text("Builder").bold() + Text(" (400–649)").font(Font.font16Light)
-                            Text("3. ").font(Font.font16) + Text("Strategist").bold() + Text(" (650–849)").font(Font.font16Light)
-                            Text("4. ").font(Font.font16) + Text("Champion").bold() + Text(" (850–1000)").font(Font.font16Light)
+                            Text("1. ").font(Font.font16)
+                                + Text("Explorer").bold()
+                                + Text(" (0–399)").font(Font.font16Light)
+
+                            Text("2. ").font(Font.font16)
+                                + Text("Builder").bold()
+                                + Text(" (400–649)").font(Font.font16Light)
+
+                            Text("3. ").font(Font.font16)
+                                + Text("Strategist").bold()
+                                + Text(" (650–849)").font(Font.font16Light)
+
+                            Text("4. ").font(Font.font16)
+                                + Text("Champion").bold()
+                                + Text(" (850–1000)").font(Font.font16Light)
                         }
 
                         Text("As your score increases, you can bump up to the next level!")
                             .font(Font.font16)
-
                     }
                     .padding(.horizontal, 30.0)
-
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)

@@ -12,16 +12,23 @@ struct FinancialHabitsView: View {
 
     let habitsData: FinancialHabitsData?
     let behaviour: Behaviour
-    
-    init(behaviour: Behaviour, nav: NavigationViewModel) {
+    let viewModel: FinancialHabitsViewModel
+
+    init(
+        behaviour: Behaviour,
+        nav: NavigationViewModel,
+        viewModel: FinancialHabitsViewModel = FinancialHabitsViewModel()
+    ) {
         self.behaviour = behaviour
         self.habitsData = loadJSON(fileName: "financialHabits", as: FinancialHabitsData.self)
         self._nav = ObservedObject(wrappedValue: nav)
+        self.viewModel = viewModel
     }
 
     var body: some View {
         ZStack {
             Color("background").ignoresSafeArea()
+
             ScrollView {
                 VStack(spacing: 24) {
                     Text("📊 Your Financial Habits & Score Impact")
@@ -30,63 +37,34 @@ struct FinancialHabitsView: View {
                         .padding(.top, 20)
 
                     VStack(alignment: .leading) {
-                        Text("🔍 A personalised look at your financial habits - see what you're doing well and where you can improve! 💰✨")
-                            .font(.font16)
-                            .padding(.bottom, 6.0)
+                        Text(
+                            "🔍 A personalised look at your financial habits - see what you're doing well and "
+                            + "where you can improve! 💰✨"
+                        )
+                        .font(.font16)
+                        .padding(.bottom, 6.0)
 
                         if let habits = habitsData {
+                            let visibleGoodHabits = viewModel.buildVisibleGoodHabits(
+                                from: habits,
+                                with: behaviour
+                            )
+                            let visibleImprovements = viewModel.buildVisibleImprovements(
+                                from: habits,
+                                with: behaviour
+                            )
 
                             // MARK: - Good Habits
-                            let visibleGoodHabits: [(String, String, String)] = [
-                                (
-                                    habits.whats_going_well.on_time_loan_payments.title,
-                                    habits.whats_going_well.on_time_loan_payments.description_1,
-                                    habits.whats_going_well.on_time_loan_payments.description_2
-                                )
-                            ].filter { _ in shouldShowOnTimeLoanPayments(behaviour.loans) } +
-                            [
-                                (
-                                    habits.whats_going_well.healthy_savings.title,
-                                    habits.whats_going_well.healthy_savings.description_1,
-                                    habits.whats_going_well.healthy_savings.description_2
-                                )
-                            ].filter { _ in shouldShowHealthySavings(behaviour.accounts?.savingsAccounts) } +
-                            [
-                                (
-                                    habits.whats_going_well.stable_income.title,
-                                    habits.whats_going_well.stable_income.description_1,
-                                    habits.whats_going_well.stable_income.description_2
-                                )
-                            ].filter { _ in shouldShowStableIncome(behaviour.income) } +
-                            [
-                                (
-                                    habits.whats_going_well.smart_bnpl_management.title,
-                                    habits.whats_going_well.smart_bnpl_management.description_1,
-                                    habits.whats_going_well.smart_bnpl_management.description_2
-                                )
-                            ].filter { _ in shouldShowSmartBNPL(behaviour.bnpl?.providers) } +
-                            [
-                                (
-                                    habits.whats_going_well.no_late_payments.title,
-                                    habits.whats_going_well.no_late_payments.description_1,
-                                    habits.whats_going_well.no_late_payments.description_2
-                                )
-                            ].filter { _ in shouldShowNoLatePayments(behaviour.paymentHistory) } +
-                            [
-                                (
-                                    habits.whats_going_well.low_debt_to_income.title,
-                                    habits.whats_going_well.low_debt_to_income.description_1,
-                                    habits.whats_going_well.low_debt_to_income.description_2
-                                )
-                            ].filter { _ in shouldShowLowDTI(behaviour.debtToIncomeRatio) }
-
                             Text("✅ What’s Going Well")
                                 .font(.font24Subtitle)
 
                             if visibleGoodHabits.isEmpty {
                                 LongCardComponent(
                                     title: "Nothing just yet...",
-                                    description: "Why not explore a video or quiz to start building better financial habits? 🎓",
+                                    description: """
+                                    Why not explore a video or quiz to start building better \
+                                    financial habits? 🎓
+                                    """,
                                     icon: "",
                                     header: "📚 Let’s Get Learning!",
                                     navigation: {
@@ -94,61 +72,17 @@ struct FinancialHabitsView: View {
                                     }
                                 )
                             } else {
-                                ForEach(visibleGoodHabits.indices, id: \.self) { index in
-                                    let card = visibleGoodHabits[index]
+                                ForEach(visibleGoodHabits, id: \.title) { card in
                                     LongCardComponent(
-                                        title: card.1,
-                                        description: card.2,
+                                        title: card.description1,
+                                        description: card.description2,
                                         icon: "",
-                                        header: card.0
+                                        header: card.title
                                     )
                                 }
                             }
 
-                            // MARK: - Improvements
-                            let visibleImprovements: [(String, String, String)] = [
-                                (
-                                    habits.what_needs_improvement.missed_credit_cards.title,
-                                    habits.what_needs_improvement.missed_credit_cards.description_1,
-                                    habits.what_needs_improvement.missed_credit_cards.description_2
-                                )
-                            ].filter { _ in shouldShowMissedCreditCardPayments(behaviour.paymentHistory) } +
-                            [
-                                (
-                                    habits.what_needs_improvement.high_bnpl_usage.title,
-                                    habits.what_needs_improvement.high_bnpl_usage.description_1,
-                                    habits.what_needs_improvement.high_bnpl_usage.description_2
-                                )
-                            ].filter { _ in shouldShowHighBNPLUsage(behaviour.bnpl?.providers) } +
-                            [
-                                (
-                                    habits.what_needs_improvement.low_savings.title,
-                                    habits.what_needs_improvement.low_savings.description_1,
-                                    habits.what_needs_improvement.low_savings.description_2
-                                )
-                            ].filter { _ in shouldShowLowSavings(behaviour.accounts?.savingsAccounts) } +
-                            [
-                                (
-                                    habits.what_needs_improvement.over_limit_spending.title,
-                                    habits.what_needs_improvement.over_limit_spending.description_1,
-                                    habits.what_needs_improvement.over_limit_spending.description_2
-                                )
-                            ].filter { _ in shouldShowOverLimitSpending(behaviour.creditCards) } +
-                            [
-                                (
-                                    habits.what_needs_improvement.missed_loan_payments.title,
-                                    habits.what_needs_improvement.missed_loan_payments.description_1,
-                                    habits.what_needs_improvement.missed_loan_payments.description_2
-                                )
-                            ].filter { _ in shouldShowMissedLoanPayments(behaviour.loans) } +
-                            [
-                                (
-                                    habits.what_needs_improvement.high_debt_to_income.title,
-                                    habits.what_needs_improvement.high_debt_to_income.description_1,
-                                    habits.what_needs_improvement.high_debt_to_income.description_2
-                                )
-                            ].filter { _ in shouldShowHighDTI(behaviour.debtToIncomeRatio) }
-
+                            // MARK: - Needs Improvement
                             Text("⚠️ What Needs Improvement")
                                 .font(.font24Subtitle)
                                 .padding(.top)
@@ -164,17 +98,16 @@ struct FinancialHabitsView: View {
                                     }
                                 )
                             } else {
-                                ForEach(visibleImprovements.indices, id: \.self) { index in
-                                    let card = visibleImprovements[index]
+
+                                ForEach(visibleImprovements, id: \.title) { card in
                                     LongCardComponent(
-                                        title: card.1,
-                                        description: card.2,
+                                        title: card.description1,
+                                        description: card.description2,
                                         icon: "",
-                                        header: card.0
+                                        header: card.title
                                     )
                                 }
                             }
-
                         } else {
                             Text("Failed to load financial habits data.")
                                 .foregroundColor(.red)

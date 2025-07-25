@@ -14,45 +14,45 @@ struct MariaView: View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
-            
+
             ScrollView {
                 VStack(spacing: 8) {
                     UserScenarioView(
                         title: maria.title,
                         subtitle: maria.subtitle,
                         image: "mariaImage",
-                        description_1: maria.description_1,
-                        description_2: maria.description_2,
-                        description_3: maria.description_3,
-                        description_4: maria.description_4,
-                        www_title: maria.what_went_wrong.title,
-                        www_point1: maria.what_went_wrong.text_1,
-                        www_point2: maria.what_went_wrong.text_2,
-                        www_point3: maria.what_went_wrong.text_3,
-                        
-                        sort_title: maria.how_to_sort.title,
-                        sort_point1: maria.how_to_sort.text_1,
-                        sort_point2: maria.how_to_sort.text_2,
-                        sort_point3: maria.how_to_sort.text_3,
-                        
-                        diff_title: maria.have_done_differently.title,
-                        diff_point1: maria.have_done_differently.text_1,
-                        diff_point2: maria.have_done_differently.text_2,
-                        diff_point3: maria.have_done_differently.text_3,
-                        
-                        solutions_title: maria.solutions_and_resources.title,
-                        solutions_point1: maria.solutions_and_resources.text_1,
-                        solutions_point2: maria.solutions_and_resources.text_2,
-                        solutions_point3: maria.solutions_and_resources.text_3
+                        description1: maria.description1,
+                        description2: maria.description2,
+                        description3: maria.description3,
+                        description4: maria.description4,
+                        wwwTitle: maria.whatWentWrong.title,
+                        wwwPoint1: maria.whatWentWrong.text1,
+                        wwwPoint2: maria.whatWentWrong.text2,
+                        wwwPoint3: maria.whatWentWrong.text3,
+
+                        sortTitle: maria.howToSort.title,
+                        sortPoint1: maria.howToSort.text1,
+                        sortPoint2: maria.howToSort.text2,
+                        sortPoint3: maria.howToSort.text3,
+
+                        diffTitle: maria.haveDoneDifferently.title,
+                        diffPoint1: maria.haveDoneDifferently.text1,
+                        diffPoint2: maria.haveDoneDifferently.text2,
+                        diffPoint3: maria.haveDoneDifferently.text3,
+
+                        solutionsTitle: maria.solutionsAndResources.title,
+                        solutionsPoint1: maria.solutionsAndResources.text1,
+                        solutionsPoint2: maria.solutionsAndResources.text2,
+                        solutionsPoint3: maria.solutionsAndResources.text3
                     )
-                    
+
                     HStack {
                         CardComponent(
                             title: "BNPL",
                             description: "Buy Now, Pay Later",
                             icon: "cart.badge.plus"
                         )
-                        
+
                         LongCardComponent(
                             title: "CREDIT CARDS",
                             description: "Understanding APR, Interest & Charges",
@@ -65,4 +65,3 @@ struct MariaView: View {
         }
     }
 }
-

@@ -5,20 +5,20 @@
 //  Created by Isabella Sulisufi on 07/07/2025.
 //
 
-func calculateCreditUtilisation(cc: CreditCard?) -> Int {
-    guard let cc = cc else {
+func calculateCreditUtilisation(creditCard: CreditCard?) -> Int {
+    guard let creditCard = creditCard else {
         return 35
     }
-    
-    let balance = cc.balance
-    let limit = cc.limit
-    
+
+    let balance = creditCard.balance
+    let limit = creditCard.limit
+
     guard limit > 0 else {
         return 35
     }
-    
+
     let utilisation = balance / limit
-    
+
     switch utilisation {
     case ..<0.3:
         return 135

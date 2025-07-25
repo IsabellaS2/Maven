@@ -11,7 +11,7 @@ import SnapshotTesting
 @testable import Maven
 
 final class QuizIntroViewSnapshotTest: XCTestCase {
-    
+
     func makeView() -> UIViewController {
         QuizData.allQuizzes["1"] = QuizSet(
             title: "Test Quiz",
@@ -28,7 +28,6 @@ final class QuizIntroViewSnapshotTest: XCTestCase {
         return viewController
     }
 
-    
     func testQuizIntroView() {
         let viewController = makeView()
         assertSnapshot(of: viewController, as: .image)

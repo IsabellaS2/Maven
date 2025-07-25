@@ -28,7 +28,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
-    
+
     func testMonthlyIncomeSometimesStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -45,7 +45,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
-    
+
     func testMonthlyIncomeNotStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -61,7 +61,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertEqual(income.frequency, "Monthly")
         XCTAssertEqual(score, 0)
     }
-    
+
     // MARK: - Bi-Weekly
 
     func testBiweeklyIncomeAlwaysStable() {
@@ -73,14 +73,14 @@ final class IncomeStabilityTest: XCTestCase {
             nextExpectedDate: "2025-06-24",
             isStable: true
         )
-        
+
         let score = calculateIncomeStability(income: income)
-        
+
         XCTAssertEqual(income.frequency, "Bi-weekly")
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
-    
+
     func testBiweeklyIncomeSometimesStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -97,7 +97,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
-    
+
     func testBiweeklyIncomeNotStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -113,7 +113,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertEqual(income.frequency, "Bi-weekly")
         XCTAssertEqual(score, 0)
     }
-    
+
     // MARK: - Weekly
 
     func testWeeklyIncomeAlwaysStable() {
@@ -125,14 +125,14 @@ final class IncomeStabilityTest: XCTestCase {
             nextExpectedDate: "2025-06-10",
             isStable: true
         )
-        
+
         let score = calculateIncomeStability(income: income)
-        
+
         XCTAssertEqual(income.frequency, "Weekly")
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 35)
     }
-    
+
     func testWeeklyIncomeSometimesStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -149,7 +149,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertTrue(income.isStable == true)
         XCTAssertEqual(score, 20)
     }
-    
+
     func testWeeklyIncomeNotStable() {
         let income = Income(
             source: "Full-time Employment",
@@ -165,7 +165,7 @@ final class IncomeStabilityTest: XCTestCase {
         XCTAssertEqual(income.frequency, "Weekly")
         XCTAssertEqual(score, 0)
     }
-    
+
     // MARK: - Edge Cases
 
     func testUnknownFrequencyReturnsZero() {
@@ -212,7 +212,7 @@ final class IncomeStabilityTest: XCTestCase {
 
         XCTAssertEqual(score, 0)
     }
-    
+
     func testEmptyFrequencyReturnsZero() {
         let income = Income(
             source: "Gig Work",
@@ -227,7 +227,7 @@ final class IncomeStabilityTest: XCTestCase {
 
         XCTAssertEqual(score, 0)
     }
-    
+
     func testEmptyIncomeFieldsReturnZero() {
         let income = Income(
             source: "",
@@ -237,9 +237,9 @@ final class IncomeStabilityTest: XCTestCase {
             nextExpectedDate: nil,
             isStable: false
         )
-        
+
         let score = calculateIncomeStability(income: income)
-        
+
         XCTAssertEqual(score, 0)
     }
 

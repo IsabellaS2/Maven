@@ -21,4 +21,3 @@ func calculateLoanRepaymentConsistency(loan: Loan?) -> Int {
         return 0
     }
 }
-

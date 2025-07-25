@@ -14,45 +14,45 @@ struct MarcusView: View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
-            
+
             ScrollView {
                 VStack(spacing: 8) {
                     UserScenarioView(
                         title: marcus.title,
                         subtitle: marcus.subtitle,
                         image: "marcusImage",
-                        description_1: marcus.description_1,
-                        description_2: marcus.description_2,
-                        description_3: marcus.description_3,
-                        description_4: marcus.description_4,
-                        www_title: marcus.what_went_wrong.title,
-                        www_point1: marcus.what_went_wrong.text_1,
-                        www_point2: marcus.what_went_wrong.text_2,
-                        www_point3: marcus.what_went_wrong.text_3,
-                        
-                        sort_title: marcus.how_to_sort.title,
-                        sort_point1: marcus.how_to_sort.text_1,
-                        sort_point2: marcus.how_to_sort.text_2,
-                        sort_point3: marcus.how_to_sort.text_3,
-                        
-                        diff_title: marcus.have_done_differently.title,
-                        diff_point1: marcus.have_done_differently.text_1,
-                        diff_point2: marcus.have_done_differently.text_2,
-                        diff_point3: marcus.have_done_differently.text_3,
-                        
-                        solutions_title: marcus.solutions_and_resources.title,
-                        solutions_point1: marcus.solutions_and_resources.text_1,
-                        solutions_point2: marcus.solutions_and_resources.text_2,
-                        solutions_point3: marcus.solutions_and_resources.text_3
+                        description1: marcus.description1,
+                        description2: marcus.description2,
+                        description3: marcus.description3,
+                        description4: marcus.description4,
+                        wwwTitle: marcus.whatWentWrong.title,
+                        wwwPoint1: marcus.whatWentWrong.text1,
+                        wwwPoint2: marcus.whatWentWrong.text2,
+                        wwwPoint3: marcus.whatWentWrong.text3,
+
+                        sortTitle: marcus.howToSort.title,
+                        sortPoint1: marcus.howToSort.text1,
+                        sortPoint2: marcus.howToSort.text2,
+                        sortPoint3: marcus.howToSort.text3,
+
+                        diffTitle: marcus.haveDoneDifferently.title,
+                        diffPoint1: marcus.haveDoneDifferently.text1,
+                        diffPoint2: marcus.haveDoneDifferently.text2,
+                        diffPoint3: marcus.haveDoneDifferently.text3,
+
+                        solutionsTitle: marcus.solutionsAndResources.title,
+                        solutionsPoint1: marcus.solutionsAndResources.text1,
+                        solutionsPoint2: marcus.solutionsAndResources.text2,
+                        solutionsPoint3: marcus.solutionsAndResources.text3
                     )
-                    
+
                     HStack {
                         CardComponent(
                             title: "MORTGAGES",
                             description: "Mortgage Basics",
                             icon: "house.fill"
                         )
-                        
+
                         LongCardComponent(
                             title: "LOANS",
                             description: "Understanding Personal Loans",
@@ -60,7 +60,7 @@ struct MarcusView: View {
                         )
                     }
                     .padding(.horizontal)
-                    
+
                 }
             }
         }
