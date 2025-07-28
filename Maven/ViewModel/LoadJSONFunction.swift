@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-func loadJSON<T: Decodable>(fileName: String, as type: T.Type) -> T? {
-    guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+func loadJSON<T: Decodable>(fileName: String, as type: T.Type, in bundle: Bundle = .main) -> T? {
+    guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
         print("🚫 Could not find \(fileName).json in bundle.")
         return nil
     }
-    print("📁 \(fileName).json found at: \(url)")
 
     do {
         let data = try Data(contentsOf: url)

@@ -34,8 +34,8 @@ struct MavenInfoView: View {
 
                         Text(
                             """
-                            A MAVEN score is a unique financial literacy and behaviour score that measures 
-                            how well you understand and manage credit. Unlike a traditional credit score (which 
+                            A MAVEN score is a unique financial literacy and behaviour score that measures
+                            how well you understand and manage credit. Unlike a traditional credit score (which
                             only looks at past borrowing history), this score reflects your financial
                             knowledge and behaviour.
                             """
