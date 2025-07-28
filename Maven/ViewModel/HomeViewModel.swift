@@ -11,6 +11,10 @@ class HomeViewModel: ObservableObject {
     @Published var creditMixScore: Int = 0
     @Published var totalScore: Int = 0
     @Published var behaviour: Behaviour?
+    @Published var creditCard: CreditCard?
+    @Published var bnplUsage: BNPLUsageProvider?
+    @Published var income: Income?
+    @Published var knowledge: Knowledge?
 
     init() {
         loadAndProcessJSON()
@@ -61,6 +65,10 @@ class HomeViewModel: ObservableObject {
                 self.creditMixScore = creditMixScore
                 self.totalScore = totalScore
                 self.behaviour = behaviour
+                self.creditCard = creditCard
+                self.bnplUsage = bnplProvider
+                self.income = income
+                self.knowledge = knowledge
             }
 
             print("Payment History Score:", paymentHistoryScore, "out of 200")

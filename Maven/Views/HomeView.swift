@@ -83,24 +83,45 @@ struct HomeView: View {
 
                 VStack(alignment: .leading) {
                     Text("📢 Latest Updates")
+                        .font(Font.font18Subtitle)
 
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Credit card utilisation has improved this month")
-                                .font(.headline)
-                                .padding(.bottom, 5)
-                            Text("Your score might go up soon! ")
+                    if let knowledge = homeVM.knowledge {
+                        let cards = getPositiveLatestCards(
+                            creditCard: homeVM.creditCard,
+                            bnpl: homeVM.bnplUsage,
+                            knowledge: knowledge,
+                            income: homeVM.income
+                        )
+
+                        VStack(alignment: .center) {
+                            ForEach(cards.prefix(2), id: \.title) { card in
+                                HStack(alignment: .top, spacing: 12) {
+                                    Image(systemName: card.icon)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(Color.progressBar)
+
+                                    VStack(alignment: .leading, spacing: 6) {
+                                        Text(card.title)
+                                            .font(.headline)
+                                        Text(card.description)
+                                            .font(.subheadline)
+                                    }
+                                }
+                                .padding(15.0)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(radius: 2)
+                            }
                         }
+                        .padding(.bottom, 20.0)
                     }
-                    .padding(15.0)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    Spacer()
                 }
 
                 VStack(alignment: .leading) {
                     Text("🚀 Boost Your Score!")
-                        .font(Font.font16)
+                        .font(Font.font18Subtitle)
 
                     HStack(spacing: 4) {
                         Button(
