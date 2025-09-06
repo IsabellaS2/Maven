@@ -98,7 +98,7 @@ class HomeViewModel: ObservableObject {
     // championEx
 
     func loadAndProcessJSON() {
-        if let url = Bundle.main.url(forResource: "championEx", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "builderEx", withExtension: "json") {
             do {
                 let jsonData = try Data(contentsOf: url)
                 processUserData(from: jsonData)

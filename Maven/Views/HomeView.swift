@@ -34,153 +34,156 @@ struct HomeView: View {
             Color("background")
                 .ignoresSafeArea()
 
-            VStack {
-                Text("MAVEN Score")
-                    .font(Font.mavenTitle)
-                    .padding(.bottom, 6.0)
-
-                Button(
-                    action: {
-                        nav.navigateToInfoView()
-                    },
-                    label: {
-                        Text("What is a MAVEN score?")
-                            .font(.headline)
-                            .underline(true, pattern: .solid)
-                    }
-                )
-                .buttonStyle(PlainButtonStyle())
-
-                Text("\(homeVM.totalScore)")
-                    .font(.system(size: 64, weight: .heavy))
-
-                Text("Level: \(currentLevel.name)")
-                    .padding(.bottom, 20.0)
-
-                ZStack(alignment: .leading) {
-                    Rectangle()
-                        .frame(height: 32)
-                        .foregroundColor(.clear)
-                        .overlay(
-                            Rectangle()
-                                .stroke(Color.black, lineWidth: 1)
-                        )
-                        .background(Color.gray.opacity(0.2))
-
-                    Rectangle()
-                        .frame(width: progressBarWidth, height: 32)
-                        .foregroundColor(Color("progressBar"))
-                }
-                .padding(.horizontal)
-
-                HStack {
-                    Text("\(currentLevel.range.lowerBound)")
-                    Spacer()
-                    Text("\(currentLevel.range.upperBound)")
-                }
-                .padding(.horizontal)
-                .padding(.bottom, 20.0)
-
-                VStack(alignment: .leading) {
-                    Text("📢 Latest Updates")
-                        .font(Font.font18Subtitle)
-
-                    if let knowledge = homeVM.knowledge {
-                        let cards = getPositiveLatestCards(
-                            creditCard: homeVM.creditCard,
-                            bnpl: homeVM.bnplUsage,
-                            knowledge: knowledge,
-                            income: homeVM.income
-                        )
-
-                        VStack(alignment: .center) {
-                            ForEach(cards.prefix(2), id: \.title) { card in
-                                HStack(alignment: .top, spacing: 12) {
-                                    Image(systemName: card.icon)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 24, height: 24)
-                                        .foregroundColor(Color.progressBar)
-
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text(card.title)
-                                            .font(.headline)
-                                        Text(card.description)
-                                            .font(.subheadline)
-                                    }
-                                }
-                                .padding(15.0)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .shadow(radius: 2)
-                            }
+            ScrollView {
+                
+                VStack {
+                    Text("MAVEN Score")
+                        .font(Font.mavenTitle)
+                        .padding(.bottom, 6.0)
+                    
+                    Button(
+                        action: {
+                            nav.navigateToInfoView()
+                        },
+                        label: {
+                            Text("What is a MAVEN score?")
+                                .font(.headline)
+                                .underline(true, pattern: .solid)
                         }
+                    )
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Text("\(homeVM.totalScore)")
+                        .font(.system(size: 64, weight: .heavy))
+                    
+                    Text("Level: \(currentLevel.name)")
                         .padding(.bottom, 20.0)
+                    
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .frame(height: 32)
+                            .foregroundColor(.clear)
+                            .overlay(
+                                Rectangle()
+                                    .stroke(Color.black, lineWidth: 1)
+                            )
+                            .background(Color.gray.opacity(0.2))
+                        
+                        Rectangle()
+                            .frame(width: progressBarWidth, height: 32)
+                            .foregroundColor(Color("progressBar"))
                     }
-                }
-
-                VStack(alignment: .leading) {
-                    Text("🚀 Boost Your Score!")
-                        .font(Font.font18Subtitle)
-
-                    HStack(spacing: 4) {
-                        Button(
-                            action: {
-                                nav.navigateToFinancialCenter()
-                            },
-                            label: {
-                                VStack(alignment: .leading) {
-                                    Text("📚 Financial Knowledge Center")
-                                        .font(Font.font16)
-                                        .padding(.bottom, 2.0)
-
-                                    Text("Learn, grow, and master your money")
-                                        .font(Font.font16Light)
-
-                                    Spacer()
-                                    Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
-                                        .font(Font.font16Light)
-                                }
-                                .padding(10.0)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .frame(width: 175)
-                            }
-                        )
-                        .buttonStyle(PlainButtonStyle())
-
-                        Button(
-                            action: {
-                                nav.navigateToFinancialHabits()
-                            },
-                            label: {
-                                VStack(alignment: .leading) {
-                                    Text("📊 Your Financial Habits")
-                                        .font(Font.font16)
-                                        .padding(.bottom, 2.0)
-
-                                    Text("See how your behaviour shapes your score!")
-                                        .font(Font.font16Light)
-
-                                    Spacer()
-                                    Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
-                                        .font(Font.font16Light)
-                                }
-                                .padding(10.0)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .frame(width: 180)
-                            }
-                        )
-                        .buttonStyle(PlainButtonStyle())
+                    .padding(.horizontal)
+                    
+                    HStack {
+                        Text("\(currentLevel.range.lowerBound)")
+                        Spacer()
+                        Text("\(currentLevel.range.upperBound)")
                     }
-                    .frame(height: 200.0)
+                    .padding(.horizontal)
+                    .padding(.bottom, 20.0)
+                    
+                    VStack(alignment: .leading) {
+                        Text("📢 Latest Updates")
+                            .font(Font.font18Subtitle)
+                        
+                        if let knowledge = homeVM.knowledge {
+                            let cards = getPositiveLatestCards(
+                                creditCard: homeVM.creditCard,
+                                bnpl: homeVM.bnplUsage,
+                                knowledge: knowledge,
+                                income: homeVM.income
+                            )
+                            
+                            VStack(alignment: .center) {
+                                ForEach(cards.prefix(2), id: \.title) { card in
+                                    HStack(alignment: .top, spacing: 12) {
+                                        Image(systemName: card.icon)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 24, height: 24)
+                                            .foregroundColor(Color.progressBar)
+                                        
+                                        VStack(alignment: .leading, spacing: 6) {
+                                            Text(card.title)
+                                                .font(.headline)
+                                            Text(card.description)
+                                                .font(.subheadline)
+                                        }
+                                    }
+                                    .padding(15.0)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 2)
+                                }
+                            }
+                            .padding(.bottom, 20.0)
+                        }
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("🚀 Boost Your Score!")
+                            .font(Font.font18Subtitle)
+                        
+                        HStack(spacing: 4) {
+                            Button(
+                                action: {
+                                    nav.navigateToFinancialCenter()
+                                },
+                                label: {
+                                    VStack(alignment: .leading) {
+                                        Text("📚 Financial Knowledge Center")
+                                            .font(Font.font16)
+                                            .padding(.bottom, 2.0)
+                                        
+                                        Text("Learn, grow, and master your money")
+                                            .font(Font.font16Light)
+                                        
+                                        Spacer()
+                                        Text("🎥 Videos\n🧩 Quizzes\n👥 User Scenarios")
+                                            .font(Font.font16Light)
+                                    }
+                                    .padding(10.0)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .frame(width: 175)
+                                }
+                            )
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            Button(
+                                action: {
+                                    nav.navigateToFinancialHabits()
+                                },
+                                label: {
+                                    VStack(alignment: .leading) {
+                                        Text("📊 Your Financial Habits")
+                                            .font(Font.font16)
+                                            .padding(.bottom, 2.0)
+                                        
+                                        Text("See how your behaviour shapes your score!")
+                                            .font(Font.font16Light)
+                                        
+                                        Spacer()
+                                        Text("📊 Credit Card Usage\n💳 Transactions\n🛒 BNPL Usage")
+                                            .font(Font.font16Light)
+                                    }
+                                    .padding(10.0)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .frame(width: 180)
+                                }
+                            )
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        .frame(height: 200.0)
+                    }
+                    .padding(.horizontal, 4.0)
+                    
+                    Spacer()
                 }
-                .padding(.horizontal, 4.0)
-
-                Spacer()
+                .padding()
             }
-            .padding()
         }
     }
 
